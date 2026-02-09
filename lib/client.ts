@@ -1,3 +1,4 @@
+import { Application } from "./application";
 import { Crash } from "./crash";
 import { Process } from "./process";
 import {
@@ -62,6 +63,69 @@ export class Client {
         return rawProcesses.map(([pid, name, parameters]) => {
             return { pid, name, parameters };
         });
+    }
+
+    async enumerateApplications(options: ApplicationQueryOptions = {}): Promise<Application[]> {
+        const connection = await this._getHostConnection();
+
+        const rawOptions: VariantDict = {};
+        const { identifiers, scope } = options;
+        if (identifiers !== undefined) {
+            rawOptions.identifiers = new dbus.Variant("as", identifiers);
+        }
+        if (scope !== undefined) {
+            rawOptions.scope = new dbus.Variant("s", scope);
+        }
+
+        const rawApps = await connection.session.EnumerateApplications(rawOptions);
+
+        return rawApps.map(([identifier, name, pid, parameters]) => {
+            return { identifier, name, pid, parameters };
+        });
+    }
+
+    async querySystemParameters(): Promise<SystemParameters> {
+        const connection = await this._getHostConnection();
+        const raw = await connection.session.QuerySystemParameters();
+
+        const result: SystemParameters = {};
+        for (const [key, variant] of Object.entries(raw)) {
+            result[key] = variant.value;
+        }
+        return result;
+    }
+
+    async spawn(program: string, options: SpawnOptions = {}): Promise<number> {
+        const connection = await this._getHostConnection();
+
+        const rawOptions: VariantDict = {};
+        if (options.argv !== undefined) {
+            rawOptions.argv = new dbus.Variant("as", options.argv);
+        }
+        if (options.envp !== undefined) {
+            rawOptions.envp = new dbus.Variant("a{ss}", options.envp);
+        }
+        if (options.env !== undefined) {
+            rawOptions.env = new dbus.Variant("a{ss}", options.env);
+        }
+        if (options.cwd !== undefined) {
+            rawOptions.cwd = new dbus.Variant("s", options.cwd);
+        }
+        if (options.stdio !== undefined) {
+            rawOptions.stdio = new dbus.Variant("s", options.stdio);
+        }
+
+        return await connection.session.Spawn(program, rawOptions);
+    }
+
+    async resume(pid: number): Promise<void> {
+        const connection = await this._getHostConnection();
+        await connection.session.Resume(pid);
+    }
+
+    async kill(pid: number): Promise<void> {
+        const connection = await this._getHostConnection();
+        await connection.session.Kill(pid);
     }
 
     async attach(pid: number, options: SessionOptions = {}): Promise<Session> {
@@ -177,4 +241,21 @@ export interface SessionOptions {
 export enum Realm {
     Native = "native",
     Emulated = "emulated"
+}
+
+export interface ApplicationQueryOptions {
+    identifiers?: string[];
+    scope?: Scope;
+}
+
+export interface SystemParameters {
+    [key: string]: any;
+}
+
+export interface SpawnOptions {
+    argv?: string[];
+    envp?: { [key: string]: string };
+    env?: { [key: string]: string };
+    cwd?: string;
+    stdio?: "inherit" | "pipe";
 }

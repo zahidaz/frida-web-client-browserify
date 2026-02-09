@@ -9,6 +9,11 @@ export interface HostConnection {
 
 export interface HostSession extends dbus.ClientInterface {
     EnumerateProcesses: ProxyMethod<(options: VariantDict) => Promise<HostProcessInfo[]>>;
+    EnumerateApplications: ProxyMethod<(options: VariantDict) => Promise<HostApplicationInfo[]>>;
+    QuerySystemParameters: ProxyMethod<() => Promise<VariantDict>>;
+    Spawn: ProxyMethod<(program: string, options: VariantDict) => Promise<number>>;
+    Resume: ProxyMethod<(pid: number) => Promise<void>>;
+    Kill: ProxyMethod<(pid: number) => Promise<void>>;
     Attach: ProxyMethod<(pid: number, options: VariantDict) => Promise<AgentSessionId>>;
     Reattach: ProxyMethod<(id: AgentSessionId) => Promise<void>>;
 }
@@ -31,6 +36,8 @@ export interface AgentSession extends dbus.ClientInterface {
 }
 
 export type HostProcessInfo = [pid: number, name: string, parameters: VariantDict];
+
+export type HostApplicationInfo = [identifier: string, name: string, pid: number, parameters: VariantDict];
 
 export type CrashInfo = [pid: number, processName: string, summary: string, report: string, parameters: VariantDict];
 

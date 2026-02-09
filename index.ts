@@ -1,3 +1,4 @@
+import * as applicationModule from "./lib/application";
 import * as clientModule from "./lib/client";
 import * as crashModule from "./lib/crash";
 import * as processModule from "./lib/process";
@@ -15,6 +16,9 @@ export const Scope = clientModule.Scope;
 export type SessionOptions = clientModule.SessionOptions;
 export type Realm = clientModule.Realm;
 export const Realm = clientModule.Realm;
+export type ApplicationQueryOptions = clientModule.ApplicationQueryOptions;
+export type SystemParameters = clientModule.SystemParameters;
+export type SpawnOptions = clientModule.SpawnOptions;
 
 export type Session = sessionModule.Session;
 export const Session = sessionModule.Session;
@@ -44,4 +48,5 @@ export type LogLevel = scriptModule.LogLevel;
 export const LogLevel = scriptModule.LogLevel;
 
 export type Process = processModule.Process;
+export type Application = applicationModule.Application;
 export type Crash = crashModule.Crash;

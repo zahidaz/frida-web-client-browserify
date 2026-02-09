@@ -1,3 +1,4 @@
+import { Application } from "./application";
 import { Process } from "./process";
 import { HostConnection, AgentSession, AgentSessionId } from "./protocol";
 import { Session } from "./session";
@@ -8,6 +9,11 @@ export declare class Client {
     private readonly _sessions;
     constructor(host: string, options?: ClientOptions);
     enumerateProcesses(options?: ProcessQueryOptions): Promise<Process[]>;
+    enumerateApplications(options?: ApplicationQueryOptions): Promise<Application[]>;
+    querySystemParameters(): Promise<SystemParameters>;
+    spawn(program: string, options?: SpawnOptions): Promise<number>;
+    resume(pid: number): Promise<void>;
+    kill(pid: number): Promise<void>;
     attach(pid: number, options?: SessionOptions): Promise<Session>;
     _getHostConnection(): Promise<HostConnection>;
     private _doGetHostConnection;
@@ -39,4 +45,22 @@ export interface SessionOptions {
 export declare enum Realm {
     Native = "native",
     Emulated = "emulated"
+}
+export interface ApplicationQueryOptions {
+    identifiers?: string[];
+    scope?: Scope;
+}
+export interface SystemParameters {
+    [key: string]: any;
+}
+export interface SpawnOptions {
+    argv?: string[];
+    envp?: {
+        [key: string]: string;
+    };
+    env?: {
+        [key: string]: string;
+    };
+    cwd?: string;
+    stdio?: "inherit" | "pipe";
 }

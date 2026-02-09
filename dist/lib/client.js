@@ -39,6 +39,58 @@ export class Client {
             return { pid, name, parameters };
         });
     }
+    async enumerateApplications(options = {}) {
+        const connection = await this._getHostConnection();
+        const rawOptions = {};
+        const { identifiers, scope } = options;
+        if (identifiers !== undefined) {
+            rawOptions.identifiers = new dbus.Variant("as", identifiers);
+        }
+        if (scope !== undefined) {
+            rawOptions.scope = new dbus.Variant("s", scope);
+        }
+        const rawApps = await connection.session.EnumerateApplications(rawOptions);
+        return rawApps.map(([identifier, name, pid, parameters]) => {
+            return { identifier, name, pid, parameters };
+        });
+    }
+    async querySystemParameters() {
+        const connection = await this._getHostConnection();
+        const raw = await connection.session.QuerySystemParameters();
+        const result = {};
+        for (const [key, variant] of Object.entries(raw)) {
+            result[key] = variant.value;
+        }
+        return result;
+    }
+    async spawn(program, options = {}) {
+        const connection = await this._getHostConnection();
+        const rawOptions = {};
+        if (options.argv !== undefined) {
+            rawOptions.argv = new dbus.Variant("as", options.argv);
+        }
+        if (options.envp !== undefined) {
+            rawOptions.envp = new dbus.Variant("a{ss}", options.envp);
+        }
+        if (options.env !== undefined) {
+            rawOptions.env = new dbus.Variant("a{ss}", options.env);
+        }
+        if (options.cwd !== undefined) {
+            rawOptions.cwd = new dbus.Variant("s", options.cwd);
+        }
+        if (options.stdio !== undefined) {
+            rawOptions.stdio = new dbus.Variant("s", options.stdio);
+        }
+        return await connection.session.Spawn(program, rawOptions);
+    }
+    async resume(pid) {
+        const connection = await this._getHostConnection();
+        await connection.session.Resume(pid);
+    }
+    async kill(pid) {
+        const connection = await this._getHostConnection();
+        await connection.session.Kill(pid);
+    }
     async attach(pid, options = {}) {
         const connection = await this._getHostConnection();
         const rawOptions = {};
