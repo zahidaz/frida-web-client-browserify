@@ -1,0 +1,47 @@
+{
+    "name": "frida-web-client-browserify",
+    "version": "3.1.0",
+    "description": "Browser-compatible client library for communicating with frida-server over WebSocket",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "/dist/"
+    ],
+    "scripts": {
+        "prepare": "npm run build",
+        "build": "tsc",
+        "build:browser": "node browser/build.mjs",
+        "watch": "tsc -w",
+        "test": "vitest run",
+        "test:unit": "vitest run test/unit",
+        "test:integration": "vitest run test/integration"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zahidaz/frida-web-client-browserify.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/zahidaz/frida-web-client-browserify/issues"
+    },
+    "homepage": "https://github.com/zahidaz/frida-web-client-browserify#readme",
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@types/node": "^20.12.2",
+        "buffer": "^6.0.3",
+        "esbuild": "^0.24.0",
+        "events": "^3.3.0",
+        "process": "^0.11.10",
+        "stream-browserify": "^3.0.0",
+        "typescript": "^5.4.3",
+        "vitest": "^2.0.0",
+        "ws": "^8.18.0"
+    },
+    "dependencies": {
+        "@frida/rtc-stream": "^1.0.3",
+        "dbus-next": "github:zahidaz/dbus-next-browserify"
+    }
+}
