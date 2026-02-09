@@ -13,7 +13,7 @@ import { Script, ScriptOptions } from "./script";
 import { Signal } from "./signals";
 
 import { EventEmitter } from "events";
-import * as dbus from "@frida/dbus";
+import * as dbus from "dbus-next";
 import RTCStream from "@frida/rtc-stream";
 
 export class Session {
@@ -73,7 +73,7 @@ export class Session {
 
         const rawId: AgentSessionId = [this.id];
 
-        await connection.session.reattach(rawId);
+        await connection.session.Reattach(rawId);
 
         const agentSession = await this._controller._linkAgentSession(rawId, connection);
 
@@ -83,7 +83,7 @@ export class Session {
             await this.setupPeerConnection(this._peerOptions);
         }
 
-        const lastTxBatchId = await this._activeSession.resume(this._lastRxBatchId);
+        const lastTxBatchId = await this._activeSession.Resume(this._lastRxBatchId);
 
         if (lastTxBatchId !== 0) {
             let m: PendingMessage | undefined;
@@ -107,7 +107,7 @@ export class Session {
             rawOptions.runtime = new dbus.Variant("s", runtime);
         }
 
-        const scriptId = await this._activeSession.createScript(source, rawOptions);
+        const scriptId = await this._activeSession.CreateScript(source, rawOptions);
 
         const script = new Script(this, scriptId);
         const onScriptDestroyed = () => {
@@ -166,11 +166,11 @@ export class Session {
                 })
                 .map(c => "a=" + c.candidate);
             if (candidateSdps.length > 0) {
-                serverSession.addCandidates(candidateSdps);
+                serverSession.AddCandidates(candidateSdps);
             }
         });
         pendingLocalCandidates.once("done", () => {
-            serverSession.notifyCandidateGatheringDone();
+            serverSession.NotifyCandidateGatheringDone();
         });
 
         const pendingRemoteCandidates = new IceCandidateQueue();
@@ -190,7 +190,7 @@ export class Session {
         peerConnection.onicecandidate = e => {
             pendingLocalCandidates.add(e.candidate);
         };
-        serverSession.on("newCandidates", (sdps: string[]) => {
+        serverSession.on("NewCandidates", (sdps: string[]) => {
             for (const sdp of sdps) {
                 pendingRemoteCandidates.add(new RTCIceCandidate({
                     candidate: sdp.substr(2),
@@ -199,7 +199,7 @@ export class Session {
                 }));
             }
         });
-        serverSession.on("candidateGatheringDone", () => {
+        serverSession.on("CandidateGatheringDone", () => {
             pendingRemoteCandidates.add(null);
         });
 
@@ -219,17 +219,17 @@ export class Session {
                     authMethods: [],
                 });
 
-                const peerAgentSessionObj = await peerBus.getProxyObject("re.frida.AgentSession16", "/re/frida/AgentSession");
-                peerAgentSession = peerAgentSessionObj.getInterface("re.frida.AgentSession16") as AgentSession;
+                const peerAgentSessionObj = await peerBus.getProxyObject("re.frida.AgentSession17", "/re/frida/AgentSession");
+                peerAgentSession = peerAgentSessionObj.getInterface("re.frida.AgentSession17") as AgentSession;
 
                 peerBus.export("/re/frida/AgentMessageSink", this._sink);
 
-                await serverSession.beginMigration();
+                await serverSession.BeginMigration();
 
                 this._beginMigration(peerAgentSession);
                 migrating = true;
 
-                await serverSession.commitMigration();
+                await serverSession.CommitMigration();
 
                 this._peerConnection = peerConnection;
                 this._peerOptions = options;
@@ -261,7 +261,7 @@ export class Session {
         const offer = await peerConnection.createOffer();
         await peerConnection.setLocalDescription(offer);
 
-        const answerSdp = await serverSession.offerPeerConnection(offer.sdp!, rawOptions);
+        const answerSdp = await serverSession.OfferPeerConnection(offer.sdp!, rawOptions);
         const answer = new RTCSessionDescription({ type: "answer", sdp: answerSdp });
         await peerConnection.setRemoteDescription(answer);
 
@@ -355,7 +355,7 @@ export class Session {
     }
 
     private _emitBatch(messages: PendingMessage[]): void {
-        this._activeSession.postMessages.begin(messages.map(m => m.record), 0);
+        this._activeSession.PostMessages(messages.map(m => m.record), 0);
     }
 
     private async _deliverBatch(messages: PendingMessage[]): Promise<void> {
@@ -368,7 +368,7 @@ export class Session {
 
             const batchId = messages[messages.length - 1].serial;
 
-            await this._activeSession.postMessages(messages.map(m => m.record), batchId);
+            await this._activeSession.PostMessages(messages.map(m => m.record), batchId);
 
             success = true;
         } catch (e) {
@@ -413,7 +413,7 @@ export class Session {
     async _closeSessionAndPeerConnection(reason: SessionDetachReason): Promise<void> {
         if (reason === SessionDetachReason.ApplicationRequested) {
             try {
-                await this._activeSession.close();
+                await this._activeSession.Close();
             } catch (e) {
             }
         }

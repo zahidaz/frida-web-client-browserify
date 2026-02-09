@@ -11,7 +11,11 @@
     "scripts": {
         "prepare": "npm run build",
         "build": "tsc",
-        "watch": "tsc -w"
+        "watch": "tsc -w",
+        "test": "vitest run",
+        "test:unit": "vitest run test/unit",
+        "test:integration": "vitest run test/integration",
+        "build:browser": "node app/build.mjs"
     },
     "repository": {
         "type": "git",
@@ -27,10 +31,17 @@
     },
     "devDependencies": {
         "@types/node": "^20.12.2",
-        "typescript": "^5.4.3"
+        "buffer": "^6.0.3",
+        "esbuild": "^0.24.0",
+        "events": "^3.3.0",
+        "process": "^0.11.10",
+        "stream-browserify": "^3.0.0",
+        "typescript": "^5.4.3",
+        "vitest": "^2.0.0",
+        "ws": "^8.18.0"
     },
     "dependencies": {
-        "@frida/dbus": "^1.1.1",
-        "@frida/rtc-stream": "^1.0.3"
+        "@frida/rtc-stream": "^1.0.3",
+        "dbus-next": "file:../node-dbus-next"
     }
 }

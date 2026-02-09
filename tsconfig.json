@@ -9,6 +9,8 @@
         "module": "ESNext",
         "moduleResolution": "Node",
         "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
         "declaration": true,
         "outDir": "./dist"
     },

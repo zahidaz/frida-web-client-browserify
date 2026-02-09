@@ -61,11 +61,11 @@ export class Script {
     }
 
     load(): Promise<void> {
-        return this._controller._activeSession.loadScript(this._id);
+        return this._controller._activeSession.LoadScript(this._id);
     }
 
     async unload(): Promise<void> {
-        await this._controller._activeSession.destroyScript(this._id);
+        await this._controller._activeSession.DestroyScript(this._id);
 
         this._destroy();
     }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frida Web Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Frida <span>Web Client</span></h1>
+    </header>
+
+    <div class="connection-bar">
+        <label for="server-url">Server</label>
+        <input type="text" id="server-url" value="127.0.0.1:27042" placeholder="host:port">
+        <label for="auth-token">Token</label>
+        <input type="text" id="auth-token" placeholder="Optional">
+        <button id="connect-btn" class="primary">Connect</button>
+        <button id="disconnect-btn" class="danger" disabled>Disconnect</button>
+        <div class="status-indicator">
+            <span class="status-dot" id="status-dot"></span>
+            <span id="status-text">Disconnected</span>
+        </div>
+    </div>
+
+    <div class="main-layout">
+        <div class="panel">
+            <div class="panel-header">
+                <h2>Processes</h2>
+                <span class="badge" id="process-count">0</span>
+                <button id="refresh-btn" disabled>Refresh</button>
+                <input type="text" id="process-filter" placeholder="Filter...">
+            </div>
+            <div class="process-list">
+                <div class="empty-state" id="process-empty">Connect to a server to list processes</div>
+                <table class="process-table hidden" id="process-table">
+                    <thead>
+                        <tr>
+                            <th class="pid-col">PID</th>
+                            <th>Name</th>
+                            <th class="action-col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="process-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="script-section">
+                <div class="editor-area">
+                    <div class="editor-toolbar">
+                        <button id="run-script-btn" class="primary" disabled>Run</button>
+                        <button id="unload-script-btn" disabled>Unload</button>
+                        <button id="detach-btn" class="danger" disabled>Detach</button>
+                        <span class="session-info" id="session-info"></span>
+                    </div>
+                    <textarea id="script-editor" spellcheck="false">send("Hello from Frida!");
+
+Process.enumerateModules().forEach(m => {
+  send({ name: m.name, base: m.base.toString() });
+});</textarea>
+                </div>
+                <div class="console-area">
+                    <div class="console-toolbar">
+                        <h2 style="font-size:14px;font-weight:600;">Console</h2>
+                        <button id="clear-console-btn" style="margin-left:auto;">Clear</button>
+                    </div>
+                    <div id="console-output">
+                        <div class="empty-state" id="console-empty">Attach to a process and run a script</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dist/app.bundle.js"></script>
+</body>
+</html>

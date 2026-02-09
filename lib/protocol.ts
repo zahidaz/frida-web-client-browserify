@@ -1,4 +1,6 @@
-import * as dbus from "@frida/dbus";
+import * as dbus from "dbus-next";
+
+type ProxyMethod<T extends (...args: any[]) => any> = T;
 
 export interface HostConnection {
     bus: dbus.MessageBus;
@@ -6,26 +8,26 @@ export interface HostConnection {
 }
 
 export interface HostSession extends dbus.ClientInterface {
-    enumerateProcesses: dbus.ProxyMethod<(options: VariantDict) => Promise<HostProcessInfo[]>>;
-    attach: dbus.ProxyMethod<(pid: number, options: VariantDict) => Promise<AgentSessionId>>;
-    reattach: dbus.ProxyMethod<(id: AgentSessionId) => Promise<void>>;
+    EnumerateProcesses: ProxyMethod<(options: VariantDict) => Promise<HostProcessInfo[]>>;
+    Attach: ProxyMethod<(pid: number, options: VariantDict) => Promise<AgentSessionId>>;
+    Reattach: ProxyMethod<(id: AgentSessionId) => Promise<void>>;
 }
 
 export interface AgentSession extends dbus.ClientInterface {
-    close: dbus.ProxyMethod<() => Promise<void>>;
+    Close: ProxyMethod<() => Promise<void>>;
 
-    resume: dbus.ProxyMethod<(rxBatchId: number) => Promise<number>>;
+    Resume: ProxyMethod<(rxBatchId: number) => Promise<number>>;
 
-    createScript: dbus.ProxyMethod<(source: string, options: VariantDict) => Promise<AgentScriptId>>;
-    destroyScript: dbus.ProxyMethod<(scriptId: AgentScriptId) => Promise<void>>;
-    loadScript: dbus.ProxyMethod<(scriptId: AgentScriptId) => Promise<void>>;
-    postMessages: dbus.ProxyMethod<(messages: AgentMessageRecord[], batchId: number) => Promise<void>>;
+    CreateScript: ProxyMethod<(source: string, options: VariantDict) => Promise<AgentScriptId>>;
+    DestroyScript: ProxyMethod<(scriptId: AgentScriptId) => Promise<void>>;
+    LoadScript: ProxyMethod<(scriptId: AgentScriptId) => Promise<void>>;
+    PostMessages: ProxyMethod<(messages: AgentMessageRecord[], batchId: number) => Promise<void>>;
 
-    offerPeerConnection: dbus.ProxyMethod<(offerSdp: string, options: VariantDict) => Promise<string>>;
-    addCandidates: dbus.ProxyMethod<(candidateSdps: string[]) => Promise<void>>;
-    notifyCandidateGatheringDone: dbus.ProxyMethod<() => Promise<void>>;
-    beginMigration: dbus.ProxyMethod<() => Promise<void>>;
-    commitMigration: dbus.ProxyMethod<() => Promise<void>>;
+    OfferPeerConnection: ProxyMethod<(offerSdp: string, options: VariantDict) => Promise<string>>;
+    AddCandidates: ProxyMethod<(candidateSdps: string[]) => Promise<void>>;
+    NotifyCandidateGatheringDone: ProxyMethod<() => Promise<void>>;
+    BeginMigration: ProxyMethod<() => Promise<void>>;
+    CommitMigration: ProxyMethod<() => Promise<void>>;
 }
 
 export type HostProcessInfo = [pid: number, name: string, parameters: VariantDict];
@@ -40,13 +42,13 @@ export class AgentMessageSink extends dbus.interface.Interface {
     #handler: AgentMessageHandler;
 
     constructor(handler: AgentMessageHandler) {
-        super("re.frida.AgentMessageSink16");
+        super("re.frida.AgentMessageSink17");
 
         this.#handler = handler;
     }
 
     @dbus.interface.method({ inSignature: "a(i(u)sbay)u" })
-    postMessages(messages: AgentMessageRecord[], batchId: number): void {
+    PostMessages(messages: AgentMessageRecord[], batchId: number): void {
         this.#handler(messages, batchId);
     }
 }

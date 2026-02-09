@@ -13,7 +13,7 @@ import {
     SessionDetachReason,
 } from "./session";
 
-import * as dbus from "@frida/dbus";
+import * as dbus from "dbus-next";
 import RTCStream from "@frida/rtc-stream";
 
 export class Client {
@@ -57,7 +57,7 @@ export class Client {
             rawOptions.scope = new dbus.Variant("s", scope);
         }
 
-        const rawProcesses = await connection.session.enumerateProcesses(rawOptions);
+        const rawProcesses = await connection.session.EnumerateProcesses(rawOptions);
 
         return rawProcesses.map(([pid, name, parameters]) => {
             return { pid, name, parameters };
@@ -76,7 +76,7 @@ export class Client {
             rawOptions["persist-timeout"] = new dbus.Variant("u", persistTimeout);
         }
 
-        const sessionId = await connection.session.attach(pid, rawOptions);
+        const sessionId = await connection.session.Attach(pid, rawOptions);
 
         const agentSession = await this._linkAgentSession(sessionId, connection);
 
@@ -97,8 +97,15 @@ export class Client {
     }
 
     private async _doGetHostConnection(): Promise<HostConnection> {
-        const ws = RTCStream.from(new WebSocket(this._serverUrl));
-        ws.once("close", () => {
+        const bus = dbus.connect(this._serverUrl, { noAuth: true, peer: true });
+        bus.once("error", () => {});
+
+        await new Promise<void>((resolve, reject) => {
+            bus.once("connect", resolve);
+            bus.once("error", reject);
+        });
+
+        (bus as any)._connection.stream.once("close", () => {
             this._hostConnectionRequest = null;
 
             for (const session of this._sessions.values()) {
@@ -106,30 +113,23 @@ export class Client {
             }
         });
 
-        const bus = dbus.peerBus(ws, {
-            authMethods: [],
-        });
-        bus.once("error", () => {
-            // Ignore
-        });
-
         if (this._token !== null) {
-            const authServiceObj = await bus.getProxyObject("re.frida.AuthenticationService16", "/re/frida/AuthenticationService");
-            const authService = authServiceObj.getInterface("re.frida.AuthenticationService16");
-            await authService.authenticate(this._token);
+            const authServiceObj = await bus.getProxyObject("re.frida.AuthenticationService17", "/re/frida/AuthenticationService");
+            const authService = authServiceObj.getInterface("re.frida.AuthenticationService17");
+            await authService.Authenticate(this._token);
         }
 
-        const sessionObj = await bus.getProxyObject("re.frida.HostSession16", "/re/frida/HostSession");
-        const session = sessionObj.getInterface("re.frida.HostSession16") as HostSession;
+        const sessionObj = await bus.getProxyObject("re.frida.HostSession17", "/re/frida/HostSession");
+        const session = sessionObj.getInterface("re.frida.HostSession17") as HostSession;
 
-        session.on("agentSessionDetached", this._onAgentSessionDetached);
+        session.on("AgentSessionDetached", this._onAgentSessionDetached);
 
         return { bus, session };
     }
 
     async _linkAgentSession(id: AgentSessionId, connection: HostConnection): Promise<AgentSession> {
-        const agentSessionObj = await connection.bus.getProxyObject("re.frida.AgentSession16", "/re/frida/AgentSession/" + id[0]);
-        return agentSessionObj.getInterface("re.frida.AgentSession16") as AgentSession;
+        const agentSessionObj = await connection.bus.getProxyObject("re.frida.AgentSession17", "/re/frida/AgentSession/" + id[0]);
+        return agentSessionObj.getInterface("re.frida.AgentSession17") as AgentSession;
     }
 
     private _onAgentSessionDetached = (id: AgentSessionId, reason: SessionDetachReason, rawCrash: CrashInfo): void => {
