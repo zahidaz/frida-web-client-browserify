@@ -1,28 +1,60 @@
-# @frida/web-client
+# Frida Web Client
 
-Client library for communicating with a remote Frida server (frida-server, frida-portal, etc.) over WebSocket. Works in both Node.js and the browser.
+A TypeScript client library and web app for communicating with [frida-server](https://frida.re/) over WebSocket. Works in both Node.js and the browser.
 
-## Installation
+Fork of [@frida/web-client](https://github.com/frida/frida-web-client) with [dbus-next](https://github.com/zahidaz/node-dbus-next) replacing `@frida/dbus` for full browser compatibility.
+
+## Web App
+
+A ready-to-use browser GUI for pentesters. Connect to any frida-server, browse processes, attach, and run scripts — no install required.
+
+**Open `app/index.html` directly in your browser** (no HTTP server needed).
+
+### Features
+
+- Connect to any frida-server URL with TLS on/off/auto
+- Browse and filter processes, sortable by PID or name
+- 12 built-in script templates: hook native/ObjC/Java functions, Interceptor, Stalker trace, memory scan, enumerate modules/exports/classes, RPC exports
+- Live console with timestamped output, export to `.txt`
+- Keyboard shortcuts: `Enter` connect, `Ctrl+Enter` run script, `Ctrl+Shift+K` clear console
+- Settings persisted to localStorage
+- Loading spinners, busy guards, auto-unload on re-run
+
+### Building the App
+
+```bash
+npm install
+npm run build
+npm run build:browser
+```
+
+Then open `app/index.html` or deploy the `app/` directory to any static host.
+
+### Running frida-server
+
+```bash
+frida-server --listen=0.0.0.0:27042
+```
+
+## Library Usage
+
+### Installation
 
 ```
 npm install @frida/web-client
 ```
 
-## Quick Start
+### Quick Start
 
 ```typescript
 import { Client } from "@frida/web-client";
 
 const client = new Client("127.0.0.1:27042", { tls: "disabled" });
 
-// List running processes
 const processes = await client.enumerateProcesses();
-console.log("Processes:", processes);
 
-// Attach to a process
 const session = await client.attach(targetPid);
 
-// Create and load a script
 const script = await session.createScript(`
   send("Hello from Frida!");
 
@@ -37,22 +69,17 @@ script.message.connect((message, data) => {
 
 await script.load();
 
-// Call RPC exports
 const result = await script.exports.add(2, 3);
-console.log("RPC result:", result);
 
-// Clean up
 await script.unload();
 session.detach();
 ```
 
-## API
+## API Reference
 
 ### Client
 
 #### `new Client(host, options?)`
-
-Creates a new client connection to a Frida server.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
@@ -85,7 +112,7 @@ Attaches to a process. Returns `Promise<Session>`.
 | `session.pid` | Process ID |
 | `session.id` | Session identifier |
 | `session.isDetached` | Whether the session has been detached |
-| `session.detached` | Signal. Connect with `session.detached.connect((reason, crash) => {})` |
+| `session.detached` | Signal: `session.detached.connect((reason, crash) => {})` |
 | `session.detach()` | Detach from the process |
 | `session.resume()` | Resume an interrupted session |
 | `session.createScript(source, options?)` | Create a script. Options: `name`, `runtime` (`"default"`, `"qjs"`, `"v8"`) |
@@ -96,38 +123,13 @@ Attaches to a process. Returns `Promise<Session>`.
 | Member | Description |
 |--------|-------------|
 | `script.isDestroyed` | Whether the script has been destroyed |
-| `script.message` | Signal. Connect with `script.message.connect((message, data) => {})` |
+| `script.message` | Signal: `script.message.connect((message, data) => {})` |
 | `script.destroyed` | Signal emitted when script is destroyed |
-| `script.exports` | Proxy for RPC-exported functions, e.g. `await script.exports.myFunc()` |
+| `script.exports` | Proxy for RPC exports: `await script.exports.myFunc()` |
 | `script.logHandler` | Get/set log handler: `(level, text) => void` |
 | `script.load()` | Load the script on the target |
 | `script.unload()` | Unload and destroy the script |
 | `script.post(message, data?)` | Send a message to the script |
-
-## Web App
-
-A browser-based GUI is included in the `app/` directory. It lets you connect to a frida-server, browse processes, attach, and run scripts interactively.
-
-### Building
-
-```bash
-npm run build            # Compile TypeScript
-npm run build:browser    # Bundle for browser
-```
-
-Then serve the `app/` directory with any static file server:
-
-```bash
-npx serve app
-```
-
-Or open `app/index.html` directly if your frida-server is running locally.
-
-### Running frida-server
-
-```bash
-frida-server --listen=127.0.0.1:27042
-```
 
 ## Development
 
@@ -139,30 +141,24 @@ frida-server --listen=127.0.0.1:27042
 ### Setup
 
 ```bash
-git clone <repo-url>
-cd frida-web-client
+git clone https://github.com/zahidaz/frida_web.git
+cd frida_web
 npm install
 npm run build
 ```
 
-### Running Tests
-
-Unit tests (no server needed):
+### Tests
 
 ```bash
 npm run test:unit
+npm run test:integration
+npm test
 ```
 
-Integration tests (requires frida-server):
+Integration tests require frida-server. Set `FRIDA_SERVER_PATH` if it's not in the default location:
 
 ```bash
 FRIDA_SERVER_PATH=/path/to/frida-server npm run test:integration
-```
-
-All tests:
-
-```bash
-npm test
 ```
 
 ## License

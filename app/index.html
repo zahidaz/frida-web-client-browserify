@@ -8,12 +8,26 @@
 </head>
 <body>
     <header>
-        <h1>Frida <span>Web Client</span></h1>
+        <a href="https://github.com/zahidaz/frida_web" target="_blank" rel="noopener" class="brand-link">
+            <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            <h1>Frida <span>Web Client</span></h1>
+        </a>
+        <div class="header-shortcuts">
+            <kbd>Enter</kbd> Connect
+            <kbd>Ctrl+Enter</kbd> Run Script
+            <kbd>Ctrl+Shift+K</kbd> Clear Console
+        </div>
     </header>
 
     <div class="connection-bar">
         <label for="server-url">Server</label>
         <input type="text" id="server-url" value="127.0.0.1:27042" placeholder="host:port">
+        <label for="tls-select">TLS</label>
+        <select id="tls-select">
+            <option value="disabled" selected>Off</option>
+            <option value="enabled">On</option>
+            <option value="auto">Auto</option>
+        </select>
         <label for="auth-token">Token</label>
         <input type="text" id="auth-token" placeholder="Optional">
         <button id="connect-btn" class="primary">Connect</button>
@@ -29,17 +43,17 @@
             <div class="panel-header">
                 <h2>Processes</h2>
                 <span class="badge" id="process-count">0</span>
-                <button id="refresh-btn" disabled>Refresh</button>
-                <input type="text" id="process-filter" placeholder="Filter...">
+                <button id="refresh-btn" disabled title="Refresh process list">Refresh</button>
+                <input type="text" id="process-filter" placeholder="Filter by name or PID...">
             </div>
             <div class="process-list">
                 <div class="empty-state" id="process-empty">Connect to a server to list processes</div>
                 <table class="process-table hidden" id="process-table">
                     <thead>
                         <tr>
-                            <th class="pid-col">PID</th>
-                            <th>Name</th>
-                            <th class="action-col">Action</th>
+                            <th class="pid-col sortable" data-sort="pid">PID <span class="sort-arrow"></span></th>
+                            <th class="sortable" data-sort="name">Name <span class="sort-arrow"></span></th>
+                            <th class="action-col"></th>
                         </tr>
                     </thead>
                     <tbody id="process-tbody"></tbody>
@@ -54,9 +68,28 @@
                         <button id="run-script-btn" class="primary" disabled>Run</button>
                         <button id="unload-script-btn" disabled>Unload</button>
                         <button id="detach-btn" class="danger" disabled>Detach</button>
+                        <select id="template-select">
+                            <option value="">Load template...</option>
+                            <option value="hello">Hello World</option>
+                            <option value="modules">Enumerate Modules</option>
+                            <option value="exports">Enumerate Exports</option>
+                            <option value="classes-ios">ObjC Classes (iOS)</option>
+                            <option value="classes-android">Java Classes (Android)</option>
+                            <option value="hook-func">Hook Native Function</option>
+                            <option value="hook-objc">Hook ObjC Method (iOS)</option>
+                            <option value="hook-java">Hook Java Method (Android)</option>
+                            <option value="intercept">Interceptor Attach</option>
+                            <option value="stalker">Stalker Trace</option>
+                            <option value="memory-scan">Memory Scan</option>
+                            <option value="rpc">RPC Exports</option>
+                        </select>
+                        <div class="codeshare-input">
+                            <input type="text" id="codeshare-url" placeholder="codeshare.frida.re/@user/script">
+                            <button id="codeshare-load-btn" title="Load script from Frida CodeShare">Load</button>
+                        </div>
                         <span class="session-info" id="session-info"></span>
                     </div>
-                    <textarea id="script-editor" spellcheck="false">send("Hello from Frida!");
+                    <textarea id="script-editor" spellcheck="false" placeholder="Write your Frida script here...">send("Hello from Frida!");
 
 Process.enumerateModules().forEach(m => {
   send({ name: m.name, base: m.base.toString() });
@@ -64,8 +97,10 @@ Process.enumerateModules().forEach(m => {
                 </div>
                 <div class="console-area">
                     <div class="console-toolbar">
-                        <h2 style="font-size:14px;font-weight:600;">Console</h2>
-                        <button id="clear-console-btn" style="margin-left:auto;">Clear</button>
+                        <h2>Console</h2>
+                        <span class="console-count" id="console-count"></span>
+                        <button id="export-console-btn" title="Export console output">Export</button>
+                        <button id="clear-console-btn" title="Clear console (Ctrl+Shift+K)">Clear</button>
                     </div>
                     <div id="console-output">
                         <div class="empty-state" id="console-empty">Attach to a process and run a script</div>
