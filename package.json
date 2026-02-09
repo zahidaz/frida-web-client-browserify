@@ -19,13 +19,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/frida/frida-web-client.git"
+        "url": "https://github.com/zahidaz/frida_web.git"
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/frida/frida-web-client/issues"
+        "url": "https://github.com/zahidaz/frida_web/issues"
     },
-    "homepage": "https://github.com/frida/frida-web-client#readme",
+    "homepage": "https://github.com/zahidaz/frida_web#readme",
     "publishConfig": {
         "access": "public"
     },
@@ -42,6 +42,6 @@
     },
     "dependencies": {
         "@frida/rtc-stream": "^1.0.3",
-        "dbus-next": "file:../node-dbus-next"
+        "dbus-next": "github:zahidaz/dbus-next-browserify"
     }
 }
