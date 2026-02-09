@@ -47,9 +47,9 @@ var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read fr
 var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
 var __privateSet = (obj, member, value, setter) => (__accessCheck(obj, member, "write to private field"), setter ? setter.call(obj, value) : member.set(obj, value), value);
 
-// ../node-dbus-next/node_modules/process/browser.js
+// node_modules/process/browser.js
 var require_browser = __commonJS({
-  "../node-dbus-next/node_modules/process/browser.js"(exports, module) {
+  "node_modules/process/browser.js"(exports, module) {
     init_globals();
     var process = module.exports = {};
     var cachedSetTimeout;
@@ -210,9 +210,9 @@ var require_browser = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/base64-js/index.js
+// node_modules/base64-js/index.js
 var require_base64_js = __commonJS({
-  "../node-dbus-next/node_modules/base64-js/index.js"(exports) {
+  "node_modules/base64-js/index.js"(exports) {
     "use strict";
     init_globals();
     exports.byteLength = byteLength;
@@ -312,9 +312,9 @@ var require_base64_js = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ieee754/index.js
+// node_modules/ieee754/index.js
 var require_ieee754 = __commonJS({
-  "../node-dbus-next/node_modules/ieee754/index.js"(exports) {
+  "node_modules/ieee754/index.js"(exports) {
     init_globals();
     exports.read = function(buffer, offset, isLE, mLen, nBytes) {
       var e, m;
@@ -396,9 +396,9 @@ var require_ieee754 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/buffer/index.js
+// node_modules/buffer/index.js
 var require_buffer = __commonJS({
-  "../node-dbus-next/node_modules/buffer/index.js"(exports) {
+  "node_modules/buffer/index.js"(exports) {
     "use strict";
     init_globals();
     var base64 = require_base64_js();
@@ -1989,18 +1989,18 @@ var require_buffer = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/shims/globals.js
+// node_modules/dbus-next/lib/shims/globals.js
 var import_process, import_buffer;
 var init_globals = __esm({
-  "../node-dbus-next/lib/shims/globals.js"() {
+  "node_modules/dbus-next/lib/shims/globals.js"() {
     import_process = __toESM(require_browser());
     import_buffer = __toESM(require_buffer());
   }
 });
 
-// ../node-dbus-next/node_modules/jsbi/dist/jsbi-umd.js
+// node_modules/jsbi/dist/jsbi-umd.js
 var require_jsbi_umd = __commonJS({
-  "../node-dbus-next/node_modules/jsbi/dist/jsbi-umd.js"(exports, module) {
+  "node_modules/jsbi/dist/jsbi-umd.js"(exports, module) {
     init_globals();
     (function(a, b) {
       "object" == typeof exports && "undefined" != typeof module ? module.exports = b() : "function" == typeof define && define.amd ? define(b) : a.JSBI = b();
@@ -2960,9 +2960,9 @@ var require_jsbi_umd = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/constants.js
+// node_modules/dbus-next/lib/constants.js
 var require_constants = __commonJS({
-  "../node-dbus-next/lib/constants.js"(exports, module) {
+  "node_modules/dbus-next/lib/constants.js"(exports, module) {
     init_globals();
     var NameFlag = class {
     };
@@ -3075,9 +3075,9 @@ var require_constants = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/events/events.js
+// node_modules/events/events.js
 var require_events = __commonJS({
-  "../node-dbus-next/node_modules/events/events.js"(exports, module) {
+  "node_modules/events/events.js"(exports, module) {
     "use strict";
     init_globals();
     var R = typeof Reflect === "object" ? Reflect : null;
@@ -3445,9 +3445,9 @@ var require_events = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/shims/fs.js
+// node_modules/dbus-next/lib/shims/fs.js
 var require_fs = __commonJS({
-  "../node-dbus-next/lib/shims/fs.js"(exports, module) {
+  "node_modules/dbus-next/lib/shims/fs.js"(exports, module) {
     init_globals();
     var err = new Error("fs not available in browser");
     module.exports = {
@@ -3468,9 +3468,9 @@ var require_fs = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/variant.js
+// node_modules/dbus-next/lib/variant.js
 var require_variant = __commonJS({
-  "../node-dbus-next/lib/variant.js"(exports, module) {
+  "node_modules/dbus-next/lib/variant.js"(exports, module) {
     init_globals();
     var Variant3 = class {
       /**
@@ -3489,9 +3489,9 @@ var require_variant = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/validators.js
+// node_modules/dbus-next/lib/validators.js
 var require_validators = __commonJS({
-  "../node-dbus-next/lib/validators.js"(exports, module) {
+  "node_modules/dbus-next/lib/validators.js"(exports, module) {
     init_globals();
     var busNameRe = /^[A-Za-z_-][A-Za-z0-9_-]*$/;
     function isBusNameValid(name) {
@@ -3547,9 +3547,9 @@ var require_validators = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/message-type.js
+// node_modules/dbus-next/lib/message-type.js
 var require_message_type = __commonJS({
-  "../node-dbus-next/lib/message-type.js"(exports, module) {
+  "node_modules/dbus-next/lib/message-type.js"(exports, module) {
     init_globals();
     var {
       assertBusNameValid,
@@ -3696,9 +3696,9 @@ var require_message_type = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/signature.js
+// node_modules/dbus-next/lib/signature.js
 var require_signature = __commonJS({
-  "../node-dbus-next/lib/signature.js"(exports, module) {
+  "node_modules/dbus-next/lib/signature.js"(exports, module) {
     init_globals();
     var match = {
       "{": "}",
@@ -3776,9 +3776,9 @@ var require_signature = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/service/interface.js
+// node_modules/dbus-next/lib/service/interface.js
 var require_interface = __commonJS({
-  "../node-dbus-next/lib/service/interface.js"(exports, module) {
+  "node_modules/dbus-next/lib/service/interface.js"(exports, module) {
     init_globals();
     var { parseSignature, collapseSignature } = require_signature();
     var variant = require_variant();
@@ -4107,9 +4107,9 @@ var require_interface = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/errors.js
+// node_modules/dbus-next/lib/errors.js
 var require_errors = __commonJS({
-  "../node-dbus-next/lib/errors.js"(exports, module) {
+  "node_modules/dbus-next/lib/errors.js"(exports, module) {
     init_globals();
     var { assertInterfaceNameValid } = require_validators();
     var DBusError = class extends Error {
@@ -4132,9 +4132,9 @@ var require_errors = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/service/handlers.js
+// node_modules/dbus-next/lib/service/handlers.js
 var require_handlers = __commonJS({
-  "../node-dbus-next/lib/service/handlers.js"(exports, module) {
+  "node_modules/dbus-next/lib/service/handlers.js"(exports, module) {
     init_globals();
     var fs = require_fs();
     var variant = require_variant();
@@ -4428,9 +4428,9 @@ ${e.stack}`);
   }
 });
 
-// ../node-dbus-next/lib/service/object.js
+// node_modules/dbus-next/lib/service/object.js
 var require_object = __commonJS({
-  "../node-dbus-next/lib/service/object.js"(exports, module) {
+  "node_modules/dbus-next/lib/service/object.js"(exports, module) {
     init_globals();
     var { Message } = require_message_type();
     var Interface = require_interface().Interface;
@@ -4580,9 +4580,9 @@ var require_object = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xml2js/lib/defaults.js
+// node_modules/xml2js/lib/defaults.js
 var require_defaults = __commonJS({
-  "../node-dbus-next/node_modules/xml2js/lib/defaults.js"(exports) {
+  "node_modules/xml2js/lib/defaults.js"(exports) {
     init_globals();
     (function() {
       exports.defaults = {
@@ -4657,9 +4657,9 @@ var require_defaults = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/Utility.js
+// node_modules/xmlbuilder/lib/Utility.js
 var require_Utility = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/Utility.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/Utility.js"(exports, module) {
     init_globals();
     (function() {
       var assign, getValue, isArray, isEmpty, isFunction, isObject, isPlainObject, slice = [].slice, hasProp = {}.hasOwnProperty;
@@ -4729,9 +4729,9 @@ var require_Utility = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDOMImplementation.js
+// node_modules/xmlbuilder/lib/XMLDOMImplementation.js
 var require_XMLDOMImplementation = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDOMImplementation.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDOMImplementation.js"(exports, module) {
     init_globals();
     (function() {
       var XMLDOMImplementation;
@@ -4759,9 +4759,9 @@ var require_XMLDOMImplementation = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDOMErrorHandler.js
+// node_modules/xmlbuilder/lib/XMLDOMErrorHandler.js
 var require_XMLDOMErrorHandler = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDOMErrorHandler.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDOMErrorHandler.js"(exports, module) {
     init_globals();
     (function() {
       var XMLDOMErrorHandler;
@@ -4777,9 +4777,9 @@ var require_XMLDOMErrorHandler = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDOMStringList.js
+// node_modules/xmlbuilder/lib/XMLDOMStringList.js
 var require_XMLDOMStringList = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDOMStringList.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDOMStringList.js"(exports, module) {
     init_globals();
     (function() {
       var XMLDOMStringList;
@@ -4804,9 +4804,9 @@ var require_XMLDOMStringList = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDOMConfiguration.js
+// node_modules/xmlbuilder/lib/XMLDOMConfiguration.js
 var require_XMLDOMConfiguration = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDOMConfiguration.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDOMConfiguration.js"(exports, module) {
     init_globals();
     (function() {
       var XMLDOMConfiguration, XMLDOMErrorHandler, XMLDOMStringList;
@@ -4864,9 +4864,9 @@ var require_XMLDOMConfiguration = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/NodeType.js
+// node_modules/xmlbuilder/lib/NodeType.js
 var require_NodeType = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/NodeType.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/NodeType.js"(exports, module) {
     init_globals();
     (function() {
       module.exports = {
@@ -4892,9 +4892,9 @@ var require_NodeType = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLAttribute.js
+// node_modules/xmlbuilder/lib/XMLAttribute.js
 var require_XMLAttribute = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLAttribute.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLAttribute.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLAttribute, XMLNode;
@@ -4989,9 +4989,9 @@ var require_XMLAttribute = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLNamedNodeMap.js
+// node_modules/xmlbuilder/lib/XMLNamedNodeMap.js
 var require_XMLNamedNodeMap = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLNamedNodeMap.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLNamedNodeMap.js"(exports, module) {
     init_globals();
     (function() {
       var XMLNamedNodeMap;
@@ -5040,9 +5040,9 @@ var require_XMLNamedNodeMap = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLElement.js
+// node_modules/xmlbuilder/lib/XMLElement.js
 var require_XMLElement = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLElement.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLElement.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLAttribute, XMLElement, XMLNamedNodeMap, XMLNode, getValue, isFunction, isObject, ref, extend = function(child, parent) {
@@ -5308,9 +5308,9 @@ var require_XMLElement = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLCharacterData.js
+// node_modules/xmlbuilder/lib/XMLCharacterData.js
 var require_XMLCharacterData = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLCharacterData.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLCharacterData.js"(exports, module) {
     init_globals();
     (function() {
       var XMLCharacterData, XMLNode, extend = function(child, parent) {
@@ -5386,9 +5386,9 @@ var require_XMLCharacterData = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLCData.js
+// node_modules/xmlbuilder/lib/XMLCData.js
 var require_XMLCData = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLCData.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLCData.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLCData, XMLCharacterData, extend = function(child, parent) {
@@ -5428,9 +5428,9 @@ var require_XMLCData = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLComment.js
+// node_modules/xmlbuilder/lib/XMLComment.js
 var require_XMLComment = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLComment.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLComment.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLCharacterData, XMLComment, extend = function(child, parent) {
@@ -5470,9 +5470,9 @@ var require_XMLComment = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDeclaration.js
+// node_modules/xmlbuilder/lib/XMLDeclaration.js
 var require_XMLDeclaration = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDeclaration.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDeclaration.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLDeclaration, XMLNode, isObject, extend = function(child, parent) {
@@ -5519,9 +5519,9 @@ var require_XMLDeclaration = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDTDAttList.js
+// node_modules/xmlbuilder/lib/XMLDTDAttList.js
 var require_XMLDTDAttList = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDTDAttList.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDTDAttList.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLDTDAttList, XMLNode, extend = function(child, parent) {
@@ -5581,9 +5581,9 @@ var require_XMLDTDAttList = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDTDEntity.js
+// node_modules/xmlbuilder/lib/XMLDTDEntity.js
 var require_XMLDTDEntity = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDTDEntity.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDTDEntity.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLDTDEntity, XMLNode, isObject, extend = function(child, parent) {
@@ -5678,9 +5678,9 @@ var require_XMLDTDEntity = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDTDElement.js
+// node_modules/xmlbuilder/lib/XMLDTDElement.js
 var require_XMLDTDElement = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDTDElement.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDTDElement.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLDTDElement, XMLNode, extend = function(child, parent) {
@@ -5723,9 +5723,9 @@ var require_XMLDTDElement = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDTDNotation.js
+// node_modules/xmlbuilder/lib/XMLDTDNotation.js
 var require_XMLDTDNotation = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDTDNotation.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDTDNotation.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLDTDNotation, XMLNode, extend = function(child, parent) {
@@ -5780,9 +5780,9 @@ var require_XMLDTDNotation = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDocType.js
+// node_modules/xmlbuilder/lib/XMLDocType.js
 var require_XMLDocType = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDocType.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDocType.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDocType, XMLNamedNodeMap, XMLNode, isObject, extend = function(child, parent) {
@@ -5950,9 +5950,9 @@ var require_XMLDocType = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLRaw.js
+// node_modules/xmlbuilder/lib/XMLRaw.js
 var require_XMLRaw = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLRaw.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLRaw.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLNode, XMLRaw, extend = function(child, parent) {
@@ -5991,9 +5991,9 @@ var require_XMLRaw = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLText.js
+// node_modules/xmlbuilder/lib/XMLText.js
 var require_XMLText = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLText.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLText.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLCharacterData, XMLText, extend = function(child, parent) {
@@ -6062,9 +6062,9 @@ var require_XMLText = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLProcessingInstruction.js
+// node_modules/xmlbuilder/lib/XMLProcessingInstruction.js
 var require_XMLProcessingInstruction = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLProcessingInstruction.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLProcessingInstruction.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLCharacterData, XMLProcessingInstruction, extend = function(child, parent) {
@@ -6116,9 +6116,9 @@ var require_XMLProcessingInstruction = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDummy.js
+// node_modules/xmlbuilder/lib/XMLDummy.js
 var require_XMLDummy = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDummy.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDummy.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLDummy, XMLNode, extend = function(child, parent) {
@@ -6153,9 +6153,9 @@ var require_XMLDummy = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLNodeList.js
+// node_modules/xmlbuilder/lib/XMLNodeList.js
 var require_XMLNodeList = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLNodeList.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLNodeList.js"(exports, module) {
     init_globals();
     (function() {
       var XMLNodeList;
@@ -6180,9 +6180,9 @@ var require_XMLNodeList = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/DocumentPosition.js
+// node_modules/xmlbuilder/lib/DocumentPosition.js
 var require_DocumentPosition = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/DocumentPosition.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/DocumentPosition.js"(exports, module) {
     init_globals();
     (function() {
       module.exports = {
@@ -6197,9 +6197,9 @@ var require_DocumentPosition = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLNode.js
+// node_modules/xmlbuilder/lib/XMLNode.js
 var require_XMLNode = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLNode.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLNode.js"(exports, module) {
     init_globals();
     (function() {
       var DocumentPosition, NodeType, XMLCData, XMLComment, XMLDeclaration, XMLDocType, XMLDummy, XMLElement, XMLNamedNodeMap, XMLNode, XMLNodeList, XMLProcessingInstruction, XMLRaw, XMLText, getValue, isEmpty, isFunction, isObject, ref1, hasProp = {}.hasOwnProperty;
@@ -6891,9 +6891,9 @@ var require_XMLNode = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLStringifier.js
+// node_modules/xmlbuilder/lib/XMLStringifier.js
 var require_XMLStringifier = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLStringifier.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLStringifier.js"(exports, module) {
     init_globals();
     (function() {
       var XMLStringifier, bind = function(fn, me) {
@@ -7107,9 +7107,9 @@ var require_XMLStringifier = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/WriterState.js
+// node_modules/xmlbuilder/lib/WriterState.js
 var require_WriterState = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/WriterState.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/WriterState.js"(exports, module) {
     init_globals();
     (function() {
       module.exports = {
@@ -7122,9 +7122,9 @@ var require_WriterState = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLWriterBase.js
+// node_modules/xmlbuilder/lib/XMLWriterBase.js
 var require_XMLWriterBase = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLWriterBase.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLWriterBase.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, WriterState, XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLDummy, XMLElement, XMLProcessingInstruction, XMLRaw, XMLText, XMLWriterBase, assign, hasProp = {}.hasOwnProperty;
@@ -7518,9 +7518,9 @@ var require_XMLWriterBase = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLStringWriter.js
+// node_modules/xmlbuilder/lib/XMLStringWriter.js
 var require_XMLStringWriter = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLStringWriter.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLStringWriter.js"(exports, module) {
     init_globals();
     (function() {
       var XMLStringWriter, XMLWriterBase, extend = function(child, parent) {
@@ -7561,9 +7561,9 @@ var require_XMLStringWriter = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDocument.js
+// node_modules/xmlbuilder/lib/XMLDocument.js
 var require_XMLDocument = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDocument.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDocument.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, XMLDOMConfiguration, XMLDOMImplementation, XMLDocument, XMLNode, XMLStringWriter, XMLStringifier, isPlainObject, extend = function(child, parent) {
@@ -7769,9 +7769,9 @@ var require_XMLDocument = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLDocumentCB.js
+// node_modules/xmlbuilder/lib/XMLDocumentCB.js
 var require_XMLDocumentCB = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLDocumentCB.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLDocumentCB.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, WriterState, XMLAttribute, XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLDocument, XMLDocumentCB, XMLElement, XMLProcessingInstruction, XMLRaw, XMLStringWriter, XMLStringifier, XMLText, getValue, isFunction, isObject, isPlainObject, ref, hasProp = {}.hasOwnProperty;
@@ -8236,9 +8236,9 @@ var require_XMLDocumentCB = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/XMLStreamWriter.js
+// node_modules/xmlbuilder/lib/XMLStreamWriter.js
 var require_XMLStreamWriter = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/XMLStreamWriter.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/XMLStreamWriter.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, WriterState, XMLStreamWriter, XMLWriterBase, extend = function(child, parent) {
@@ -8404,9 +8404,9 @@ var require_XMLStreamWriter = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xmlbuilder/lib/index.js
+// node_modules/xmlbuilder/lib/index.js
 var require_lib = __commonJS({
-  "../node-dbus-next/node_modules/xmlbuilder/lib/index.js"(exports, module) {
+  "node_modules/xmlbuilder/lib/index.js"(exports, module) {
     init_globals();
     (function() {
       var NodeType, WriterState, XMLDOMImplementation, XMLDocument, XMLDocumentCB, XMLStreamWriter, XMLStringWriter, assign, isFunction, ref;
@@ -8459,9 +8459,9 @@ var require_lib = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xml2js/lib/builder.js
+// node_modules/xml2js/lib/builder.js
 var require_builder = __commonJS({
-  "../node-dbus-next/node_modules/xml2js/lib/builder.js"(exports) {
+  "node_modules/xml2js/lib/builder.js"(exports) {
     init_globals();
     (function() {
       "use strict";
@@ -8581,376 +8581,6 @@ var require_builder = __commonJS({
   }
 });
 
-// node_modules/events/events.js
-var require_events2 = __commonJS({
-  "node_modules/events/events.js"(exports, module) {
-    "use strict";
-    init_globals();
-    var R = typeof Reflect === "object" ? Reflect : null;
-    var ReflectApply = R && typeof R.apply === "function" ? R.apply : function ReflectApply2(target, receiver, args) {
-      return Function.prototype.apply.call(target, receiver, args);
-    };
-    var ReflectOwnKeys;
-    if (R && typeof R.ownKeys === "function") {
-      ReflectOwnKeys = R.ownKeys;
-    } else if (Object.getOwnPropertySymbols) {
-      ReflectOwnKeys = function ReflectOwnKeys2(target) {
-        return Object.getOwnPropertyNames(target).concat(Object.getOwnPropertySymbols(target));
-      };
-    } else {
-      ReflectOwnKeys = function ReflectOwnKeys2(target) {
-        return Object.getOwnPropertyNames(target);
-      };
-    }
-    function ProcessEmitWarning(warning) {
-      if (console && console.warn) console.warn(warning);
-    }
-    var NumberIsNaN = Number.isNaN || function NumberIsNaN2(value) {
-      return value !== value;
-    };
-    function EventEmitter3() {
-      EventEmitter3.init.call(this);
-    }
-    module.exports = EventEmitter3;
-    module.exports.once = once;
-    EventEmitter3.EventEmitter = EventEmitter3;
-    EventEmitter3.prototype._events = void 0;
-    EventEmitter3.prototype._eventsCount = 0;
-    EventEmitter3.prototype._maxListeners = void 0;
-    var defaultMaxListeners = 10;
-    function checkListener(listener) {
-      if (typeof listener !== "function") {
-        throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
-      }
-    }
-    Object.defineProperty(EventEmitter3, "defaultMaxListeners", {
-      enumerable: true,
-      get: function() {
-        return defaultMaxListeners;
-      },
-      set: function(arg) {
-        if (typeof arg !== "number" || arg < 0 || NumberIsNaN(arg)) {
-          throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + ".");
-        }
-        defaultMaxListeners = arg;
-      }
-    });
-    EventEmitter3.init = function() {
-      if (this._events === void 0 || this._events === Object.getPrototypeOf(this)._events) {
-        this._events = /* @__PURE__ */ Object.create(null);
-        this._eventsCount = 0;
-      }
-      this._maxListeners = this._maxListeners || void 0;
-    };
-    EventEmitter3.prototype.setMaxListeners = function setMaxListeners(n) {
-      if (typeof n !== "number" || n < 0 || NumberIsNaN(n)) {
-        throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + ".");
-      }
-      this._maxListeners = n;
-      return this;
-    };
-    function _getMaxListeners(that) {
-      if (that._maxListeners === void 0)
-        return EventEmitter3.defaultMaxListeners;
-      return that._maxListeners;
-    }
-    EventEmitter3.prototype.getMaxListeners = function getMaxListeners() {
-      return _getMaxListeners(this);
-    };
-    EventEmitter3.prototype.emit = function emit(type) {
-      var args = [];
-      for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
-      var doError = type === "error";
-      var events = this._events;
-      if (events !== void 0)
-        doError = doError && events.error === void 0;
-      else if (!doError)
-        return false;
-      if (doError) {
-        var er;
-        if (args.length > 0)
-          er = args[0];
-        if (er instanceof Error) {
-          throw er;
-        }
-        var err = new Error("Unhandled error." + (er ? " (" + er.message + ")" : ""));
-        err.context = er;
-        throw err;
-      }
-      var handler = events[type];
-      if (handler === void 0)
-        return false;
-      if (typeof handler === "function") {
-        ReflectApply(handler, this, args);
-      } else {
-        var len = handler.length;
-        var listeners = arrayClone(handler, len);
-        for (var i = 0; i < len; ++i)
-          ReflectApply(listeners[i], this, args);
-      }
-      return true;
-    };
-    function _addListener(target, type, listener, prepend) {
-      var m;
-      var events;
-      var existing;
-      checkListener(listener);
-      events = target._events;
-      if (events === void 0) {
-        events = target._events = /* @__PURE__ */ Object.create(null);
-        target._eventsCount = 0;
-      } else {
-        if (events.newListener !== void 0) {
-          target.emit(
-            "newListener",
-            type,
-            listener.listener ? listener.listener : listener
-          );
-          events = target._events;
-        }
-        existing = events[type];
-      }
-      if (existing === void 0) {
-        existing = events[type] = listener;
-        ++target._eventsCount;
-      } else {
-        if (typeof existing === "function") {
-          existing = events[type] = prepend ? [listener, existing] : [existing, listener];
-        } else if (prepend) {
-          existing.unshift(listener);
-        } else {
-          existing.push(listener);
-        }
-        m = _getMaxListeners(target);
-        if (m > 0 && existing.length > m && !existing.warned) {
-          existing.warned = true;
-          var w = new Error("Possible EventEmitter memory leak detected. " + existing.length + " " + String(type) + " listeners added. Use emitter.setMaxListeners() to increase limit");
-          w.name = "MaxListenersExceededWarning";
-          w.emitter = target;
-          w.type = type;
-          w.count = existing.length;
-          ProcessEmitWarning(w);
-        }
-      }
-      return target;
-    }
-    EventEmitter3.prototype.addListener = function addListener(type, listener) {
-      return _addListener(this, type, listener, false);
-    };
-    EventEmitter3.prototype.on = EventEmitter3.prototype.addListener;
-    EventEmitter3.prototype.prependListener = function prependListener(type, listener) {
-      return _addListener(this, type, listener, true);
-    };
-    function onceWrapper() {
-      if (!this.fired) {
-        this.target.removeListener(this.type, this.wrapFn);
-        this.fired = true;
-        if (arguments.length === 0)
-          return this.listener.call(this.target);
-        return this.listener.apply(this.target, arguments);
-      }
-    }
-    function _onceWrap(target, type, listener) {
-      var state = { fired: false, wrapFn: void 0, target, type, listener };
-      var wrapped = onceWrapper.bind(state);
-      wrapped.listener = listener;
-      state.wrapFn = wrapped;
-      return wrapped;
-    }
-    EventEmitter3.prototype.once = function once2(type, listener) {
-      checkListener(listener);
-      this.on(type, _onceWrap(this, type, listener));
-      return this;
-    };
-    EventEmitter3.prototype.prependOnceListener = function prependOnceListener(type, listener) {
-      checkListener(listener);
-      this.prependListener(type, _onceWrap(this, type, listener));
-      return this;
-    };
-    EventEmitter3.prototype.removeListener = function removeListener(type, listener) {
-      var list, events, position, i, originalListener;
-      checkListener(listener);
-      events = this._events;
-      if (events === void 0)
-        return this;
-      list = events[type];
-      if (list === void 0)
-        return this;
-      if (list === listener || list.listener === listener) {
-        if (--this._eventsCount === 0)
-          this._events = /* @__PURE__ */ Object.create(null);
-        else {
-          delete events[type];
-          if (events.removeListener)
-            this.emit("removeListener", type, list.listener || listener);
-        }
-      } else if (typeof list !== "function") {
-        position = -1;
-        for (i = list.length - 1; i >= 0; i--) {
-          if (list[i] === listener || list[i].listener === listener) {
-            originalListener = list[i].listener;
-            position = i;
-            break;
-          }
-        }
-        if (position < 0)
-          return this;
-        if (position === 0)
-          list.shift();
-        else {
-          spliceOne(list, position);
-        }
-        if (list.length === 1)
-          events[type] = list[0];
-        if (events.removeListener !== void 0)
-          this.emit("removeListener", type, originalListener || listener);
-      }
-      return this;
-    };
-    EventEmitter3.prototype.off = EventEmitter3.prototype.removeListener;
-    EventEmitter3.prototype.removeAllListeners = function removeAllListeners(type) {
-      var listeners, events, i;
-      events = this._events;
-      if (events === void 0)
-        return this;
-      if (events.removeListener === void 0) {
-        if (arguments.length === 0) {
-          this._events = /* @__PURE__ */ Object.create(null);
-          this._eventsCount = 0;
-        } else if (events[type] !== void 0) {
-          if (--this._eventsCount === 0)
-            this._events = /* @__PURE__ */ Object.create(null);
-          else
-            delete events[type];
-        }
-        return this;
-      }
-      if (arguments.length === 0) {
-        var keys = Object.keys(events);
-        var key;
-        for (i = 0; i < keys.length; ++i) {
-          key = keys[i];
-          if (key === "removeListener") continue;
-          this.removeAllListeners(key);
-        }
-        this.removeAllListeners("removeListener");
-        this._events = /* @__PURE__ */ Object.create(null);
-        this._eventsCount = 0;
-        return this;
-      }
-      listeners = events[type];
-      if (typeof listeners === "function") {
-        this.removeListener(type, listeners);
-      } else if (listeners !== void 0) {
-        for (i = listeners.length - 1; i >= 0; i--) {
-          this.removeListener(type, listeners[i]);
-        }
-      }
-      return this;
-    };
-    function _listeners(target, type, unwrap) {
-      var events = target._events;
-      if (events === void 0)
-        return [];
-      var evlistener = events[type];
-      if (evlistener === void 0)
-        return [];
-      if (typeof evlistener === "function")
-        return unwrap ? [evlistener.listener || evlistener] : [evlistener];
-      return unwrap ? unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
-    }
-    EventEmitter3.prototype.listeners = function listeners(type) {
-      return _listeners(this, type, true);
-    };
-    EventEmitter3.prototype.rawListeners = function rawListeners(type) {
-      return _listeners(this, type, false);
-    };
-    EventEmitter3.listenerCount = function(emitter, type) {
-      if (typeof emitter.listenerCount === "function") {
-        return emitter.listenerCount(type);
-      } else {
-        return listenerCount.call(emitter, type);
-      }
-    };
-    EventEmitter3.prototype.listenerCount = listenerCount;
-    function listenerCount(type) {
-      var events = this._events;
-      if (events !== void 0) {
-        var evlistener = events[type];
-        if (typeof evlistener === "function") {
-          return 1;
-        } else if (evlistener !== void 0) {
-          return evlistener.length;
-        }
-      }
-      return 0;
-    }
-    EventEmitter3.prototype.eventNames = function eventNames() {
-      return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
-    };
-    function arrayClone(arr, n) {
-      var copy = new Array(n);
-      for (var i = 0; i < n; ++i)
-        copy[i] = arr[i];
-      return copy;
-    }
-    function spliceOne(list, index) {
-      for (; index + 1 < list.length; index++)
-        list[index] = list[index + 1];
-      list.pop();
-    }
-    function unwrapListeners(arr) {
-      var ret = new Array(arr.length);
-      for (var i = 0; i < ret.length; ++i) {
-        ret[i] = arr[i].listener || arr[i];
-      }
-      return ret;
-    }
-    function once(emitter, name) {
-      return new Promise(function(resolve, reject) {
-        function errorListener(err) {
-          emitter.removeListener(name, resolver);
-          reject(err);
-        }
-        function resolver() {
-          if (typeof emitter.removeListener === "function") {
-            emitter.removeListener("error", errorListener);
-          }
-          resolve([].slice.call(arguments));
-        }
-        ;
-        eventTargetAgnosticAddListener(emitter, name, resolver, { once: true });
-        if (name !== "error") {
-          addErrorHandlerIfEventEmitter(emitter, errorListener, { once: true });
-        }
-      });
-    }
-    function addErrorHandlerIfEventEmitter(emitter, handler, flags) {
-      if (typeof emitter.on === "function") {
-        eventTargetAgnosticAddListener(emitter, "error", handler, flags);
-      }
-    }
-    function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
-      if (typeof emitter.on === "function") {
-        if (flags.once) {
-          emitter.once(name, listener);
-        } else {
-          emitter.on(name, listener);
-        }
-      } else if (typeof emitter.addEventListener === "function") {
-        emitter.addEventListener(name, function wrapListener(arg) {
-          if (flags.once) {
-            emitter.removeEventListener(name, wrapListener);
-          }
-          listener(arg);
-        });
-      } else {
-        throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
-      }
-    }
-  }
-});
-
 // node_modules/inherits/inherits_browser.js
 var require_inherits_browser = __commonJS({
   "node_modules/inherits/inherits_browser.js"(exports, module) {
@@ -8988,1786 +8618,7 @@ var require_inherits_browser = __commonJS({
 var require_stream_browser = __commonJS({
   "node_modules/readable-stream/lib/internal/streams/stream-browser.js"(exports, module) {
     init_globals();
-    module.exports = require_events2().EventEmitter;
-  }
-});
-
-// node_modules/base64-js/index.js
-var require_base64_js2 = __commonJS({
-  "node_modules/base64-js/index.js"(exports) {
-    "use strict";
-    init_globals();
-    exports.byteLength = byteLength;
-    exports.toByteArray = toByteArray;
-    exports.fromByteArray = fromByteArray;
-    var lookup = [];
-    var revLookup = [];
-    var Arr = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
-    var code = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-    for (i = 0, len = code.length; i < len; ++i) {
-      lookup[i] = code[i];
-      revLookup[code.charCodeAt(i)] = i;
-    }
-    var i;
-    var len;
-    revLookup["-".charCodeAt(0)] = 62;
-    revLookup["_".charCodeAt(0)] = 63;
-    function getLens(b64) {
-      var len2 = b64.length;
-      if (len2 % 4 > 0) {
-        throw new Error("Invalid string. Length must be a multiple of 4");
-      }
-      var validLen = b64.indexOf("=");
-      if (validLen === -1) validLen = len2;
-      var placeHoldersLen = validLen === len2 ? 0 : 4 - validLen % 4;
-      return [validLen, placeHoldersLen];
-    }
-    function byteLength(b64) {
-      var lens = getLens(b64);
-      var validLen = lens[0];
-      var placeHoldersLen = lens[1];
-      return (validLen + placeHoldersLen) * 3 / 4 - placeHoldersLen;
-    }
-    function _byteLength(b64, validLen, placeHoldersLen) {
-      return (validLen + placeHoldersLen) * 3 / 4 - placeHoldersLen;
-    }
-    function toByteArray(b64) {
-      var tmp;
-      var lens = getLens(b64);
-      var validLen = lens[0];
-      var placeHoldersLen = lens[1];
-      var arr = new Arr(_byteLength(b64, validLen, placeHoldersLen));
-      var curByte = 0;
-      var len2 = placeHoldersLen > 0 ? validLen - 4 : validLen;
-      var i2;
-      for (i2 = 0; i2 < len2; i2 += 4) {
-        tmp = revLookup[b64.charCodeAt(i2)] << 18 | revLookup[b64.charCodeAt(i2 + 1)] << 12 | revLookup[b64.charCodeAt(i2 + 2)] << 6 | revLookup[b64.charCodeAt(i2 + 3)];
-        arr[curByte++] = tmp >> 16 & 255;
-        arr[curByte++] = tmp >> 8 & 255;
-        arr[curByte++] = tmp & 255;
-      }
-      if (placeHoldersLen === 2) {
-        tmp = revLookup[b64.charCodeAt(i2)] << 2 | revLookup[b64.charCodeAt(i2 + 1)] >> 4;
-        arr[curByte++] = tmp & 255;
-      }
-      if (placeHoldersLen === 1) {
-        tmp = revLookup[b64.charCodeAt(i2)] << 10 | revLookup[b64.charCodeAt(i2 + 1)] << 4 | revLookup[b64.charCodeAt(i2 + 2)] >> 2;
-        arr[curByte++] = tmp >> 8 & 255;
-        arr[curByte++] = tmp & 255;
-      }
-      return arr;
-    }
-    function tripletToBase64(num) {
-      return lookup[num >> 18 & 63] + lookup[num >> 12 & 63] + lookup[num >> 6 & 63] + lookup[num & 63];
-    }
-    function encodeChunk(uint8, start, end) {
-      var tmp;
-      var output = [];
-      for (var i2 = start; i2 < end; i2 += 3) {
-        tmp = (uint8[i2] << 16 & 16711680) + (uint8[i2 + 1] << 8 & 65280) + (uint8[i2 + 2] & 255);
-        output.push(tripletToBase64(tmp));
-      }
-      return output.join("");
-    }
-    function fromByteArray(uint8) {
-      var tmp;
-      var len2 = uint8.length;
-      var extraBytes = len2 % 3;
-      var parts = [];
-      var maxChunkLength = 16383;
-      for (var i2 = 0, len22 = len2 - extraBytes; i2 < len22; i2 += maxChunkLength) {
-        parts.push(encodeChunk(uint8, i2, i2 + maxChunkLength > len22 ? len22 : i2 + maxChunkLength));
-      }
-      if (extraBytes === 1) {
-        tmp = uint8[len2 - 1];
-        parts.push(
-          lookup[tmp >> 2] + lookup[tmp << 4 & 63] + "=="
-        );
-      } else if (extraBytes === 2) {
-        tmp = (uint8[len2 - 2] << 8) + uint8[len2 - 1];
-        parts.push(
-          lookup[tmp >> 10] + lookup[tmp >> 4 & 63] + lookup[tmp << 2 & 63] + "="
-        );
-      }
-      return parts.join("");
-    }
-  }
-});
-
-// node_modules/ieee754/index.js
-var require_ieee7542 = __commonJS({
-  "node_modules/ieee754/index.js"(exports) {
-    init_globals();
-    exports.read = function(buffer, offset, isLE, mLen, nBytes) {
-      var e, m;
-      var eLen = nBytes * 8 - mLen - 1;
-      var eMax = (1 << eLen) - 1;
-      var eBias = eMax >> 1;
-      var nBits = -7;
-      var i = isLE ? nBytes - 1 : 0;
-      var d = isLE ? -1 : 1;
-      var s = buffer[offset + i];
-      i += d;
-      e = s & (1 << -nBits) - 1;
-      s >>= -nBits;
-      nBits += eLen;
-      for (; nBits > 0; e = e * 256 + buffer[offset + i], i += d, nBits -= 8) {
-      }
-      m = e & (1 << -nBits) - 1;
-      e >>= -nBits;
-      nBits += mLen;
-      for (; nBits > 0; m = m * 256 + buffer[offset + i], i += d, nBits -= 8) {
-      }
-      if (e === 0) {
-        e = 1 - eBias;
-      } else if (e === eMax) {
-        return m ? NaN : (s ? -1 : 1) * Infinity;
-      } else {
-        m = m + Math.pow(2, mLen);
-        e = e - eBias;
-      }
-      return (s ? -1 : 1) * m * Math.pow(2, e - mLen);
-    };
-    exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
-      var e, m, c;
-      var eLen = nBytes * 8 - mLen - 1;
-      var eMax = (1 << eLen) - 1;
-      var eBias = eMax >> 1;
-      var rt = mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0;
-      var i = isLE ? 0 : nBytes - 1;
-      var d = isLE ? 1 : -1;
-      var s = value < 0 || value === 0 && 1 / value < 0 ? 1 : 0;
-      value = Math.abs(value);
-      if (isNaN(value) || value === Infinity) {
-        m = isNaN(value) ? 1 : 0;
-        e = eMax;
-      } else {
-        e = Math.floor(Math.log(value) / Math.LN2);
-        if (value * (c = Math.pow(2, -e)) < 1) {
-          e--;
-          c *= 2;
-        }
-        if (e + eBias >= 1) {
-          value += rt / c;
-        } else {
-          value += rt * Math.pow(2, 1 - eBias);
-        }
-        if (value * c >= 2) {
-          e++;
-          c /= 2;
-        }
-        if (e + eBias >= eMax) {
-          m = 0;
-          e = eMax;
-        } else if (e + eBias >= 1) {
-          m = (value * c - 1) * Math.pow(2, mLen);
-          e = e + eBias;
-        } else {
-          m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen);
-          e = 0;
-        }
-      }
-      for (; mLen >= 8; buffer[offset + i] = m & 255, i += d, m /= 256, mLen -= 8) {
-      }
-      e = e << mLen | m;
-      eLen += mLen;
-      for (; eLen > 0; buffer[offset + i] = e & 255, i += d, e /= 256, eLen -= 8) {
-      }
-      buffer[offset + i - d] |= s * 128;
-    };
-  }
-});
-
-// node_modules/buffer/index.js
-var require_buffer2 = __commonJS({
-  "node_modules/buffer/index.js"(exports) {
-    "use strict";
-    init_globals();
-    var base64 = require_base64_js2();
-    var ieee754 = require_ieee7542();
-    var customInspectSymbol = typeof Symbol === "function" && typeof Symbol["for"] === "function" ? Symbol["for"]("nodejs.util.inspect.custom") : null;
-    exports.Buffer = Buffer4;
-    exports.SlowBuffer = SlowBuffer;
-    exports.INSPECT_MAX_BYTES = 50;
-    var K_MAX_LENGTH = 2147483647;
-    exports.kMaxLength = K_MAX_LENGTH;
-    Buffer4.TYPED_ARRAY_SUPPORT = typedArraySupport();
-    if (!Buffer4.TYPED_ARRAY_SUPPORT && typeof console !== "undefined" && typeof console.error === "function") {
-      console.error(
-        "This browser lacks typed array (Uint8Array) support which is required by `buffer` v5.x. Use `buffer` v4.x if you require old browser support."
-      );
-    }
-    function typedArraySupport() {
-      try {
-        const arr = new Uint8Array(1);
-        const proto = { foo: function() {
-          return 42;
-        } };
-        Object.setPrototypeOf(proto, Uint8Array.prototype);
-        Object.setPrototypeOf(arr, proto);
-        return arr.foo() === 42;
-      } catch (e) {
-        return false;
-      }
-    }
-    Object.defineProperty(Buffer4.prototype, "parent", {
-      enumerable: true,
-      get: function() {
-        if (!Buffer4.isBuffer(this)) return void 0;
-        return this.buffer;
-      }
-    });
-    Object.defineProperty(Buffer4.prototype, "offset", {
-      enumerable: true,
-      get: function() {
-        if (!Buffer4.isBuffer(this)) return void 0;
-        return this.byteOffset;
-      }
-    });
-    function createBuffer(length) {
-      if (length > K_MAX_LENGTH) {
-        throw new RangeError('The value "' + length + '" is invalid for option "size"');
-      }
-      const buf = new Uint8Array(length);
-      Object.setPrototypeOf(buf, Buffer4.prototype);
-      return buf;
-    }
-    function Buffer4(arg, encodingOrOffset, length) {
-      if (typeof arg === "number") {
-        if (typeof encodingOrOffset === "string") {
-          throw new TypeError(
-            'The "string" argument must be of type string. Received type number'
-          );
-        }
-        return allocUnsafe(arg);
-      }
-      return from(arg, encodingOrOffset, length);
-    }
-    Buffer4.poolSize = 8192;
-    function from(value, encodingOrOffset, length) {
-      if (typeof value === "string") {
-        return fromString(value, encodingOrOffset);
-      }
-      if (ArrayBuffer.isView(value)) {
-        return fromArrayView(value);
-      }
-      if (value == null) {
-        throw new TypeError(
-          "The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof value
-        );
-      }
-      if (isInstance(value, ArrayBuffer) || value && isInstance(value.buffer, ArrayBuffer)) {
-        return fromArrayBuffer(value, encodingOrOffset, length);
-      }
-      if (typeof SharedArrayBuffer !== "undefined" && (isInstance(value, SharedArrayBuffer) || value && isInstance(value.buffer, SharedArrayBuffer))) {
-        return fromArrayBuffer(value, encodingOrOffset, length);
-      }
-      if (typeof value === "number") {
-        throw new TypeError(
-          'The "value" argument must not be of type number. Received type number'
-        );
-      }
-      const valueOf = value.valueOf && value.valueOf();
-      if (valueOf != null && valueOf !== value) {
-        return Buffer4.from(valueOf, encodingOrOffset, length);
-      }
-      const b = fromObject(value);
-      if (b) return b;
-      if (typeof Symbol !== "undefined" && Symbol.toPrimitive != null && typeof value[Symbol.toPrimitive] === "function") {
-        return Buffer4.from(value[Symbol.toPrimitive]("string"), encodingOrOffset, length);
-      }
-      throw new TypeError(
-        "The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof value
-      );
-    }
-    Buffer4.from = function(value, encodingOrOffset, length) {
-      return from(value, encodingOrOffset, length);
-    };
-    Object.setPrototypeOf(Buffer4.prototype, Uint8Array.prototype);
-    Object.setPrototypeOf(Buffer4, Uint8Array);
-    function assertSize(size) {
-      if (typeof size !== "number") {
-        throw new TypeError('"size" argument must be of type number');
-      } else if (size < 0) {
-        throw new RangeError('The value "' + size + '" is invalid for option "size"');
-      }
-    }
-    function alloc(size, fill, encoding) {
-      assertSize(size);
-      if (size <= 0) {
-        return createBuffer(size);
-      }
-      if (fill !== void 0) {
-        return typeof encoding === "string" ? createBuffer(size).fill(fill, encoding) : createBuffer(size).fill(fill);
-      }
-      return createBuffer(size);
-    }
-    Buffer4.alloc = function(size, fill, encoding) {
-      return alloc(size, fill, encoding);
-    };
-    function allocUnsafe(size) {
-      assertSize(size);
-      return createBuffer(size < 0 ? 0 : checked(size) | 0);
-    }
-    Buffer4.allocUnsafe = function(size) {
-      return allocUnsafe(size);
-    };
-    Buffer4.allocUnsafeSlow = function(size) {
-      return allocUnsafe(size);
-    };
-    function fromString(string, encoding) {
-      if (typeof encoding !== "string" || encoding === "") {
-        encoding = "utf8";
-      }
-      if (!Buffer4.isEncoding(encoding)) {
-        throw new TypeError("Unknown encoding: " + encoding);
-      }
-      const length = byteLength(string, encoding) | 0;
-      let buf = createBuffer(length);
-      const actual = buf.write(string, encoding);
-      if (actual !== length) {
-        buf = buf.slice(0, actual);
-      }
-      return buf;
-    }
-    function fromArrayLike(array) {
-      const length = array.length < 0 ? 0 : checked(array.length) | 0;
-      const buf = createBuffer(length);
-      for (let i = 0; i < length; i += 1) {
-        buf[i] = array[i] & 255;
-      }
-      return buf;
-    }
-    function fromArrayView(arrayView) {
-      if (isInstance(arrayView, Uint8Array)) {
-        const copy = new Uint8Array(arrayView);
-        return fromArrayBuffer(copy.buffer, copy.byteOffset, copy.byteLength);
-      }
-      return fromArrayLike(arrayView);
-    }
-    function fromArrayBuffer(array, byteOffset, length) {
-      if (byteOffset < 0 || array.byteLength < byteOffset) {
-        throw new RangeError('"offset" is outside of buffer bounds');
-      }
-      if (array.byteLength < byteOffset + (length || 0)) {
-        throw new RangeError('"length" is outside of buffer bounds');
-      }
-      let buf;
-      if (byteOffset === void 0 && length === void 0) {
-        buf = new Uint8Array(array);
-      } else if (length === void 0) {
-        buf = new Uint8Array(array, byteOffset);
-      } else {
-        buf = new Uint8Array(array, byteOffset, length);
-      }
-      Object.setPrototypeOf(buf, Buffer4.prototype);
-      return buf;
-    }
-    function fromObject(obj) {
-      if (Buffer4.isBuffer(obj)) {
-        const len = checked(obj.length) | 0;
-        const buf = createBuffer(len);
-        if (buf.length === 0) {
-          return buf;
-        }
-        obj.copy(buf, 0, 0, len);
-        return buf;
-      }
-      if (obj.length !== void 0) {
-        if (typeof obj.length !== "number" || numberIsNaN(obj.length)) {
-          return createBuffer(0);
-        }
-        return fromArrayLike(obj);
-      }
-      if (obj.type === "Buffer" && Array.isArray(obj.data)) {
-        return fromArrayLike(obj.data);
-      }
-    }
-    function checked(length) {
-      if (length >= K_MAX_LENGTH) {
-        throw new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + K_MAX_LENGTH.toString(16) + " bytes");
-      }
-      return length | 0;
-    }
-    function SlowBuffer(length) {
-      if (+length != length) {
-        length = 0;
-      }
-      return Buffer4.alloc(+length);
-    }
-    Buffer4.isBuffer = function isBuffer(b) {
-      return b != null && b._isBuffer === true && b !== Buffer4.prototype;
-    };
-    Buffer4.compare = function compare(a, b) {
-      if (isInstance(a, Uint8Array)) a = Buffer4.from(a, a.offset, a.byteLength);
-      if (isInstance(b, Uint8Array)) b = Buffer4.from(b, b.offset, b.byteLength);
-      if (!Buffer4.isBuffer(a) || !Buffer4.isBuffer(b)) {
-        throw new TypeError(
-          'The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array'
-        );
-      }
-      if (a === b) return 0;
-      let x = a.length;
-      let y = b.length;
-      for (let i = 0, len = Math.min(x, y); i < len; ++i) {
-        if (a[i] !== b[i]) {
-          x = a[i];
-          y = b[i];
-          break;
-        }
-      }
-      if (x < y) return -1;
-      if (y < x) return 1;
-      return 0;
-    };
-    Buffer4.isEncoding = function isEncoding(encoding) {
-      switch (String(encoding).toLowerCase()) {
-        case "hex":
-        case "utf8":
-        case "utf-8":
-        case "ascii":
-        case "latin1":
-        case "binary":
-        case "base64":
-        case "ucs2":
-        case "ucs-2":
-        case "utf16le":
-        case "utf-16le":
-          return true;
-        default:
-          return false;
-      }
-    };
-    Buffer4.concat = function concat(list, length) {
-      if (!Array.isArray(list)) {
-        throw new TypeError('"list" argument must be an Array of Buffers');
-      }
-      if (list.length === 0) {
-        return Buffer4.alloc(0);
-      }
-      let i;
-      if (length === void 0) {
-        length = 0;
-        for (i = 0; i < list.length; ++i) {
-          length += list[i].length;
-        }
-      }
-      const buffer = Buffer4.allocUnsafe(length);
-      let pos = 0;
-      for (i = 0; i < list.length; ++i) {
-        let buf = list[i];
-        if (isInstance(buf, Uint8Array)) {
-          if (pos + buf.length > buffer.length) {
-            if (!Buffer4.isBuffer(buf)) buf = Buffer4.from(buf);
-            buf.copy(buffer, pos);
-          } else {
-            Uint8Array.prototype.set.call(
-              buffer,
-              buf,
-              pos
-            );
-          }
-        } else if (!Buffer4.isBuffer(buf)) {
-          throw new TypeError('"list" argument must be an Array of Buffers');
-        } else {
-          buf.copy(buffer, pos);
-        }
-        pos += buf.length;
-      }
-      return buffer;
-    };
-    function byteLength(string, encoding) {
-      if (Buffer4.isBuffer(string)) {
-        return string.length;
-      }
-      if (ArrayBuffer.isView(string) || isInstance(string, ArrayBuffer)) {
-        return string.byteLength;
-      }
-      if (typeof string !== "string") {
-        throw new TypeError(
-          'The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type ' + typeof string
-        );
-      }
-      const len = string.length;
-      const mustMatch = arguments.length > 2 && arguments[2] === true;
-      if (!mustMatch && len === 0) return 0;
-      let loweredCase = false;
-      for (; ; ) {
-        switch (encoding) {
-          case "ascii":
-          case "latin1":
-          case "binary":
-            return len;
-          case "utf8":
-          case "utf-8":
-            return utf8ToBytes(string).length;
-          case "ucs2":
-          case "ucs-2":
-          case "utf16le":
-          case "utf-16le":
-            return len * 2;
-          case "hex":
-            return len >>> 1;
-          case "base64":
-            return base64ToBytes(string).length;
-          default:
-            if (loweredCase) {
-              return mustMatch ? -1 : utf8ToBytes(string).length;
-            }
-            encoding = ("" + encoding).toLowerCase();
-            loweredCase = true;
-        }
-      }
-    }
-    Buffer4.byteLength = byteLength;
-    function slowToString(encoding, start, end) {
-      let loweredCase = false;
-      if (start === void 0 || start < 0) {
-        start = 0;
-      }
-      if (start > this.length) {
-        return "";
-      }
-      if (end === void 0 || end > this.length) {
-        end = this.length;
-      }
-      if (end <= 0) {
-        return "";
-      }
-      end >>>= 0;
-      start >>>= 0;
-      if (end <= start) {
-        return "";
-      }
-      if (!encoding) encoding = "utf8";
-      while (true) {
-        switch (encoding) {
-          case "hex":
-            return hexSlice(this, start, end);
-          case "utf8":
-          case "utf-8":
-            return utf8Slice(this, start, end);
-          case "ascii":
-            return asciiSlice(this, start, end);
-          case "latin1":
-          case "binary":
-            return latin1Slice(this, start, end);
-          case "base64":
-            return base64Slice(this, start, end);
-          case "ucs2":
-          case "ucs-2":
-          case "utf16le":
-          case "utf-16le":
-            return utf16leSlice(this, start, end);
-          default:
-            if (loweredCase) throw new TypeError("Unknown encoding: " + encoding);
-            encoding = (encoding + "").toLowerCase();
-            loweredCase = true;
-        }
-      }
-    }
-    Buffer4.prototype._isBuffer = true;
-    function swap(b, n, m) {
-      const i = b[n];
-      b[n] = b[m];
-      b[m] = i;
-    }
-    Buffer4.prototype.swap16 = function swap16() {
-      const len = this.length;
-      if (len % 2 !== 0) {
-        throw new RangeError("Buffer size must be a multiple of 16-bits");
-      }
-      for (let i = 0; i < len; i += 2) {
-        swap(this, i, i + 1);
-      }
-      return this;
-    };
-    Buffer4.prototype.swap32 = function swap32() {
-      const len = this.length;
-      if (len % 4 !== 0) {
-        throw new RangeError("Buffer size must be a multiple of 32-bits");
-      }
-      for (let i = 0; i < len; i += 4) {
-        swap(this, i, i + 3);
-        swap(this, i + 1, i + 2);
-      }
-      return this;
-    };
-    Buffer4.prototype.swap64 = function swap64() {
-      const len = this.length;
-      if (len % 8 !== 0) {
-        throw new RangeError("Buffer size must be a multiple of 64-bits");
-      }
-      for (let i = 0; i < len; i += 8) {
-        swap(this, i, i + 7);
-        swap(this, i + 1, i + 6);
-        swap(this, i + 2, i + 5);
-        swap(this, i + 3, i + 4);
-      }
-      return this;
-    };
-    Buffer4.prototype.toString = function toString() {
-      const length = this.length;
-      if (length === 0) return "";
-      if (arguments.length === 0) return utf8Slice(this, 0, length);
-      return slowToString.apply(this, arguments);
-    };
-    Buffer4.prototype.toLocaleString = Buffer4.prototype.toString;
-    Buffer4.prototype.equals = function equals(b) {
-      if (!Buffer4.isBuffer(b)) throw new TypeError("Argument must be a Buffer");
-      if (this === b) return true;
-      return Buffer4.compare(this, b) === 0;
-    };
-    Buffer4.prototype.inspect = function inspect2() {
-      let str = "";
-      const max = exports.INSPECT_MAX_BYTES;
-      str = this.toString("hex", 0, max).replace(/(.{2})/g, "$1 ").trim();
-      if (this.length > max) str += " ... ";
-      return "<Buffer " + str + ">";
-    };
-    if (customInspectSymbol) {
-      Buffer4.prototype[customInspectSymbol] = Buffer4.prototype.inspect;
-    }
-    Buffer4.prototype.compare = function compare(target, start, end, thisStart, thisEnd) {
-      if (isInstance(target, Uint8Array)) {
-        target = Buffer4.from(target, target.offset, target.byteLength);
-      }
-      if (!Buffer4.isBuffer(target)) {
-        throw new TypeError(
-          'The "target" argument must be one of type Buffer or Uint8Array. Received type ' + typeof target
-        );
-      }
-      if (start === void 0) {
-        start = 0;
-      }
-      if (end === void 0) {
-        end = target ? target.length : 0;
-      }
-      if (thisStart === void 0) {
-        thisStart = 0;
-      }
-      if (thisEnd === void 0) {
-        thisEnd = this.length;
-      }
-      if (start < 0 || end > target.length || thisStart < 0 || thisEnd > this.length) {
-        throw new RangeError("out of range index");
-      }
-      if (thisStart >= thisEnd && start >= end) {
-        return 0;
-      }
-      if (thisStart >= thisEnd) {
-        return -1;
-      }
-      if (start >= end) {
-        return 1;
-      }
-      start >>>= 0;
-      end >>>= 0;
-      thisStart >>>= 0;
-      thisEnd >>>= 0;
-      if (this === target) return 0;
-      let x = thisEnd - thisStart;
-      let y = end - start;
-      const len = Math.min(x, y);
-      const thisCopy = this.slice(thisStart, thisEnd);
-      const targetCopy = target.slice(start, end);
-      for (let i = 0; i < len; ++i) {
-        if (thisCopy[i] !== targetCopy[i]) {
-          x = thisCopy[i];
-          y = targetCopy[i];
-          break;
-        }
-      }
-      if (x < y) return -1;
-      if (y < x) return 1;
-      return 0;
-    };
-    function bidirectionalIndexOf(buffer, val, byteOffset, encoding, dir) {
-      if (buffer.length === 0) return -1;
-      if (typeof byteOffset === "string") {
-        encoding = byteOffset;
-        byteOffset = 0;
-      } else if (byteOffset > 2147483647) {
-        byteOffset = 2147483647;
-      } else if (byteOffset < -2147483648) {
-        byteOffset = -2147483648;
-      }
-      byteOffset = +byteOffset;
-      if (numberIsNaN(byteOffset)) {
-        byteOffset = dir ? 0 : buffer.length - 1;
-      }
-      if (byteOffset < 0) byteOffset = buffer.length + byteOffset;
-      if (byteOffset >= buffer.length) {
-        if (dir) return -1;
-        else byteOffset = buffer.length - 1;
-      } else if (byteOffset < 0) {
-        if (dir) byteOffset = 0;
-        else return -1;
-      }
-      if (typeof val === "string") {
-        val = Buffer4.from(val, encoding);
-      }
-      if (Buffer4.isBuffer(val)) {
-        if (val.length === 0) {
-          return -1;
-        }
-        return arrayIndexOf(buffer, val, byteOffset, encoding, dir);
-      } else if (typeof val === "number") {
-        val = val & 255;
-        if (typeof Uint8Array.prototype.indexOf === "function") {
-          if (dir) {
-            return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset);
-          } else {
-            return Uint8Array.prototype.lastIndexOf.call(buffer, val, byteOffset);
-          }
-        }
-        return arrayIndexOf(buffer, [val], byteOffset, encoding, dir);
-      }
-      throw new TypeError("val must be string, number or Buffer");
-    }
-    function arrayIndexOf(arr, val, byteOffset, encoding, dir) {
-      let indexSize = 1;
-      let arrLength = arr.length;
-      let valLength = val.length;
-      if (encoding !== void 0) {
-        encoding = String(encoding).toLowerCase();
-        if (encoding === "ucs2" || encoding === "ucs-2" || encoding === "utf16le" || encoding === "utf-16le") {
-          if (arr.length < 2 || val.length < 2) {
-            return -1;
-          }
-          indexSize = 2;
-          arrLength /= 2;
-          valLength /= 2;
-          byteOffset /= 2;
-        }
-      }
-      function read(buf, i2) {
-        if (indexSize === 1) {
-          return buf[i2];
-        } else {
-          return buf.readUInt16BE(i2 * indexSize);
-        }
-      }
-      let i;
-      if (dir) {
-        let foundIndex = -1;
-        for (i = byteOffset; i < arrLength; i++) {
-          if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
-            if (foundIndex === -1) foundIndex = i;
-            if (i - foundIndex + 1 === valLength) return foundIndex * indexSize;
-          } else {
-            if (foundIndex !== -1) i -= i - foundIndex;
-            foundIndex = -1;
-          }
-        }
-      } else {
-        if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength;
-        for (i = byteOffset; i >= 0; i--) {
-          let found = true;
-          for (let j = 0; j < valLength; j++) {
-            if (read(arr, i + j) !== read(val, j)) {
-              found = false;
-              break;
-            }
-          }
-          if (found) return i;
-        }
-      }
-      return -1;
-    }
-    Buffer4.prototype.includes = function includes(val, byteOffset, encoding) {
-      return this.indexOf(val, byteOffset, encoding) !== -1;
-    };
-    Buffer4.prototype.indexOf = function indexOf(val, byteOffset, encoding) {
-      return bidirectionalIndexOf(this, val, byteOffset, encoding, true);
-    };
-    Buffer4.prototype.lastIndexOf = function lastIndexOf(val, byteOffset, encoding) {
-      return bidirectionalIndexOf(this, val, byteOffset, encoding, false);
-    };
-    function hexWrite(buf, string, offset, length) {
-      offset = Number(offset) || 0;
-      const remaining = buf.length - offset;
-      if (!length) {
-        length = remaining;
-      } else {
-        length = Number(length);
-        if (length > remaining) {
-          length = remaining;
-        }
-      }
-      const strLen = string.length;
-      if (length > strLen / 2) {
-        length = strLen / 2;
-      }
-      let i;
-      for (i = 0; i < length; ++i) {
-        const parsed = parseInt(string.substr(i * 2, 2), 16);
-        if (numberIsNaN(parsed)) return i;
-        buf[offset + i] = parsed;
-      }
-      return i;
-    }
-    function utf8Write(buf, string, offset, length) {
-      return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length);
-    }
-    function asciiWrite(buf, string, offset, length) {
-      return blitBuffer(asciiToBytes(string), buf, offset, length);
-    }
-    function base64Write(buf, string, offset, length) {
-      return blitBuffer(base64ToBytes(string), buf, offset, length);
-    }
-    function ucs2Write(buf, string, offset, length) {
-      return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length);
-    }
-    Buffer4.prototype.write = function write(string, offset, length, encoding) {
-      if (offset === void 0) {
-        encoding = "utf8";
-        length = this.length;
-        offset = 0;
-      } else if (length === void 0 && typeof offset === "string") {
-        encoding = offset;
-        length = this.length;
-        offset = 0;
-      } else if (isFinite(offset)) {
-        offset = offset >>> 0;
-        if (isFinite(length)) {
-          length = length >>> 0;
-          if (encoding === void 0) encoding = "utf8";
-        } else {
-          encoding = length;
-          length = void 0;
-        }
-      } else {
-        throw new Error(
-          "Buffer.write(string, encoding, offset[, length]) is no longer supported"
-        );
-      }
-      const remaining = this.length - offset;
-      if (length === void 0 || length > remaining) length = remaining;
-      if (string.length > 0 && (length < 0 || offset < 0) || offset > this.length) {
-        throw new RangeError("Attempt to write outside buffer bounds");
-      }
-      if (!encoding) encoding = "utf8";
-      let loweredCase = false;
-      for (; ; ) {
-        switch (encoding) {
-          case "hex":
-            return hexWrite(this, string, offset, length);
-          case "utf8":
-          case "utf-8":
-            return utf8Write(this, string, offset, length);
-          case "ascii":
-          case "latin1":
-          case "binary":
-            return asciiWrite(this, string, offset, length);
-          case "base64":
-            return base64Write(this, string, offset, length);
-          case "ucs2":
-          case "ucs-2":
-          case "utf16le":
-          case "utf-16le":
-            return ucs2Write(this, string, offset, length);
-          default:
-            if (loweredCase) throw new TypeError("Unknown encoding: " + encoding);
-            encoding = ("" + encoding).toLowerCase();
-            loweredCase = true;
-        }
-      }
-    };
-    Buffer4.prototype.toJSON = function toJSON() {
-      return {
-        type: "Buffer",
-        data: Array.prototype.slice.call(this._arr || this, 0)
-      };
-    };
-    function base64Slice(buf, start, end) {
-      if (start === 0 && end === buf.length) {
-        return base64.fromByteArray(buf);
-      } else {
-        return base64.fromByteArray(buf.slice(start, end));
-      }
-    }
-    function utf8Slice(buf, start, end) {
-      end = Math.min(buf.length, end);
-      const res = [];
-      let i = start;
-      while (i < end) {
-        const firstByte = buf[i];
-        let codePoint = null;
-        let bytesPerSequence = firstByte > 239 ? 4 : firstByte > 223 ? 3 : firstByte > 191 ? 2 : 1;
-        if (i + bytesPerSequence <= end) {
-          let secondByte, thirdByte, fourthByte, tempCodePoint;
-          switch (bytesPerSequence) {
-            case 1:
-              if (firstByte < 128) {
-                codePoint = firstByte;
-              }
-              break;
-            case 2:
-              secondByte = buf[i + 1];
-              if ((secondByte & 192) === 128) {
-                tempCodePoint = (firstByte & 31) << 6 | secondByte & 63;
-                if (tempCodePoint > 127) {
-                  codePoint = tempCodePoint;
-                }
-              }
-              break;
-            case 3:
-              secondByte = buf[i + 1];
-              thirdByte = buf[i + 2];
-              if ((secondByte & 192) === 128 && (thirdByte & 192) === 128) {
-                tempCodePoint = (firstByte & 15) << 12 | (secondByte & 63) << 6 | thirdByte & 63;
-                if (tempCodePoint > 2047 && (tempCodePoint < 55296 || tempCodePoint > 57343)) {
-                  codePoint = tempCodePoint;
-                }
-              }
-              break;
-            case 4:
-              secondByte = buf[i + 1];
-              thirdByte = buf[i + 2];
-              fourthByte = buf[i + 3];
-              if ((secondByte & 192) === 128 && (thirdByte & 192) === 128 && (fourthByte & 192) === 128) {
-                tempCodePoint = (firstByte & 15) << 18 | (secondByte & 63) << 12 | (thirdByte & 63) << 6 | fourthByte & 63;
-                if (tempCodePoint > 65535 && tempCodePoint < 1114112) {
-                  codePoint = tempCodePoint;
-                }
-              }
-          }
-        }
-        if (codePoint === null) {
-          codePoint = 65533;
-          bytesPerSequence = 1;
-        } else if (codePoint > 65535) {
-          codePoint -= 65536;
-          res.push(codePoint >>> 10 & 1023 | 55296);
-          codePoint = 56320 | codePoint & 1023;
-        }
-        res.push(codePoint);
-        i += bytesPerSequence;
-      }
-      return decodeCodePointsArray(res);
-    }
-    var MAX_ARGUMENTS_LENGTH = 4096;
-    function decodeCodePointsArray(codePoints) {
-      const len = codePoints.length;
-      if (len <= MAX_ARGUMENTS_LENGTH) {
-        return String.fromCharCode.apply(String, codePoints);
-      }
-      let res = "";
-      let i = 0;
-      while (i < len) {
-        res += String.fromCharCode.apply(
-          String,
-          codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
-        );
-      }
-      return res;
-    }
-    function asciiSlice(buf, start, end) {
-      let ret = "";
-      end = Math.min(buf.length, end);
-      for (let i = start; i < end; ++i) {
-        ret += String.fromCharCode(buf[i] & 127);
-      }
-      return ret;
-    }
-    function latin1Slice(buf, start, end) {
-      let ret = "";
-      end = Math.min(buf.length, end);
-      for (let i = start; i < end; ++i) {
-        ret += String.fromCharCode(buf[i]);
-      }
-      return ret;
-    }
-    function hexSlice(buf, start, end) {
-      const len = buf.length;
-      if (!start || start < 0) start = 0;
-      if (!end || end < 0 || end > len) end = len;
-      let out = "";
-      for (let i = start; i < end; ++i) {
-        out += hexSliceLookupTable[buf[i]];
-      }
-      return out;
-    }
-    function utf16leSlice(buf, start, end) {
-      const bytes = buf.slice(start, end);
-      let res = "";
-      for (let i = 0; i < bytes.length - 1; i += 2) {
-        res += String.fromCharCode(bytes[i] + bytes[i + 1] * 256);
-      }
-      return res;
-    }
-    Buffer4.prototype.slice = function slice(start, end) {
-      const len = this.length;
-      start = ~~start;
-      end = end === void 0 ? len : ~~end;
-      if (start < 0) {
-        start += len;
-        if (start < 0) start = 0;
-      } else if (start > len) {
-        start = len;
-      }
-      if (end < 0) {
-        end += len;
-        if (end < 0) end = 0;
-      } else if (end > len) {
-        end = len;
-      }
-      if (end < start) end = start;
-      const newBuf = this.subarray(start, end);
-      Object.setPrototypeOf(newBuf, Buffer4.prototype);
-      return newBuf;
-    };
-    function checkOffset(offset, ext, length) {
-      if (offset % 1 !== 0 || offset < 0) throw new RangeError("offset is not uint");
-      if (offset + ext > length) throw new RangeError("Trying to access beyond buffer length");
-    }
-    Buffer4.prototype.readUintLE = Buffer4.prototype.readUIntLE = function readUIntLE(offset, byteLength2, noAssert) {
-      offset = offset >>> 0;
-      byteLength2 = byteLength2 >>> 0;
-      if (!noAssert) checkOffset(offset, byteLength2, this.length);
-      let val = this[offset];
-      let mul = 1;
-      let i = 0;
-      while (++i < byteLength2 && (mul *= 256)) {
-        val += this[offset + i] * mul;
-      }
-      return val;
-    };
-    Buffer4.prototype.readUintBE = Buffer4.prototype.readUIntBE = function readUIntBE(offset, byteLength2, noAssert) {
-      offset = offset >>> 0;
-      byteLength2 = byteLength2 >>> 0;
-      if (!noAssert) {
-        checkOffset(offset, byteLength2, this.length);
-      }
-      let val = this[offset + --byteLength2];
-      let mul = 1;
-      while (byteLength2 > 0 && (mul *= 256)) {
-        val += this[offset + --byteLength2] * mul;
-      }
-      return val;
-    };
-    Buffer4.prototype.readUint8 = Buffer4.prototype.readUInt8 = function readUInt8(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 1, this.length);
-      return this[offset];
-    };
-    Buffer4.prototype.readUint16LE = Buffer4.prototype.readUInt16LE = function readUInt16LE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 2, this.length);
-      return this[offset] | this[offset + 1] << 8;
-    };
-    Buffer4.prototype.readUint16BE = Buffer4.prototype.readUInt16BE = function readUInt16BE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 2, this.length);
-      return this[offset] << 8 | this[offset + 1];
-    };
-    Buffer4.prototype.readUint32LE = Buffer4.prototype.readUInt32LE = function readUInt32LE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 4, this.length);
-      return (this[offset] | this[offset + 1] << 8 | this[offset + 2] << 16) + this[offset + 3] * 16777216;
-    };
-    Buffer4.prototype.readUint32BE = Buffer4.prototype.readUInt32BE = function readUInt32BE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 4, this.length);
-      return this[offset] * 16777216 + (this[offset + 1] << 16 | this[offset + 2] << 8 | this[offset + 3]);
-    };
-    Buffer4.prototype.readBigUInt64LE = defineBigIntMethod(function readBigUInt64LE(offset) {
-      offset = offset >>> 0;
-      validateNumber(offset, "offset");
-      const first = this[offset];
-      const last = this[offset + 7];
-      if (first === void 0 || last === void 0) {
-        boundsError(offset, this.length - 8);
-      }
-      const lo = first + this[++offset] * 2 ** 8 + this[++offset] * 2 ** 16 + this[++offset] * 2 ** 24;
-      const hi = this[++offset] + this[++offset] * 2 ** 8 + this[++offset] * 2 ** 16 + last * 2 ** 24;
-      return BigInt(lo) + (BigInt(hi) << BigInt(32));
-    });
-    Buffer4.prototype.readBigUInt64BE = defineBigIntMethod(function readBigUInt64BE(offset) {
-      offset = offset >>> 0;
-      validateNumber(offset, "offset");
-      const first = this[offset];
-      const last = this[offset + 7];
-      if (first === void 0 || last === void 0) {
-        boundsError(offset, this.length - 8);
-      }
-      const hi = first * 2 ** 24 + this[++offset] * 2 ** 16 + this[++offset] * 2 ** 8 + this[++offset];
-      const lo = this[++offset] * 2 ** 24 + this[++offset] * 2 ** 16 + this[++offset] * 2 ** 8 + last;
-      return (BigInt(hi) << BigInt(32)) + BigInt(lo);
-    });
-    Buffer4.prototype.readIntLE = function readIntLE(offset, byteLength2, noAssert) {
-      offset = offset >>> 0;
-      byteLength2 = byteLength2 >>> 0;
-      if (!noAssert) checkOffset(offset, byteLength2, this.length);
-      let val = this[offset];
-      let mul = 1;
-      let i = 0;
-      while (++i < byteLength2 && (mul *= 256)) {
-        val += this[offset + i] * mul;
-      }
-      mul *= 128;
-      if (val >= mul) val -= Math.pow(2, 8 * byteLength2);
-      return val;
-    };
-    Buffer4.prototype.readIntBE = function readIntBE(offset, byteLength2, noAssert) {
-      offset = offset >>> 0;
-      byteLength2 = byteLength2 >>> 0;
-      if (!noAssert) checkOffset(offset, byteLength2, this.length);
-      let i = byteLength2;
-      let mul = 1;
-      let val = this[offset + --i];
-      while (i > 0 && (mul *= 256)) {
-        val += this[offset + --i] * mul;
-      }
-      mul *= 128;
-      if (val >= mul) val -= Math.pow(2, 8 * byteLength2);
-      return val;
-    };
-    Buffer4.prototype.readInt8 = function readInt8(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 1, this.length);
-      if (!(this[offset] & 128)) return this[offset];
-      return (255 - this[offset] + 1) * -1;
-    };
-    Buffer4.prototype.readInt16LE = function readInt16LE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 2, this.length);
-      const val = this[offset] | this[offset + 1] << 8;
-      return val & 32768 ? val | 4294901760 : val;
-    };
-    Buffer4.prototype.readInt16BE = function readInt16BE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 2, this.length);
-      const val = this[offset + 1] | this[offset] << 8;
-      return val & 32768 ? val | 4294901760 : val;
-    };
-    Buffer4.prototype.readInt32LE = function readInt32LE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 4, this.length);
-      return this[offset] | this[offset + 1] << 8 | this[offset + 2] << 16 | this[offset + 3] << 24;
-    };
-    Buffer4.prototype.readInt32BE = function readInt32BE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 4, this.length);
-      return this[offset] << 24 | this[offset + 1] << 16 | this[offset + 2] << 8 | this[offset + 3];
-    };
-    Buffer4.prototype.readBigInt64LE = defineBigIntMethod(function readBigInt64LE(offset) {
-      offset = offset >>> 0;
-      validateNumber(offset, "offset");
-      const first = this[offset];
-      const last = this[offset + 7];
-      if (first === void 0 || last === void 0) {
-        boundsError(offset, this.length - 8);
-      }
-      const val = this[offset + 4] + this[offset + 5] * 2 ** 8 + this[offset + 6] * 2 ** 16 + (last << 24);
-      return (BigInt(val) << BigInt(32)) + BigInt(first + this[++offset] * 2 ** 8 + this[++offset] * 2 ** 16 + this[++offset] * 2 ** 24);
-    });
-    Buffer4.prototype.readBigInt64BE = defineBigIntMethod(function readBigInt64BE(offset) {
-      offset = offset >>> 0;
-      validateNumber(offset, "offset");
-      const first = this[offset];
-      const last = this[offset + 7];
-      if (first === void 0 || last === void 0) {
-        boundsError(offset, this.length - 8);
-      }
-      const val = (first << 24) + // Overflow
-      this[++offset] * 2 ** 16 + this[++offset] * 2 ** 8 + this[++offset];
-      return (BigInt(val) << BigInt(32)) + BigInt(this[++offset] * 2 ** 24 + this[++offset] * 2 ** 16 + this[++offset] * 2 ** 8 + last);
-    });
-    Buffer4.prototype.readFloatLE = function readFloatLE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 4, this.length);
-      return ieee754.read(this, offset, true, 23, 4);
-    };
-    Buffer4.prototype.readFloatBE = function readFloatBE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 4, this.length);
-      return ieee754.read(this, offset, false, 23, 4);
-    };
-    Buffer4.prototype.readDoubleLE = function readDoubleLE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 8, this.length);
-      return ieee754.read(this, offset, true, 52, 8);
-    };
-    Buffer4.prototype.readDoubleBE = function readDoubleBE(offset, noAssert) {
-      offset = offset >>> 0;
-      if (!noAssert) checkOffset(offset, 8, this.length);
-      return ieee754.read(this, offset, false, 52, 8);
-    };
-    function checkInt(buf, value, offset, ext, max, min) {
-      if (!Buffer4.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance');
-      if (value > max || value < min) throw new RangeError('"value" argument is out of bounds');
-      if (offset + ext > buf.length) throw new RangeError("Index out of range");
-    }
-    Buffer4.prototype.writeUintLE = Buffer4.prototype.writeUIntLE = function writeUIntLE(value, offset, byteLength2, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      byteLength2 = byteLength2 >>> 0;
-      if (!noAssert) {
-        const maxBytes = Math.pow(2, 8 * byteLength2) - 1;
-        checkInt(this, value, offset, byteLength2, maxBytes, 0);
-      }
-      let mul = 1;
-      let i = 0;
-      this[offset] = value & 255;
-      while (++i < byteLength2 && (mul *= 256)) {
-        this[offset + i] = value / mul & 255;
-      }
-      return offset + byteLength2;
-    };
-    Buffer4.prototype.writeUintBE = Buffer4.prototype.writeUIntBE = function writeUIntBE(value, offset, byteLength2, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      byteLength2 = byteLength2 >>> 0;
-      if (!noAssert) {
-        const maxBytes = Math.pow(2, 8 * byteLength2) - 1;
-        checkInt(this, value, offset, byteLength2, maxBytes, 0);
-      }
-      let i = byteLength2 - 1;
-      let mul = 1;
-      this[offset + i] = value & 255;
-      while (--i >= 0 && (mul *= 256)) {
-        this[offset + i] = value / mul & 255;
-      }
-      return offset + byteLength2;
-    };
-    Buffer4.prototype.writeUint8 = Buffer4.prototype.writeUInt8 = function writeUInt8(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 1, 255, 0);
-      this[offset] = value & 255;
-      return offset + 1;
-    };
-    Buffer4.prototype.writeUint16LE = Buffer4.prototype.writeUInt16LE = function writeUInt16LE(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 2, 65535, 0);
-      this[offset] = value & 255;
-      this[offset + 1] = value >>> 8;
-      return offset + 2;
-    };
-    Buffer4.prototype.writeUint16BE = Buffer4.prototype.writeUInt16BE = function writeUInt16BE(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 2, 65535, 0);
-      this[offset] = value >>> 8;
-      this[offset + 1] = value & 255;
-      return offset + 2;
-    };
-    Buffer4.prototype.writeUint32LE = Buffer4.prototype.writeUInt32LE = function writeUInt32LE(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 4, 4294967295, 0);
-      this[offset + 3] = value >>> 24;
-      this[offset + 2] = value >>> 16;
-      this[offset + 1] = value >>> 8;
-      this[offset] = value & 255;
-      return offset + 4;
-    };
-    Buffer4.prototype.writeUint32BE = Buffer4.prototype.writeUInt32BE = function writeUInt32BE(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 4, 4294967295, 0);
-      this[offset] = value >>> 24;
-      this[offset + 1] = value >>> 16;
-      this[offset + 2] = value >>> 8;
-      this[offset + 3] = value & 255;
-      return offset + 4;
-    };
-    function wrtBigUInt64LE(buf, value, offset, min, max) {
-      checkIntBI(value, min, max, buf, offset, 7);
-      let lo = Number(value & BigInt(4294967295));
-      buf[offset++] = lo;
-      lo = lo >> 8;
-      buf[offset++] = lo;
-      lo = lo >> 8;
-      buf[offset++] = lo;
-      lo = lo >> 8;
-      buf[offset++] = lo;
-      let hi = Number(value >> BigInt(32) & BigInt(4294967295));
-      buf[offset++] = hi;
-      hi = hi >> 8;
-      buf[offset++] = hi;
-      hi = hi >> 8;
-      buf[offset++] = hi;
-      hi = hi >> 8;
-      buf[offset++] = hi;
-      return offset;
-    }
-    function wrtBigUInt64BE(buf, value, offset, min, max) {
-      checkIntBI(value, min, max, buf, offset, 7);
-      let lo = Number(value & BigInt(4294967295));
-      buf[offset + 7] = lo;
-      lo = lo >> 8;
-      buf[offset + 6] = lo;
-      lo = lo >> 8;
-      buf[offset + 5] = lo;
-      lo = lo >> 8;
-      buf[offset + 4] = lo;
-      let hi = Number(value >> BigInt(32) & BigInt(4294967295));
-      buf[offset + 3] = hi;
-      hi = hi >> 8;
-      buf[offset + 2] = hi;
-      hi = hi >> 8;
-      buf[offset + 1] = hi;
-      hi = hi >> 8;
-      buf[offset] = hi;
-      return offset + 8;
-    }
-    Buffer4.prototype.writeBigUInt64LE = defineBigIntMethod(function writeBigUInt64LE(value, offset = 0) {
-      return wrtBigUInt64LE(this, value, offset, BigInt(0), BigInt("0xffffffffffffffff"));
-    });
-    Buffer4.prototype.writeBigUInt64BE = defineBigIntMethod(function writeBigUInt64BE(value, offset = 0) {
-      return wrtBigUInt64BE(this, value, offset, BigInt(0), BigInt("0xffffffffffffffff"));
-    });
-    Buffer4.prototype.writeIntLE = function writeIntLE(value, offset, byteLength2, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) {
-        const limit = Math.pow(2, 8 * byteLength2 - 1);
-        checkInt(this, value, offset, byteLength2, limit - 1, -limit);
-      }
-      let i = 0;
-      let mul = 1;
-      let sub = 0;
-      this[offset] = value & 255;
-      while (++i < byteLength2 && (mul *= 256)) {
-        if (value < 0 && sub === 0 && this[offset + i - 1] !== 0) {
-          sub = 1;
-        }
-        this[offset + i] = (value / mul >> 0) - sub & 255;
-      }
-      return offset + byteLength2;
-    };
-    Buffer4.prototype.writeIntBE = function writeIntBE(value, offset, byteLength2, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) {
-        const limit = Math.pow(2, 8 * byteLength2 - 1);
-        checkInt(this, value, offset, byteLength2, limit - 1, -limit);
-      }
-      let i = byteLength2 - 1;
-      let mul = 1;
-      let sub = 0;
-      this[offset + i] = value & 255;
-      while (--i >= 0 && (mul *= 256)) {
-        if (value < 0 && sub === 0 && this[offset + i + 1] !== 0) {
-          sub = 1;
-        }
-        this[offset + i] = (value / mul >> 0) - sub & 255;
-      }
-      return offset + byteLength2;
-    };
-    Buffer4.prototype.writeInt8 = function writeInt8(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 1, 127, -128);
-      if (value < 0) value = 255 + value + 1;
-      this[offset] = value & 255;
-      return offset + 1;
-    };
-    Buffer4.prototype.writeInt16LE = function writeInt16LE(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 2, 32767, -32768);
-      this[offset] = value & 255;
-      this[offset + 1] = value >>> 8;
-      return offset + 2;
-    };
-    Buffer4.prototype.writeInt16BE = function writeInt16BE(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 2, 32767, -32768);
-      this[offset] = value >>> 8;
-      this[offset + 1] = value & 255;
-      return offset + 2;
-    };
-    Buffer4.prototype.writeInt32LE = function writeInt32LE(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 4, 2147483647, -2147483648);
-      this[offset] = value & 255;
-      this[offset + 1] = value >>> 8;
-      this[offset + 2] = value >>> 16;
-      this[offset + 3] = value >>> 24;
-      return offset + 4;
-    };
-    Buffer4.prototype.writeInt32BE = function writeInt32BE(value, offset, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) checkInt(this, value, offset, 4, 2147483647, -2147483648);
-      if (value < 0) value = 4294967295 + value + 1;
-      this[offset] = value >>> 24;
-      this[offset + 1] = value >>> 16;
-      this[offset + 2] = value >>> 8;
-      this[offset + 3] = value & 255;
-      return offset + 4;
-    };
-    Buffer4.prototype.writeBigInt64LE = defineBigIntMethod(function writeBigInt64LE(value, offset = 0) {
-      return wrtBigUInt64LE(this, value, offset, -BigInt("0x8000000000000000"), BigInt("0x7fffffffffffffff"));
-    });
-    Buffer4.prototype.writeBigInt64BE = defineBigIntMethod(function writeBigInt64BE(value, offset = 0) {
-      return wrtBigUInt64BE(this, value, offset, -BigInt("0x8000000000000000"), BigInt("0x7fffffffffffffff"));
-    });
-    function checkIEEE754(buf, value, offset, ext, max, min) {
-      if (offset + ext > buf.length) throw new RangeError("Index out of range");
-      if (offset < 0) throw new RangeError("Index out of range");
-    }
-    function writeFloat(buf, value, offset, littleEndian, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) {
-        checkIEEE754(buf, value, offset, 4, 34028234663852886e22, -34028234663852886e22);
-      }
-      ieee754.write(buf, value, offset, littleEndian, 23, 4);
-      return offset + 4;
-    }
-    Buffer4.prototype.writeFloatLE = function writeFloatLE(value, offset, noAssert) {
-      return writeFloat(this, value, offset, true, noAssert);
-    };
-    Buffer4.prototype.writeFloatBE = function writeFloatBE(value, offset, noAssert) {
-      return writeFloat(this, value, offset, false, noAssert);
-    };
-    function writeDouble(buf, value, offset, littleEndian, noAssert) {
-      value = +value;
-      offset = offset >>> 0;
-      if (!noAssert) {
-        checkIEEE754(buf, value, offset, 8, 17976931348623157e292, -17976931348623157e292);
-      }
-      ieee754.write(buf, value, offset, littleEndian, 52, 8);
-      return offset + 8;
-    }
-    Buffer4.prototype.writeDoubleLE = function writeDoubleLE(value, offset, noAssert) {
-      return writeDouble(this, value, offset, true, noAssert);
-    };
-    Buffer4.prototype.writeDoubleBE = function writeDoubleBE(value, offset, noAssert) {
-      return writeDouble(this, value, offset, false, noAssert);
-    };
-    Buffer4.prototype.copy = function copy(target, targetStart, start, end) {
-      if (!Buffer4.isBuffer(target)) throw new TypeError("argument should be a Buffer");
-      if (!start) start = 0;
-      if (!end && end !== 0) end = this.length;
-      if (targetStart >= target.length) targetStart = target.length;
-      if (!targetStart) targetStart = 0;
-      if (end > 0 && end < start) end = start;
-      if (end === start) return 0;
-      if (target.length === 0 || this.length === 0) return 0;
-      if (targetStart < 0) {
-        throw new RangeError("targetStart out of bounds");
-      }
-      if (start < 0 || start >= this.length) throw new RangeError("Index out of range");
-      if (end < 0) throw new RangeError("sourceEnd out of bounds");
-      if (end > this.length) end = this.length;
-      if (target.length - targetStart < end - start) {
-        end = target.length - targetStart + start;
-      }
-      const len = end - start;
-      if (this === target && typeof Uint8Array.prototype.copyWithin === "function") {
-        this.copyWithin(targetStart, start, end);
-      } else {
-        Uint8Array.prototype.set.call(
-          target,
-          this.subarray(start, end),
-          targetStart
-        );
-      }
-      return len;
-    };
-    Buffer4.prototype.fill = function fill(val, start, end, encoding) {
-      if (typeof val === "string") {
-        if (typeof start === "string") {
-          encoding = start;
-          start = 0;
-          end = this.length;
-        } else if (typeof end === "string") {
-          encoding = end;
-          end = this.length;
-        }
-        if (encoding !== void 0 && typeof encoding !== "string") {
-          throw new TypeError("encoding must be a string");
-        }
-        if (typeof encoding === "string" && !Buffer4.isEncoding(encoding)) {
-          throw new TypeError("Unknown encoding: " + encoding);
-        }
-        if (val.length === 1) {
-          const code = val.charCodeAt(0);
-          if (encoding === "utf8" && code < 128 || encoding === "latin1") {
-            val = code;
-          }
-        }
-      } else if (typeof val === "number") {
-        val = val & 255;
-      } else if (typeof val === "boolean") {
-        val = Number(val);
-      }
-      if (start < 0 || this.length < start || this.length < end) {
-        throw new RangeError("Out of range index");
-      }
-      if (end <= start) {
-        return this;
-      }
-      start = start >>> 0;
-      end = end === void 0 ? this.length : end >>> 0;
-      if (!val) val = 0;
-      let i;
-      if (typeof val === "number") {
-        for (i = start; i < end; ++i) {
-          this[i] = val;
-        }
-      } else {
-        const bytes = Buffer4.isBuffer(val) ? val : Buffer4.from(val, encoding);
-        const len = bytes.length;
-        if (len === 0) {
-          throw new TypeError('The value "' + val + '" is invalid for argument "value"');
-        }
-        for (i = 0; i < end - start; ++i) {
-          this[i + start] = bytes[i % len];
-        }
-      }
-      return this;
-    };
-    var errors = {};
-    function E(sym, getMessage, Base) {
-      errors[sym] = class NodeError extends Base {
-        constructor() {
-          super();
-          Object.defineProperty(this, "message", {
-            value: getMessage.apply(this, arguments),
-            writable: true,
-            configurable: true
-          });
-          this.name = `${this.name} [${sym}]`;
-          this.stack;
-          delete this.name;
-        }
-        get code() {
-          return sym;
-        }
-        set code(value) {
-          Object.defineProperty(this, "code", {
-            configurable: true,
-            enumerable: true,
-            value,
-            writable: true
-          });
-        }
-        toString() {
-          return `${this.name} [${sym}]: ${this.message}`;
-        }
-      };
-    }
-    E(
-      "ERR_BUFFER_OUT_OF_BOUNDS",
-      function(name) {
-        if (name) {
-          return `${name} is outside of buffer bounds`;
-        }
-        return "Attempt to access memory outside buffer bounds";
-      },
-      RangeError
-    );
-    E(
-      "ERR_INVALID_ARG_TYPE",
-      function(name, actual) {
-        return `The "${name}" argument must be of type number. Received type ${typeof actual}`;
-      },
-      TypeError
-    );
-    E(
-      "ERR_OUT_OF_RANGE",
-      function(str, range, input) {
-        let msg = `The value of "${str}" is out of range.`;
-        let received = input;
-        if (Number.isInteger(input) && Math.abs(input) > 2 ** 32) {
-          received = addNumericalSeparator(String(input));
-        } else if (typeof input === "bigint") {
-          received = String(input);
-          if (input > BigInt(2) ** BigInt(32) || input < -(BigInt(2) ** BigInt(32))) {
-            received = addNumericalSeparator(received);
-          }
-          received += "n";
-        }
-        msg += ` It must be ${range}. Received ${received}`;
-        return msg;
-      },
-      RangeError
-    );
-    function addNumericalSeparator(val) {
-      let res = "";
-      let i = val.length;
-      const start = val[0] === "-" ? 1 : 0;
-      for (; i >= start + 4; i -= 3) {
-        res = `_${val.slice(i - 3, i)}${res}`;
-      }
-      return `${val.slice(0, i)}${res}`;
-    }
-    function checkBounds(buf, offset, byteLength2) {
-      validateNumber(offset, "offset");
-      if (buf[offset] === void 0 || buf[offset + byteLength2] === void 0) {
-        boundsError(offset, buf.length - (byteLength2 + 1));
-      }
-    }
-    function checkIntBI(value, min, max, buf, offset, byteLength2) {
-      if (value > max || value < min) {
-        const n = typeof min === "bigint" ? "n" : "";
-        let range;
-        if (byteLength2 > 3) {
-          if (min === 0 || min === BigInt(0)) {
-            range = `>= 0${n} and < 2${n} ** ${(byteLength2 + 1) * 8}${n}`;
-          } else {
-            range = `>= -(2${n} ** ${(byteLength2 + 1) * 8 - 1}${n}) and < 2 ** ${(byteLength2 + 1) * 8 - 1}${n}`;
-          }
-        } else {
-          range = `>= ${min}${n} and <= ${max}${n}`;
-        }
-        throw new errors.ERR_OUT_OF_RANGE("value", range, value);
-      }
-      checkBounds(buf, offset, byteLength2);
-    }
-    function validateNumber(value, name) {
-      if (typeof value !== "number") {
-        throw new errors.ERR_INVALID_ARG_TYPE(name, "number", value);
-      }
-    }
-    function boundsError(value, length, type) {
-      if (Math.floor(value) !== value) {
-        validateNumber(value, type);
-        throw new errors.ERR_OUT_OF_RANGE(type || "offset", "an integer", value);
-      }
-      if (length < 0) {
-        throw new errors.ERR_BUFFER_OUT_OF_BOUNDS();
-      }
-      throw new errors.ERR_OUT_OF_RANGE(
-        type || "offset",
-        `>= ${type ? 1 : 0} and <= ${length}`,
-        value
-      );
-    }
-    var INVALID_BASE64_RE = /[^+/0-9A-Za-z-_]/g;
-    function base64clean(str) {
-      str = str.split("=")[0];
-      str = str.trim().replace(INVALID_BASE64_RE, "");
-      if (str.length < 2) return "";
-      while (str.length % 4 !== 0) {
-        str = str + "=";
-      }
-      return str;
-    }
-    function utf8ToBytes(string, units) {
-      units = units || Infinity;
-      let codePoint;
-      const length = string.length;
-      let leadSurrogate = null;
-      const bytes = [];
-      for (let i = 0; i < length; ++i) {
-        codePoint = string.charCodeAt(i);
-        if (codePoint > 55295 && codePoint < 57344) {
-          if (!leadSurrogate) {
-            if (codePoint > 56319) {
-              if ((units -= 3) > -1) bytes.push(239, 191, 189);
-              continue;
-            } else if (i + 1 === length) {
-              if ((units -= 3) > -1) bytes.push(239, 191, 189);
-              continue;
-            }
-            leadSurrogate = codePoint;
-            continue;
-          }
-          if (codePoint < 56320) {
-            if ((units -= 3) > -1) bytes.push(239, 191, 189);
-            leadSurrogate = codePoint;
-            continue;
-          }
-          codePoint = (leadSurrogate - 55296 << 10 | codePoint - 56320) + 65536;
-        } else if (leadSurrogate) {
-          if ((units -= 3) > -1) bytes.push(239, 191, 189);
-        }
-        leadSurrogate = null;
-        if (codePoint < 128) {
-          if ((units -= 1) < 0) break;
-          bytes.push(codePoint);
-        } else if (codePoint < 2048) {
-          if ((units -= 2) < 0) break;
-          bytes.push(
-            codePoint >> 6 | 192,
-            codePoint & 63 | 128
-          );
-        } else if (codePoint < 65536) {
-          if ((units -= 3) < 0) break;
-          bytes.push(
-            codePoint >> 12 | 224,
-            codePoint >> 6 & 63 | 128,
-            codePoint & 63 | 128
-          );
-        } else if (codePoint < 1114112) {
-          if ((units -= 4) < 0) break;
-          bytes.push(
-            codePoint >> 18 | 240,
-            codePoint >> 12 & 63 | 128,
-            codePoint >> 6 & 63 | 128,
-            codePoint & 63 | 128
-          );
-        } else {
-          throw new Error("Invalid code point");
-        }
-      }
-      return bytes;
-    }
-    function asciiToBytes(str) {
-      const byteArray = [];
-      for (let i = 0; i < str.length; ++i) {
-        byteArray.push(str.charCodeAt(i) & 255);
-      }
-      return byteArray;
-    }
-    function utf16leToBytes(str, units) {
-      let c, hi, lo;
-      const byteArray = [];
-      for (let i = 0; i < str.length; ++i) {
-        if ((units -= 2) < 0) break;
-        c = str.charCodeAt(i);
-        hi = c >> 8;
-        lo = c % 256;
-        byteArray.push(lo);
-        byteArray.push(hi);
-      }
-      return byteArray;
-    }
-    function base64ToBytes(str) {
-      return base64.toByteArray(base64clean(str));
-    }
-    function blitBuffer(src, dst, offset, length) {
-      let i;
-      for (i = 0; i < length; ++i) {
-        if (i + offset >= dst.length || i >= src.length) break;
-        dst[i + offset] = src[i];
-      }
-      return i;
-    }
-    function isInstance(obj, type) {
-      return obj instanceof type || obj != null && obj.constructor != null && obj.constructor.name != null && obj.constructor.name === type.name;
-    }
-    function numberIsNaN(obj) {
-      return obj !== obj;
-    }
-    var hexSliceLookupTable = function() {
-      const alphabet = "0123456789abcdef";
-      const table = new Array(256);
-      for (let i = 0; i < 16; ++i) {
-        const i16 = i * 16;
-        for (let j = 0; j < 16; ++j) {
-          table[i16 + j] = alphabet[i] + alphabet[j];
-        }
-      }
-      return table;
-    }();
-    function defineBigIntMethod(fn) {
-      return typeof BigInt === "undefined" ? BufferBigIntNotDefined : fn;
-    }
-    function BufferBigIntNotDefined() {
-      throw new Error("BigInt not supported");
-    }
+    module.exports = require_events().EventEmitter;
   }
 });
 
@@ -10877,7 +8728,7 @@ var require_buffer_list = __commonJS({
       }
       return (hint === "string" ? String : Number)(input);
     }
-    var _require = require_buffer2();
+    var _require = require_buffer();
     var Buffer4 = _require.Buffer;
     var _require2 = (init_util_shim(), __toCommonJS(util_shim_exports));
     var inspect2 = _require2.inspect;
@@ -11335,7 +9186,7 @@ var require_stream_writable = __commonJS({
       deprecate: require_browser2()
     };
     var Stream = require_stream_browser();
-    var Buffer4 = require_buffer2().Buffer;
+    var Buffer4 = require_buffer().Buffer;
     var OurUint8Array = (typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof self !== "undefined" ? self : {}).Uint8Array || function() {
     };
     function _uint8ArrayToBuffer(chunk) {
@@ -11885,7 +9736,7 @@ var require_stream_duplex = __commonJS({
 var require_safe_buffer = __commonJS({
   "node_modules/safe-buffer/index.js"(exports, module) {
     init_globals();
-    var buffer = require_buffer2();
+    var buffer = require_buffer();
     var Buffer4 = buffer.Buffer;
     function copyProps(src, dst) {
       for (var key in src) {
@@ -12471,12 +10322,12 @@ var require_stream_readable = __commonJS({
     module.exports = Readable;
     var Duplex2;
     Readable.ReadableState = ReadableState;
-    var EE = require_events2().EventEmitter;
+    var EE = require_events().EventEmitter;
     var EElistenerCount = function EElistenerCount2(emitter, type) {
       return emitter.listeners(type).length;
     };
     var Stream = require_stream_browser();
-    var Buffer4 = require_buffer2().Buffer;
+    var Buffer4 = require_buffer().Buffer;
     var OurUint8Array = (typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof self !== "undefined" ? self : {}).Uint8Array || function() {
     };
     function _uint8ArrayToBuffer(chunk) {
@@ -13408,7 +11259,7 @@ var require_stream_browserify = __commonJS({
   "node_modules/stream-browserify/index.js"(exports, module) {
     init_globals();
     module.exports = Stream;
-    var EE = require_events2().EventEmitter;
+    var EE = require_events().EventEmitter;
     var inherits2 = require_inherits_browser();
     inherits2(Stream, EE);
     Stream.Readable = require_stream_readable();
@@ -13481,248 +11332,9 @@ var require_stream_browserify = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/string_decoder/lib/string_decoder.js
-var require_string_decoder2 = __commonJS({
-  "../node-dbus-next/node_modules/string_decoder/lib/string_decoder.js"(exports) {
-    "use strict";
-    init_globals();
-    var Buffer4 = require_buffer().Buffer;
-    var isEncoding = Buffer4.isEncoding || function(encoding) {
-      encoding = "" + encoding;
-      switch (encoding && encoding.toLowerCase()) {
-        case "hex":
-        case "utf8":
-        case "utf-8":
-        case "ascii":
-        case "binary":
-        case "base64":
-        case "ucs2":
-        case "ucs-2":
-        case "utf16le":
-        case "utf-16le":
-        case "raw":
-          return true;
-        default:
-          return false;
-      }
-    };
-    function _normalizeEncoding(enc) {
-      if (!enc) return "utf8";
-      var retried;
-      while (true) {
-        switch (enc) {
-          case "utf8":
-          case "utf-8":
-            return "utf8";
-          case "ucs2":
-          case "ucs-2":
-          case "utf16le":
-          case "utf-16le":
-            return "utf16le";
-          case "latin1":
-          case "binary":
-            return "latin1";
-          case "base64":
-          case "ascii":
-          case "hex":
-            return enc;
-          default:
-            if (retried) return;
-            enc = ("" + enc).toLowerCase();
-            retried = true;
-        }
-      }
-    }
-    function normalizeEncoding(enc) {
-      var nenc = _normalizeEncoding(enc);
-      if (typeof nenc !== "string" && (Buffer4.isEncoding === isEncoding || !isEncoding(enc))) throw new Error("Unknown encoding: " + enc);
-      return nenc || enc;
-    }
-    exports.StringDecoder = StringDecoder;
-    function StringDecoder(encoding) {
-      this.encoding = normalizeEncoding(encoding);
-      var nb;
-      switch (this.encoding) {
-        case "utf16le":
-          this.text = utf16Text;
-          this.end = utf16End;
-          nb = 4;
-          break;
-        case "utf8":
-          this.fillLast = utf8FillLast;
-          nb = 4;
-          break;
-        case "base64":
-          this.text = base64Text;
-          this.end = base64End;
-          nb = 3;
-          break;
-        default:
-          this.write = simpleWrite;
-          this.end = simpleEnd;
-          return;
-      }
-      this.lastNeed = 0;
-      this.lastTotal = 0;
-      this.lastChar = Buffer4.allocUnsafe(nb);
-    }
-    StringDecoder.prototype.write = function(buf) {
-      if (buf.length === 0) return "";
-      var r;
-      var i;
-      if (this.lastNeed) {
-        r = this.fillLast(buf);
-        if (r === void 0) return "";
-        i = this.lastNeed;
-        this.lastNeed = 0;
-      } else {
-        i = 0;
-      }
-      if (i < buf.length) return r ? r + this.text(buf, i) : this.text(buf, i);
-      return r || "";
-    };
-    StringDecoder.prototype.end = utf8End;
-    StringDecoder.prototype.text = utf8Text;
-    StringDecoder.prototype.fillLast = function(buf) {
-      if (this.lastNeed <= buf.length) {
-        buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed);
-        return this.lastChar.toString(this.encoding, 0, this.lastTotal);
-      }
-      buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, buf.length);
-      this.lastNeed -= buf.length;
-    };
-    function utf8CheckByte(byte) {
-      if (byte <= 127) return 0;
-      else if (byte >> 5 === 6) return 2;
-      else if (byte >> 4 === 14) return 3;
-      else if (byte >> 3 === 30) return 4;
-      return byte >> 6 === 2 ? -1 : -2;
-    }
-    function utf8CheckIncomplete(self2, buf, i) {
-      var j = buf.length - 1;
-      if (j < i) return 0;
-      var nb = utf8CheckByte(buf[j]);
-      if (nb >= 0) {
-        if (nb > 0) self2.lastNeed = nb - 1;
-        return nb;
-      }
-      if (--j < i || nb === -2) return 0;
-      nb = utf8CheckByte(buf[j]);
-      if (nb >= 0) {
-        if (nb > 0) self2.lastNeed = nb - 2;
-        return nb;
-      }
-      if (--j < i || nb === -2) return 0;
-      nb = utf8CheckByte(buf[j]);
-      if (nb >= 0) {
-        if (nb > 0) {
-          if (nb === 2) nb = 0;
-          else self2.lastNeed = nb - 3;
-        }
-        return nb;
-      }
-      return 0;
-    }
-    function utf8CheckExtraBytes(self2, buf, p) {
-      if ((buf[0] & 192) !== 128) {
-        self2.lastNeed = 0;
-        return "\uFFFD";
-      }
-      if (self2.lastNeed > 1 && buf.length > 1) {
-        if ((buf[1] & 192) !== 128) {
-          self2.lastNeed = 1;
-          return "\uFFFD";
-        }
-        if (self2.lastNeed > 2 && buf.length > 2) {
-          if ((buf[2] & 192) !== 128) {
-            self2.lastNeed = 2;
-            return "\uFFFD";
-          }
-        }
-      }
-    }
-    function utf8FillLast(buf) {
-      var p = this.lastTotal - this.lastNeed;
-      var r = utf8CheckExtraBytes(this, buf, p);
-      if (r !== void 0) return r;
-      if (this.lastNeed <= buf.length) {
-        buf.copy(this.lastChar, p, 0, this.lastNeed);
-        return this.lastChar.toString(this.encoding, 0, this.lastTotal);
-      }
-      buf.copy(this.lastChar, p, 0, buf.length);
-      this.lastNeed -= buf.length;
-    }
-    function utf8Text(buf, i) {
-      var total = utf8CheckIncomplete(this, buf, i);
-      if (!this.lastNeed) return buf.toString("utf8", i);
-      this.lastTotal = total;
-      var end = buf.length - (total - this.lastNeed);
-      buf.copy(this.lastChar, 0, end);
-      return buf.toString("utf8", i, end);
-    }
-    function utf8End(buf) {
-      var r = buf && buf.length ? this.write(buf) : "";
-      if (this.lastNeed) return r + "\uFFFD";
-      return r;
-    }
-    function utf16Text(buf, i) {
-      if ((buf.length - i) % 2 === 0) {
-        var r = buf.toString("utf16le", i);
-        if (r) {
-          var c = r.charCodeAt(r.length - 1);
-          if (c >= 55296 && c <= 56319) {
-            this.lastNeed = 2;
-            this.lastTotal = 4;
-            this.lastChar[0] = buf[buf.length - 2];
-            this.lastChar[1] = buf[buf.length - 1];
-            return r.slice(0, -1);
-          }
-        }
-        return r;
-      }
-      this.lastNeed = 1;
-      this.lastTotal = 2;
-      this.lastChar[0] = buf[buf.length - 1];
-      return buf.toString("utf16le", i, buf.length - 1);
-    }
-    function utf16End(buf) {
-      var r = buf && buf.length ? this.write(buf) : "";
-      if (this.lastNeed) {
-        var end = this.lastTotal - this.lastNeed;
-        return r + this.lastChar.toString("utf16le", 0, end);
-      }
-      return r;
-    }
-    function base64Text(buf, i) {
-      var n = (buf.length - i) % 3;
-      if (n === 0) return buf.toString("base64", i);
-      this.lastNeed = 3 - n;
-      this.lastTotal = 3;
-      if (n === 1) {
-        this.lastChar[0] = buf[buf.length - 1];
-      } else {
-        this.lastChar[0] = buf[buf.length - 2];
-        this.lastChar[1] = buf[buf.length - 1];
-      }
-      return buf.toString("base64", i, buf.length - n);
-    }
-    function base64End(buf) {
-      var r = buf && buf.length ? this.write(buf) : "";
-      if (this.lastNeed) return r + this.lastChar.toString("base64", 0, 3 - this.lastNeed);
-      return r;
-    }
-    function simpleWrite(buf) {
-      return buf.toString(this.encoding);
-    }
-    function simpleEnd(buf) {
-      return buf && buf.length ? this.write(buf) : "";
-    }
-  }
-});
-
-// ../node-dbus-next/node_modules/sax/lib/sax.js
+// node_modules/sax/lib/sax.js
 var require_sax = __commonJS({
-  "../node-dbus-next/node_modules/sax/lib/sax.js"(exports) {
+  "node_modules/sax/lib/sax.js"(exports) {
     init_globals();
     (function(sax) {
       sax.parser = function(strict, opt) {
@@ -13788,6 +11400,9 @@ var require_sax = __commonJS({
         parser.attribList = [];
         if (parser.opt.xmlns) {
           parser.ns = Object.create(rootNS);
+        }
+        if (parser.opt.unquotedAttributeValues === void 0) {
+          parser.opt.unquotedAttributeValues = !strict;
         }
         parser.trackPosition = parser.opt.position !== false;
         if (parser.trackPosition) {
@@ -13877,6 +11492,8 @@ var require_sax = __commonJS({
         Stream = function() {
         };
       }
+      if (!Stream) Stream = function() {
+      };
       var streamWraps = sax.EVENTS.filter(function(ev) {
         return ev !== "error" && ev !== "end";
       });
@@ -13926,10 +11543,9 @@ var require_sax = __commonJS({
       SAXStream.prototype.write = function(data) {
         if (typeof import_buffer.Buffer === "function" && typeof import_buffer.Buffer.isBuffer === "function" && import_buffer.Buffer.isBuffer(data)) {
           if (!this._decoder) {
-            var SD = require_string_decoder2().StringDecoder;
-            this._decoder = new SD("utf8");
+            this._decoder = new TextDecoder("utf8");
           }
-          data = this._decoder.write(data);
+          data = this._decoder.decode(data, { stream: true });
         }
         this._parser.write(data.toString());
         this.emit("data", data);
@@ -13938,6 +11554,13 @@ var require_sax = __commonJS({
       SAXStream.prototype.end = function(chunk) {
         if (chunk && chunk.length) {
           this.write(chunk);
+        }
+        if (this._decoder) {
+          var remaining = this._decoder.decode();
+          if (remaining) {
+            this._parser.write(remaining);
+            this.emit("data", remaining);
+          }
         }
         this._parser.end();
         return true;
@@ -14053,266 +11676,266 @@ var require_sax = __commonJS({
         // <script> ... <
       };
       sax.XML_ENTITIES = {
-        "amp": "&",
-        "gt": ">",
-        "lt": "<",
-        "quot": '"',
-        "apos": "'"
+        amp: "&",
+        gt: ">",
+        lt: "<",
+        quot: '"',
+        apos: "'"
       };
       sax.ENTITIES = {
-        "amp": "&",
-        "gt": ">",
-        "lt": "<",
-        "quot": '"',
-        "apos": "'",
-        "AElig": 198,
-        "Aacute": 193,
-        "Acirc": 194,
-        "Agrave": 192,
-        "Aring": 197,
-        "Atilde": 195,
-        "Auml": 196,
-        "Ccedil": 199,
-        "ETH": 208,
-        "Eacute": 201,
-        "Ecirc": 202,
-        "Egrave": 200,
-        "Euml": 203,
-        "Iacute": 205,
-        "Icirc": 206,
-        "Igrave": 204,
-        "Iuml": 207,
-        "Ntilde": 209,
-        "Oacute": 211,
-        "Ocirc": 212,
-        "Ograve": 210,
-        "Oslash": 216,
-        "Otilde": 213,
-        "Ouml": 214,
-        "THORN": 222,
-        "Uacute": 218,
-        "Ucirc": 219,
-        "Ugrave": 217,
-        "Uuml": 220,
-        "Yacute": 221,
-        "aacute": 225,
-        "acirc": 226,
-        "aelig": 230,
-        "agrave": 224,
-        "aring": 229,
-        "atilde": 227,
-        "auml": 228,
-        "ccedil": 231,
-        "eacute": 233,
-        "ecirc": 234,
-        "egrave": 232,
-        "eth": 240,
-        "euml": 235,
-        "iacute": 237,
-        "icirc": 238,
-        "igrave": 236,
-        "iuml": 239,
-        "ntilde": 241,
-        "oacute": 243,
-        "ocirc": 244,
-        "ograve": 242,
-        "oslash": 248,
-        "otilde": 245,
-        "ouml": 246,
-        "szlig": 223,
-        "thorn": 254,
-        "uacute": 250,
-        "ucirc": 251,
-        "ugrave": 249,
-        "uuml": 252,
-        "yacute": 253,
-        "yuml": 255,
-        "copy": 169,
-        "reg": 174,
-        "nbsp": 160,
-        "iexcl": 161,
-        "cent": 162,
-        "pound": 163,
-        "curren": 164,
-        "yen": 165,
-        "brvbar": 166,
-        "sect": 167,
-        "uml": 168,
-        "ordf": 170,
-        "laquo": 171,
-        "not": 172,
-        "shy": 173,
-        "macr": 175,
-        "deg": 176,
-        "plusmn": 177,
-        "sup1": 185,
-        "sup2": 178,
-        "sup3": 179,
-        "acute": 180,
-        "micro": 181,
-        "para": 182,
-        "middot": 183,
-        "cedil": 184,
-        "ordm": 186,
-        "raquo": 187,
-        "frac14": 188,
-        "frac12": 189,
-        "frac34": 190,
-        "iquest": 191,
-        "times": 215,
-        "divide": 247,
-        "OElig": 338,
-        "oelig": 339,
-        "Scaron": 352,
-        "scaron": 353,
-        "Yuml": 376,
-        "fnof": 402,
-        "circ": 710,
-        "tilde": 732,
-        "Alpha": 913,
-        "Beta": 914,
-        "Gamma": 915,
-        "Delta": 916,
-        "Epsilon": 917,
-        "Zeta": 918,
-        "Eta": 919,
-        "Theta": 920,
-        "Iota": 921,
-        "Kappa": 922,
-        "Lambda": 923,
-        "Mu": 924,
-        "Nu": 925,
-        "Xi": 926,
-        "Omicron": 927,
-        "Pi": 928,
-        "Rho": 929,
-        "Sigma": 931,
-        "Tau": 932,
-        "Upsilon": 933,
-        "Phi": 934,
-        "Chi": 935,
-        "Psi": 936,
-        "Omega": 937,
-        "alpha": 945,
-        "beta": 946,
-        "gamma": 947,
-        "delta": 948,
-        "epsilon": 949,
-        "zeta": 950,
-        "eta": 951,
-        "theta": 952,
-        "iota": 953,
-        "kappa": 954,
-        "lambda": 955,
-        "mu": 956,
-        "nu": 957,
-        "xi": 958,
-        "omicron": 959,
-        "pi": 960,
-        "rho": 961,
-        "sigmaf": 962,
-        "sigma": 963,
-        "tau": 964,
-        "upsilon": 965,
-        "phi": 966,
-        "chi": 967,
-        "psi": 968,
-        "omega": 969,
-        "thetasym": 977,
-        "upsih": 978,
-        "piv": 982,
-        "ensp": 8194,
-        "emsp": 8195,
-        "thinsp": 8201,
-        "zwnj": 8204,
-        "zwj": 8205,
-        "lrm": 8206,
-        "rlm": 8207,
-        "ndash": 8211,
-        "mdash": 8212,
-        "lsquo": 8216,
-        "rsquo": 8217,
-        "sbquo": 8218,
-        "ldquo": 8220,
-        "rdquo": 8221,
-        "bdquo": 8222,
-        "dagger": 8224,
-        "Dagger": 8225,
-        "bull": 8226,
-        "hellip": 8230,
-        "permil": 8240,
-        "prime": 8242,
-        "Prime": 8243,
-        "lsaquo": 8249,
-        "rsaquo": 8250,
-        "oline": 8254,
-        "frasl": 8260,
-        "euro": 8364,
-        "image": 8465,
-        "weierp": 8472,
-        "real": 8476,
-        "trade": 8482,
-        "alefsym": 8501,
-        "larr": 8592,
-        "uarr": 8593,
-        "rarr": 8594,
-        "darr": 8595,
-        "harr": 8596,
-        "crarr": 8629,
-        "lArr": 8656,
-        "uArr": 8657,
-        "rArr": 8658,
-        "dArr": 8659,
-        "hArr": 8660,
-        "forall": 8704,
-        "part": 8706,
-        "exist": 8707,
-        "empty": 8709,
-        "nabla": 8711,
-        "isin": 8712,
-        "notin": 8713,
-        "ni": 8715,
-        "prod": 8719,
-        "sum": 8721,
-        "minus": 8722,
-        "lowast": 8727,
-        "radic": 8730,
-        "prop": 8733,
-        "infin": 8734,
-        "ang": 8736,
-        "and": 8743,
-        "or": 8744,
-        "cap": 8745,
-        "cup": 8746,
-        "int": 8747,
-        "there4": 8756,
-        "sim": 8764,
-        "cong": 8773,
-        "asymp": 8776,
-        "ne": 8800,
-        "equiv": 8801,
-        "le": 8804,
-        "ge": 8805,
-        "sub": 8834,
-        "sup": 8835,
-        "nsub": 8836,
-        "sube": 8838,
-        "supe": 8839,
-        "oplus": 8853,
-        "otimes": 8855,
-        "perp": 8869,
-        "sdot": 8901,
-        "lceil": 8968,
-        "rceil": 8969,
-        "lfloor": 8970,
-        "rfloor": 8971,
-        "lang": 9001,
-        "rang": 9002,
-        "loz": 9674,
-        "spades": 9824,
-        "clubs": 9827,
-        "hearts": 9829,
-        "diams": 9830
+        amp: "&",
+        gt: ">",
+        lt: "<",
+        quot: '"',
+        apos: "'",
+        AElig: 198,
+        Aacute: 193,
+        Acirc: 194,
+        Agrave: 192,
+        Aring: 197,
+        Atilde: 195,
+        Auml: 196,
+        Ccedil: 199,
+        ETH: 208,
+        Eacute: 201,
+        Ecirc: 202,
+        Egrave: 200,
+        Euml: 203,
+        Iacute: 205,
+        Icirc: 206,
+        Igrave: 204,
+        Iuml: 207,
+        Ntilde: 209,
+        Oacute: 211,
+        Ocirc: 212,
+        Ograve: 210,
+        Oslash: 216,
+        Otilde: 213,
+        Ouml: 214,
+        THORN: 222,
+        Uacute: 218,
+        Ucirc: 219,
+        Ugrave: 217,
+        Uuml: 220,
+        Yacute: 221,
+        aacute: 225,
+        acirc: 226,
+        aelig: 230,
+        agrave: 224,
+        aring: 229,
+        atilde: 227,
+        auml: 228,
+        ccedil: 231,
+        eacute: 233,
+        ecirc: 234,
+        egrave: 232,
+        eth: 240,
+        euml: 235,
+        iacute: 237,
+        icirc: 238,
+        igrave: 236,
+        iuml: 239,
+        ntilde: 241,
+        oacute: 243,
+        ocirc: 244,
+        ograve: 242,
+        oslash: 248,
+        otilde: 245,
+        ouml: 246,
+        szlig: 223,
+        thorn: 254,
+        uacute: 250,
+        ucirc: 251,
+        ugrave: 249,
+        uuml: 252,
+        yacute: 253,
+        yuml: 255,
+        copy: 169,
+        reg: 174,
+        nbsp: 160,
+        iexcl: 161,
+        cent: 162,
+        pound: 163,
+        curren: 164,
+        yen: 165,
+        brvbar: 166,
+        sect: 167,
+        uml: 168,
+        ordf: 170,
+        laquo: 171,
+        not: 172,
+        shy: 173,
+        macr: 175,
+        deg: 176,
+        plusmn: 177,
+        sup1: 185,
+        sup2: 178,
+        sup3: 179,
+        acute: 180,
+        micro: 181,
+        para: 182,
+        middot: 183,
+        cedil: 184,
+        ordm: 186,
+        raquo: 187,
+        frac14: 188,
+        frac12: 189,
+        frac34: 190,
+        iquest: 191,
+        times: 215,
+        divide: 247,
+        OElig: 338,
+        oelig: 339,
+        Scaron: 352,
+        scaron: 353,
+        Yuml: 376,
+        fnof: 402,
+        circ: 710,
+        tilde: 732,
+        Alpha: 913,
+        Beta: 914,
+        Gamma: 915,
+        Delta: 916,
+        Epsilon: 917,
+        Zeta: 918,
+        Eta: 919,
+        Theta: 920,
+        Iota: 921,
+        Kappa: 922,
+        Lambda: 923,
+        Mu: 924,
+        Nu: 925,
+        Xi: 926,
+        Omicron: 927,
+        Pi: 928,
+        Rho: 929,
+        Sigma: 931,
+        Tau: 932,
+        Upsilon: 933,
+        Phi: 934,
+        Chi: 935,
+        Psi: 936,
+        Omega: 937,
+        alpha: 945,
+        beta: 946,
+        gamma: 947,
+        delta: 948,
+        epsilon: 949,
+        zeta: 950,
+        eta: 951,
+        theta: 952,
+        iota: 953,
+        kappa: 954,
+        lambda: 955,
+        mu: 956,
+        nu: 957,
+        xi: 958,
+        omicron: 959,
+        pi: 960,
+        rho: 961,
+        sigmaf: 962,
+        sigma: 963,
+        tau: 964,
+        upsilon: 965,
+        phi: 966,
+        chi: 967,
+        psi: 968,
+        omega: 969,
+        thetasym: 977,
+        upsih: 978,
+        piv: 982,
+        ensp: 8194,
+        emsp: 8195,
+        thinsp: 8201,
+        zwnj: 8204,
+        zwj: 8205,
+        lrm: 8206,
+        rlm: 8207,
+        ndash: 8211,
+        mdash: 8212,
+        lsquo: 8216,
+        rsquo: 8217,
+        sbquo: 8218,
+        ldquo: 8220,
+        rdquo: 8221,
+        bdquo: 8222,
+        dagger: 8224,
+        Dagger: 8225,
+        bull: 8226,
+        hellip: 8230,
+        permil: 8240,
+        prime: 8242,
+        Prime: 8243,
+        lsaquo: 8249,
+        rsaquo: 8250,
+        oline: 8254,
+        frasl: 8260,
+        euro: 8364,
+        image: 8465,
+        weierp: 8472,
+        real: 8476,
+        trade: 8482,
+        alefsym: 8501,
+        larr: 8592,
+        uarr: 8593,
+        rarr: 8594,
+        darr: 8595,
+        harr: 8596,
+        crarr: 8629,
+        lArr: 8656,
+        uArr: 8657,
+        rArr: 8658,
+        dArr: 8659,
+        hArr: 8660,
+        forall: 8704,
+        part: 8706,
+        exist: 8707,
+        empty: 8709,
+        nabla: 8711,
+        isin: 8712,
+        notin: 8713,
+        ni: 8715,
+        prod: 8719,
+        sum: 8721,
+        minus: 8722,
+        lowast: 8727,
+        radic: 8730,
+        prop: 8733,
+        infin: 8734,
+        ang: 8736,
+        and: 8743,
+        or: 8744,
+        cap: 8745,
+        cup: 8746,
+        int: 8747,
+        there4: 8756,
+        sim: 8764,
+        cong: 8773,
+        asymp: 8776,
+        ne: 8800,
+        equiv: 8801,
+        le: 8804,
+        ge: 8805,
+        sub: 8834,
+        sup: 8835,
+        nsub: 8836,
+        sube: 8838,
+        supe: 8839,
+        oplus: 8853,
+        otimes: 8855,
+        perp: 8869,
+        sdot: 8901,
+        lceil: 8968,
+        rceil: 8969,
+        lfloor: 8970,
+        rfloor: 8971,
+        lang: 9001,
+        rang: 9002,
+        loz: 9674,
+        spades: 9824,
+        clubs: 9827,
+        hearts: 9829,
+        diams: 9830
       };
       Object.keys(sax.ENTITIES).forEach(function(key) {
         var e = sax.ENTITIES[key];
@@ -14351,7 +11974,8 @@ var require_sax = __commonJS({
         return parser;
       }
       function end(parser) {
-        if (parser.sawRoot && !parser.closedRoot) strictFail(parser, "Unclosed root tag");
+        if (parser.sawRoot && !parser.closedRoot)
+          strictFail(parser, "Unclosed root tag");
         if (parser.state !== S.BEGIN && parser.state !== S.BEGIN_WHITESPACE && parser.state !== S.TEXT) {
           error(parser, "Unexpected end");
         }
@@ -14441,7 +12065,10 @@ var require_sax = __commonJS({
           tag.local = qn.local;
           tag.uri = tag.ns[qn.prefix] || "";
           if (tag.prefix && !tag.uri) {
-            strictFail(parser, "Unbound namespace prefix: " + JSON.stringify(parser.tagName));
+            strictFail(
+              parser,
+              "Unbound namespace prefix: " + JSON.stringify(parser.tagName)
+            );
             tag.uri = qn.prefix;
           }
           var parent = parser.tags[parser.tags.length - 1] || parser;
@@ -14469,7 +12096,10 @@ var require_sax = __commonJS({
               uri
             };
             if (prefix && prefix !== "xmlns" && !uri) {
-              strictFail(parser, "Unbound namespace prefix: " + JSON.stringify(prefix));
+              strictFail(
+                parser,
+                "Unbound namespace prefix: " + JSON.stringify(prefix)
+              );
               a.uri = prefix;
             }
             parser.tag.attributes[name] = a;
@@ -14577,7 +12207,7 @@ var require_sax = __commonJS({
           }
         }
         entity = entity.replace(/^0+/, "");
-        if (isNaN(num) || numStr.toLowerCase() !== entity) {
+        if (isNaN(num) || numStr.toLowerCase() !== entity || num < 0 || num > 1114111) {
           strictFail(parser, "Invalid character entity");
           return "&" + parser.entity + ";";
         }
@@ -14716,15 +12346,21 @@ var require_sax = __commonJS({
               }
               continue;
             case S.SGML_DECL:
-              if ((parser.sgmlDecl + c).toUpperCase() === CDATA) {
+              if (parser.sgmlDecl + c === "--") {
+                parser.state = S.COMMENT;
+                parser.comment = "";
+                parser.sgmlDecl = "";
+                continue;
+              }
+              if (parser.doctype && parser.doctype !== true && parser.sgmlDecl) {
+                parser.state = S.DOCTYPE_DTD;
+                parser.doctype += "<!" + parser.sgmlDecl + c;
+                parser.sgmlDecl = "";
+              } else if ((parser.sgmlDecl + c).toUpperCase() === CDATA) {
                 emitNode(parser, "onopencdata");
                 parser.state = S.CDATA;
                 parser.sgmlDecl = "";
                 parser.cdata = "";
-              } else if (parser.sgmlDecl + c === "--") {
-                parser.state = S.COMMENT;
-                parser.comment = "";
-                parser.sgmlDecl = "";
               } else if ((parser.sgmlDecl + c).toUpperCase() === DOCTYPE) {
                 parser.state = S.DOCTYPE;
                 if (parser.doctype || parser.sawRoot) {
@@ -14776,12 +12412,18 @@ var require_sax = __commonJS({
               }
               continue;
             case S.DOCTYPE_DTD:
-              parser.doctype += c;
               if (c === "]") {
+                parser.doctype += c;
                 parser.state = S.DOCTYPE;
+              } else if (c === "<") {
+                parser.state = S.OPEN_WAKA;
+                parser.startTagPosition = parser.position;
               } else if (isQuote(c)) {
+                parser.doctype += c;
                 parser.state = S.DOCTYPE_DTD_QUOTED;
                 parser.q = c;
+              } else {
+                parser.doctype += c;
               }
               continue;
             case S.DOCTYPE_DTD_QUOTED:
@@ -14816,15 +12458,29 @@ var require_sax = __commonJS({
                 strictFail(parser, "Malformed comment");
                 parser.comment += "--" + c;
                 parser.state = S.COMMENT;
+              } else if (parser.doctype && parser.doctype !== true) {
+                parser.state = S.DOCTYPE_DTD;
               } else {
                 parser.state = S.TEXT;
               }
               continue;
             case S.CDATA:
+              var starti = i - 1;
+              while (c && c !== "]") {
+                c = charAt(chunk, i++);
+                if (c && parser.trackPosition) {
+                  parser.position++;
+                  if (c === "\n") {
+                    parser.line++;
+                    parser.column = 0;
+                  } else {
+                    parser.column++;
+                  }
+                }
+              }
+              parser.cdata += chunk.substring(starti, i - 1);
               if (c === "]") {
                 parser.state = S.CDATA_ENDING;
-              } else {
-                parser.cdata += c;
               }
               continue;
             case S.CDATA_ENDING:
@@ -14903,7 +12559,10 @@ var require_sax = __commonJS({
                 openTag(parser, true);
                 closeTag(parser);
               } else {
-                strictFail(parser, "Forward-slash in opening tag not followed by >");
+                strictFail(
+                  parser,
+                  "Forward-slash in opening tag not followed by >"
+                );
                 parser.state = S.ATTRIB;
               }
               continue;
@@ -14970,7 +12629,9 @@ var require_sax = __commonJS({
                 parser.q = c;
                 parser.state = S.ATTRIB_VALUE_QUOTED;
               } else {
-                strictFail(parser, "Unquoted attribute value");
+                if (!parser.opt.unquotedAttributeValues) {
+                  error(parser, "Unquoted attribute value");
+                }
                 parser.state = S.ATTRIB_VALUE_UNQUOTED;
                 parser.attribValue = c;
               }
@@ -15039,7 +12700,7 @@ var require_sax = __commonJS({
               } else if (isMatch(nameBody, c)) {
                 parser.tagName += c;
               } else if (parser.script) {
-                parser.script += "</" + parser.tagName;
+                parser.script += "</" + parser.tagName + c;
                 parser.tagName = "";
                 parser.state = S.SCRIPT;
               } else {
@@ -15079,9 +12740,16 @@ var require_sax = __commonJS({
                   break;
               }
               if (c === ";") {
-                parser[buffer] += parseEntity(parser);
-                parser.entity = "";
-                parser.state = returnState;
+                var parsedEntity = parseEntity(parser);
+                if (parser.opt.unparsedEntities && !Object.values(sax.XML_ENTITIES).includes(parsedEntity)) {
+                  parser.entity = "";
+                  parser.state = returnState;
+                  parser.write(parsedEntity);
+                } else {
+                  parser[buffer] += parsedEntity;
+                  parser.entity = "";
+                  parser.state = returnState;
+                }
               } else if (isMatch(parser.entity.length ? entityBody : entityStart, c)) {
                 parser.entity += c;
               } else {
@@ -15091,8 +12759,9 @@ var require_sax = __commonJS({
                 parser.state = returnState;
               }
               continue;
-            default:
+            default: {
               throw new Error(parser, "Unknown state: " + parser.state);
+            }
           }
         }
         if (parser.position >= parser.bufferCheckPosition) {
@@ -15101,6 +12770,7 @@ var require_sax = __commonJS({
         return parser;
       }
       if (!String.fromCodePoint) {
+        ;
         (function() {
           var stringFromCharCode = String.fromCharCode;
           var floor = Math.floor;
@@ -15153,9 +12823,9 @@ var require_sax = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xml2js/lib/bom.js
+// node_modules/xml2js/lib/bom.js
 var require_bom = __commonJS({
-  "../node-dbus-next/node_modules/xml2js/lib/bom.js"(exports) {
+  "node_modules/xml2js/lib/bom.js"(exports) {
     init_globals();
     (function() {
       "use strict";
@@ -15170,9 +12840,9 @@ var require_bom = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xml2js/lib/processors.js
+// node_modules/xml2js/lib/processors.js
 var require_processors = __commonJS({
-  "../node-dbus-next/node_modules/xml2js/lib/processors.js"(exports) {
+  "node_modules/xml2js/lib/processors.js"(exports) {
     init_globals();
     (function() {
       "use strict";
@@ -15203,212 +12873,28 @@ var require_processors = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/setimmediate/setImmediate.js
-var require_setImmediate = __commonJS({
-  "../node-dbus-next/node_modules/setimmediate/setImmediate.js"(exports) {
+// shim:timers
+var timers_exports = {};
+__export(timers_exports, {
+  clearImmediate: () => clearImmediate,
+  setImmediate: () => setImmediate2
+});
+var setImmediate2, clearImmediate;
+var init_timers = __esm({
+  "shim:timers"() {
     init_globals();
-    (function(global2, undefined2) {
-      "use strict";
-      if (global2.setImmediate) {
-        return;
-      }
-      var nextHandle = 1;
-      var tasksByHandle = {};
-      var currentlyRunningATask = false;
-      var doc = global2.document;
-      var registerImmediate;
-      function setImmediate2(callback) {
-        if (typeof callback !== "function") {
-          callback = new Function("" + callback);
-        }
-        var args = new Array(arguments.length - 1);
-        for (var i = 0; i < args.length; i++) {
-          args[i] = arguments[i + 1];
-        }
-        var task = { callback, args };
-        tasksByHandle[nextHandle] = task;
-        registerImmediate(nextHandle);
-        return nextHandle++;
-      }
-      function clearImmediate(handle) {
-        delete tasksByHandle[handle];
-      }
-      function run(task) {
-        var callback = task.callback;
-        var args = task.args;
-        switch (args.length) {
-          case 0:
-            callback();
-            break;
-          case 1:
-            callback(args[0]);
-            break;
-          case 2:
-            callback(args[0], args[1]);
-            break;
-          case 3:
-            callback(args[0], args[1], args[2]);
-            break;
-          default:
-            callback.apply(undefined2, args);
-            break;
-        }
-      }
-      function runIfPresent(handle) {
-        if (currentlyRunningATask) {
-          setTimeout(runIfPresent, 0, handle);
-        } else {
-          var task = tasksByHandle[handle];
-          if (task) {
-            currentlyRunningATask = true;
-            try {
-              run(task);
-            } finally {
-              clearImmediate(handle);
-              currentlyRunningATask = false;
-            }
-          }
-        }
-      }
-      function installNextTickImplementation() {
-        registerImmediate = function(handle) {
-          import_process.default.nextTick(function() {
-            runIfPresent(handle);
-          });
-        };
-      }
-      function canUsePostMessage() {
-        if (global2.postMessage && !global2.importScripts) {
-          var postMessageIsAsynchronous = true;
-          var oldOnMessage = global2.onmessage;
-          global2.onmessage = function() {
-            postMessageIsAsynchronous = false;
-          };
-          global2.postMessage("", "*");
-          global2.onmessage = oldOnMessage;
-          return postMessageIsAsynchronous;
-        }
-      }
-      function installPostMessageImplementation() {
-        var messagePrefix = "setImmediate$" + Math.random() + "$";
-        var onGlobalMessage = function(event) {
-          if (event.source === global2 && typeof event.data === "string" && event.data.indexOf(messagePrefix) === 0) {
-            runIfPresent(+event.data.slice(messagePrefix.length));
-          }
-        };
-        if (global2.addEventListener) {
-          global2.addEventListener("message", onGlobalMessage, false);
-        } else {
-          global2.attachEvent("onmessage", onGlobalMessage);
-        }
-        registerImmediate = function(handle) {
-          global2.postMessage(messagePrefix + handle, "*");
-        };
-      }
-      function installMessageChannelImplementation() {
-        var channel = new MessageChannel();
-        channel.port1.onmessage = function(event) {
-          var handle = event.data;
-          runIfPresent(handle);
-        };
-        registerImmediate = function(handle) {
-          channel.port2.postMessage(handle);
-        };
-      }
-      function installReadyStateChangeImplementation() {
-        var html = doc.documentElement;
-        registerImmediate = function(handle) {
-          var script = doc.createElement("script");
-          script.onreadystatechange = function() {
-            runIfPresent(handle);
-            script.onreadystatechange = null;
-            html.removeChild(script);
-            script = null;
-          };
-          html.appendChild(script);
-        };
-      }
-      function installSetTimeoutImplementation() {
-        registerImmediate = function(handle) {
-          setTimeout(runIfPresent, 0, handle);
-        };
-      }
-      var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global2);
-      attachTo = attachTo && attachTo.setTimeout ? attachTo : global2;
-      if ({}.toString.call(global2.process) === "[object process]") {
-        installNextTickImplementation();
-      } else if (canUsePostMessage()) {
-        installPostMessageImplementation();
-      } else if (global2.MessageChannel) {
-        installMessageChannelImplementation();
-      } else if (doc && "onreadystatechange" in doc.createElement("script")) {
-        installReadyStateChangeImplementation();
-      } else {
-        installSetTimeoutImplementation();
-      }
-      attachTo.setImmediate = setImmediate2;
-      attachTo.clearImmediate = clearImmediate;
-    })(typeof self === "undefined" ? typeof globalThis === "undefined" ? exports : globalThis : self);
+    setImmediate2 = globalThis.setTimeout;
+    clearImmediate = globalThis.clearTimeout;
   }
 });
 
-// ../node-dbus-next/node_modules/timers-browserify/main.js
-var require_main = __commonJS({
-  "../node-dbus-next/node_modules/timers-browserify/main.js"(exports) {
-    init_globals();
-    var scope = typeof globalThis !== "undefined" && globalThis || typeof self !== "undefined" && self || window;
-    var apply = Function.prototype.apply;
-    exports.setTimeout = function() {
-      return new Timeout(apply.call(setTimeout, scope, arguments), clearTimeout);
-    };
-    exports.setInterval = function() {
-      return new Timeout(apply.call(setInterval, scope, arguments), clearInterval);
-    };
-    exports.clearTimeout = exports.clearInterval = function(timeout) {
-      if (timeout) {
-        timeout.close();
-      }
-    };
-    function Timeout(id, clearFn) {
-      this._id = id;
-      this._clearFn = clearFn;
-    }
-    Timeout.prototype.unref = Timeout.prototype.ref = function() {
-    };
-    Timeout.prototype.close = function() {
-      this._clearFn.call(scope, this._id);
-    };
-    exports.enroll = function(item, msecs) {
-      clearTimeout(item._idleTimeoutId);
-      item._idleTimeout = msecs;
-    };
-    exports.unenroll = function(item) {
-      clearTimeout(item._idleTimeoutId);
-      item._idleTimeout = -1;
-    };
-    exports._unrefActive = exports.active = function(item) {
-      clearTimeout(item._idleTimeoutId);
-      var msecs = item._idleTimeout;
-      if (msecs >= 0) {
-        item._idleTimeoutId = setTimeout(function onTimeout() {
-          if (item._onTimeout)
-            item._onTimeout();
-        }, msecs);
-      }
-    };
-    require_setImmediate();
-    exports.setImmediate = typeof self !== "undefined" && self.setImmediate || typeof globalThis !== "undefined" && globalThis.setImmediate || exports && exports.setImmediate;
-    exports.clearImmediate = typeof self !== "undefined" && self.clearImmediate || typeof globalThis !== "undefined" && globalThis.clearImmediate || exports && exports.clearImmediate;
-  }
-});
-
-// ../node-dbus-next/node_modules/xml2js/lib/parser.js
+// node_modules/xml2js/lib/parser.js
 var require_parser = __commonJS({
-  "../node-dbus-next/node_modules/xml2js/lib/parser.js"(exports) {
+  "node_modules/xml2js/lib/parser.js"(exports) {
     init_globals();
     (function() {
       "use strict";
-      var bom, defaults, events, isEmpty, processItem, processors, sax, setImmediate2, bind = function(fn, me) {
+      var bom, defaults, events, isEmpty, processItem, processors, sax, setImmediate3, bind = function(fn, me) {
         return function() {
           return fn.apply(me, arguments);
         };
@@ -15428,7 +12914,7 @@ var require_parser = __commonJS({
       events = require_events();
       bom = require_bom();
       processors = require_processors();
-      setImmediate2 = require_main().setImmediate;
+      setImmediate3 = (init_timers(), __toCommonJS(timers_exports)).setImmediate;
       defaults = require_defaults().defaults;
       isEmpty = function(thing) {
         return typeof thing === "object" && thing != null && Object.keys(thing).length === 0;
@@ -15488,7 +12974,7 @@ var require_parser = __commonJS({
               chunk = this.remaining.substr(0, this.options.chunkSize);
               this.remaining = this.remaining.substr(this.options.chunkSize, this.remaining.length);
               this.saxParser = this.saxParser.write(chunk);
-              return setImmediate2(this.processAsync);
+              return setImmediate3(this.processAsync);
             }
           } catch (error1) {
             err = error1;
@@ -15722,7 +13208,7 @@ var require_parser = __commonJS({
             str = bom.stripBOM(str);
             if (this.options.async) {
               this.remaining = str;
-              setImmediate2(this.processAsync);
+              setImmediate3(this.processAsync);
               return this.saxParser;
             }
             return this.saxParser.write(str).close();
@@ -15781,9 +13267,9 @@ var require_parser = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/xml2js/lib/xml2js.js
+// node_modules/xml2js/lib/xml2js.js
 var require_xml2js = __commonJS({
-  "../node-dbus-next/node_modules/xml2js/lib/xml2js.js"(exports) {
+  "node_modules/xml2js/lib/xml2js.js"(exports) {
     init_globals();
     (function() {
       "use strict";
@@ -15820,9 +13306,9 @@ var require_xml2js = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/client/proxy-interface.js
+// node_modules/dbus-next/lib/client/proxy-interface.js
 var require_proxy_interface = __commonJS({
-  "../node-dbus-next/lib/client/proxy-interface.js"(exports, module) {
+  "node_modules/dbus-next/lib/client/proxy-interface.js"(exports, module) {
     init_globals();
     var EventEmitter3 = require_events();
     var {
@@ -15989,9 +13475,9 @@ var require_proxy_interface = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/client/proxy-object.js
+// node_modules/dbus-next/lib/client/proxy-object.js
 var require_proxy_object = __commonJS({
-  "../node-dbus-next/lib/client/proxy-object.js"(exports, module) {
+  "node_modules/dbus-next/lib/client/proxy-object.js"(exports, module) {
     init_globals();
     var xml2js = require_xml2js();
     var { parseSignature } = require_signature();
@@ -16137,9 +13623,9 @@ var require_proxy_object = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/bus.js
+// node_modules/dbus-next/lib/bus.js
 var require_bus = __commonJS({
-  "../node-dbus-next/lib/bus.js"(exports, module) {
+  "node_modules/dbus-next/lib/bus.js"(exports, module) {
     init_globals();
     var EventEmitter3 = require_events().EventEmitter;
     var constants = require_constants();
@@ -16586,9 +14072,9 @@ ${e.stack}`));
   }
 });
 
-// ../node-dbus-next/lib/shims/net.js
+// node_modules/dbus-next/lib/shims/net.js
 var require_net = __commonJS({
-  "../node-dbus-next/lib/shims/net.js"(exports, module) {
+  "node_modules/dbus-next/lib/shims/net.js"(exports, module) {
     init_globals();
     module.exports = {
       createConnection: function() {
@@ -16598,9 +14084,9 @@ var require_net = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/assert/build/internal/errors.js
+// node_modules/assert/build/internal/errors.js
 var require_errors2 = __commonJS({
-  "../node-dbus-next/node_modules/assert/build/internal/errors.js"(exports, module) {
+  "node_modules/assert/build/internal/errors.js"(exports, module) {
     "use strict";
     init_globals();
     function _typeof(o) {
@@ -16837,9 +14323,9 @@ var require_errors2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/assert/build/internal/assert/assertion_error.js
+// node_modules/assert/build/internal/assert/assertion_error.js
 var require_assertion_error = __commonJS({
-  "../node-dbus-next/node_modules/assert/build/internal/assert/assertion_error.js"(exports, module) {
+  "node_modules/assert/build/internal/assert/assertion_error.js"(exports, module) {
     "use strict";
     init_globals();
     function ownKeys(e, r) {
@@ -17340,9 +14826,9 @@ var require_assertion_error = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/object-keys/isArguments.js
+// node_modules/object-keys/isArguments.js
 var require_isArguments = __commonJS({
-  "../node-dbus-next/node_modules/object-keys/isArguments.js"(exports, module) {
+  "node_modules/object-keys/isArguments.js"(exports, module) {
     "use strict";
     init_globals();
     var toStr = Object.prototype.toString;
@@ -17357,9 +14843,9 @@ var require_isArguments = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/object-keys/implementation.js
+// node_modules/object-keys/implementation.js
 var require_implementation = __commonJS({
-  "../node-dbus-next/node_modules/object-keys/implementation.js"(exports, module) {
+  "node_modules/object-keys/implementation.js"(exports, module) {
     "use strict";
     init_globals();
     var keysShim;
@@ -17490,9 +14976,9 @@ var require_implementation = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/object-keys/index.js
+// node_modules/object-keys/index.js
 var require_object_keys = __commonJS({
-  "../node-dbus-next/node_modules/object-keys/index.js"(exports, module) {
+  "node_modules/object-keys/index.js"(exports, module) {
     "use strict";
     init_globals();
     var slice = Array.prototype.slice;
@@ -17525,9 +15011,9 @@ var require_object_keys = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/has-symbols/shams.js
+// node_modules/has-symbols/shams.js
 var require_shams = __commonJS({
-  "../node-dbus-next/node_modules/has-symbols/shams.js"(exports, module) {
+  "node_modules/has-symbols/shams.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = function hasSymbols() {
@@ -17581,135 +15067,135 @@ var require_shams = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/es-object-atoms/index.js
+// node_modules/es-object-atoms/index.js
 var require_es_object_atoms = __commonJS({
-  "../node-dbus-next/node_modules/es-object-atoms/index.js"(exports, module) {
+  "node_modules/es-object-atoms/index.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Object;
   }
 });
 
-// ../node-dbus-next/node_modules/es-errors/index.js
+// node_modules/es-errors/index.js
 var require_es_errors = __commonJS({
-  "../node-dbus-next/node_modules/es-errors/index.js"(exports, module) {
+  "node_modules/es-errors/index.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Error;
   }
 });
 
-// ../node-dbus-next/node_modules/es-errors/eval.js
+// node_modules/es-errors/eval.js
 var require_eval = __commonJS({
-  "../node-dbus-next/node_modules/es-errors/eval.js"(exports, module) {
+  "node_modules/es-errors/eval.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = EvalError;
   }
 });
 
-// ../node-dbus-next/node_modules/es-errors/range.js
+// node_modules/es-errors/range.js
 var require_range = __commonJS({
-  "../node-dbus-next/node_modules/es-errors/range.js"(exports, module) {
+  "node_modules/es-errors/range.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = RangeError;
   }
 });
 
-// ../node-dbus-next/node_modules/es-errors/ref.js
+// node_modules/es-errors/ref.js
 var require_ref = __commonJS({
-  "../node-dbus-next/node_modules/es-errors/ref.js"(exports, module) {
+  "node_modules/es-errors/ref.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = ReferenceError;
   }
 });
 
-// ../node-dbus-next/node_modules/es-errors/syntax.js
+// node_modules/es-errors/syntax.js
 var require_syntax = __commonJS({
-  "../node-dbus-next/node_modules/es-errors/syntax.js"(exports, module) {
+  "node_modules/es-errors/syntax.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = SyntaxError;
   }
 });
 
-// ../node-dbus-next/node_modules/es-errors/type.js
+// node_modules/es-errors/type.js
 var require_type = __commonJS({
-  "../node-dbus-next/node_modules/es-errors/type.js"(exports, module) {
+  "node_modules/es-errors/type.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = TypeError;
   }
 });
 
-// ../node-dbus-next/node_modules/es-errors/uri.js
+// node_modules/es-errors/uri.js
 var require_uri = __commonJS({
-  "../node-dbus-next/node_modules/es-errors/uri.js"(exports, module) {
+  "node_modules/es-errors/uri.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = URIError;
   }
 });
 
-// ../node-dbus-next/node_modules/math-intrinsics/abs.js
+// node_modules/math-intrinsics/abs.js
 var require_abs = __commonJS({
-  "../node-dbus-next/node_modules/math-intrinsics/abs.js"(exports, module) {
+  "node_modules/math-intrinsics/abs.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Math.abs;
   }
 });
 
-// ../node-dbus-next/node_modules/math-intrinsics/floor.js
+// node_modules/math-intrinsics/floor.js
 var require_floor = __commonJS({
-  "../node-dbus-next/node_modules/math-intrinsics/floor.js"(exports, module) {
+  "node_modules/math-intrinsics/floor.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Math.floor;
   }
 });
 
-// ../node-dbus-next/node_modules/math-intrinsics/max.js
+// node_modules/math-intrinsics/max.js
 var require_max = __commonJS({
-  "../node-dbus-next/node_modules/math-intrinsics/max.js"(exports, module) {
+  "node_modules/math-intrinsics/max.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Math.max;
   }
 });
 
-// ../node-dbus-next/node_modules/math-intrinsics/min.js
+// node_modules/math-intrinsics/min.js
 var require_min = __commonJS({
-  "../node-dbus-next/node_modules/math-intrinsics/min.js"(exports, module) {
+  "node_modules/math-intrinsics/min.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Math.min;
   }
 });
 
-// ../node-dbus-next/node_modules/math-intrinsics/pow.js
+// node_modules/math-intrinsics/pow.js
 var require_pow = __commonJS({
-  "../node-dbus-next/node_modules/math-intrinsics/pow.js"(exports, module) {
+  "node_modules/math-intrinsics/pow.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Math.pow;
   }
 });
 
-// ../node-dbus-next/node_modules/math-intrinsics/round.js
+// node_modules/math-intrinsics/round.js
 var require_round = __commonJS({
-  "../node-dbus-next/node_modules/math-intrinsics/round.js"(exports, module) {
+  "node_modules/math-intrinsics/round.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Math.round;
   }
 });
 
-// ../node-dbus-next/node_modules/math-intrinsics/isNaN.js
+// node_modules/math-intrinsics/isNaN.js
 var require_isNaN = __commonJS({
-  "../node-dbus-next/node_modules/math-intrinsics/isNaN.js"(exports, module) {
+  "node_modules/math-intrinsics/isNaN.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Number.isNaN || function isNaN2(a) {
@@ -17718,9 +15204,9 @@ var require_isNaN = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/math-intrinsics/sign.js
+// node_modules/math-intrinsics/sign.js
 var require_sign = __commonJS({
-  "../node-dbus-next/node_modules/math-intrinsics/sign.js"(exports, module) {
+  "node_modules/math-intrinsics/sign.js"(exports, module) {
     "use strict";
     init_globals();
     var $isNaN = require_isNaN();
@@ -17733,18 +15219,18 @@ var require_sign = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/gopd/gOPD.js
+// node_modules/gopd/gOPD.js
 var require_gOPD = __commonJS({
-  "../node-dbus-next/node_modules/gopd/gOPD.js"(exports, module) {
+  "node_modules/gopd/gOPD.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Object.getOwnPropertyDescriptor;
   }
 });
 
-// ../node-dbus-next/node_modules/gopd/index.js
+// node_modules/gopd/index.js
 var require_gopd = __commonJS({
-  "../node-dbus-next/node_modules/gopd/index.js"(exports, module) {
+  "node_modules/gopd/index.js"(exports, module) {
     "use strict";
     init_globals();
     var $gOPD = require_gOPD();
@@ -17759,9 +15245,9 @@ var require_gopd = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/es-define-property/index.js
+// node_modules/es-define-property/index.js
 var require_es_define_property = __commonJS({
-  "../node-dbus-next/node_modules/es-define-property/index.js"(exports, module) {
+  "node_modules/es-define-property/index.js"(exports, module) {
     "use strict";
     init_globals();
     var $defineProperty = Object.defineProperty || false;
@@ -17776,9 +15262,9 @@ var require_es_define_property = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/has-symbols/index.js
+// node_modules/has-symbols/index.js
 var require_has_symbols = __commonJS({
-  "../node-dbus-next/node_modules/has-symbols/index.js"(exports, module) {
+  "node_modules/has-symbols/index.js"(exports, module) {
     "use strict";
     init_globals();
     var origSymbol = typeof Symbol !== "undefined" && Symbol;
@@ -17801,18 +15287,18 @@ var require_has_symbols = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/get-proto/Reflect.getPrototypeOf.js
+// node_modules/get-proto/Reflect.getPrototypeOf.js
 var require_Reflect_getPrototypeOf = __commonJS({
-  "../node-dbus-next/node_modules/get-proto/Reflect.getPrototypeOf.js"(exports, module) {
+  "node_modules/get-proto/Reflect.getPrototypeOf.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = typeof Reflect !== "undefined" && Reflect.getPrototypeOf || null;
   }
 });
 
-// ../node-dbus-next/node_modules/get-proto/Object.getPrototypeOf.js
+// node_modules/get-proto/Object.getPrototypeOf.js
 var require_Object_getPrototypeOf = __commonJS({
-  "../node-dbus-next/node_modules/get-proto/Object.getPrototypeOf.js"(exports, module) {
+  "node_modules/get-proto/Object.getPrototypeOf.js"(exports, module) {
     "use strict";
     init_globals();
     var $Object = require_es_object_atoms();
@@ -17820,9 +15306,9 @@ var require_Object_getPrototypeOf = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/function-bind/implementation.js
+// node_modules/function-bind/implementation.js
 var require_implementation2 = __commonJS({
-  "../node-dbus-next/node_modules/function-bind/implementation.js"(exports, module) {
+  "node_modules/function-bind/implementation.js"(exports, module) {
     "use strict";
     init_globals();
     var ERROR_MESSAGE = "Function.prototype.bind called on incompatible ";
@@ -17897,9 +15383,9 @@ var require_implementation2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/function-bind/index.js
+// node_modules/function-bind/index.js
 var require_function_bind = __commonJS({
-  "../node-dbus-next/node_modules/function-bind/index.js"(exports, module) {
+  "node_modules/function-bind/index.js"(exports, module) {
     "use strict";
     init_globals();
     var implementation = require_implementation2();
@@ -17907,36 +15393,36 @@ var require_function_bind = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/call-bind-apply-helpers/functionCall.js
+// node_modules/call-bind-apply-helpers/functionCall.js
 var require_functionCall = __commonJS({
-  "../node-dbus-next/node_modules/call-bind-apply-helpers/functionCall.js"(exports, module) {
+  "node_modules/call-bind-apply-helpers/functionCall.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Function.prototype.call;
   }
 });
 
-// ../node-dbus-next/node_modules/call-bind-apply-helpers/functionApply.js
+// node_modules/call-bind-apply-helpers/functionApply.js
 var require_functionApply = __commonJS({
-  "../node-dbus-next/node_modules/call-bind-apply-helpers/functionApply.js"(exports, module) {
+  "node_modules/call-bind-apply-helpers/functionApply.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Function.prototype.apply;
   }
 });
 
-// ../node-dbus-next/node_modules/call-bind-apply-helpers/reflectApply.js
+// node_modules/call-bind-apply-helpers/reflectApply.js
 var require_reflectApply = __commonJS({
-  "../node-dbus-next/node_modules/call-bind-apply-helpers/reflectApply.js"(exports, module) {
+  "node_modules/call-bind-apply-helpers/reflectApply.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = typeof Reflect !== "undefined" && Reflect && Reflect.apply;
   }
 });
 
-// ../node-dbus-next/node_modules/call-bind-apply-helpers/actualApply.js
+// node_modules/call-bind-apply-helpers/actualApply.js
 var require_actualApply = __commonJS({
-  "../node-dbus-next/node_modules/call-bind-apply-helpers/actualApply.js"(exports, module) {
+  "node_modules/call-bind-apply-helpers/actualApply.js"(exports, module) {
     "use strict";
     init_globals();
     var bind = require_function_bind();
@@ -17947,9 +15433,9 @@ var require_actualApply = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/call-bind-apply-helpers/index.js
+// node_modules/call-bind-apply-helpers/index.js
 var require_call_bind_apply_helpers = __commonJS({
-  "../node-dbus-next/node_modules/call-bind-apply-helpers/index.js"(exports, module) {
+  "node_modules/call-bind-apply-helpers/index.js"(exports, module) {
     "use strict";
     init_globals();
     var bind = require_function_bind();
@@ -17965,9 +15451,9 @@ var require_call_bind_apply_helpers = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/dunder-proto/get.js
+// node_modules/dunder-proto/get.js
 var require_get = __commonJS({
-  "../node-dbus-next/node_modules/dunder-proto/get.js"(exports, module) {
+  "node_modules/dunder-proto/get.js"(exports, module) {
     "use strict";
     init_globals();
     var callBind = require_call_bind_apply_helpers();
@@ -17997,9 +15483,9 @@ var require_get = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/get-proto/index.js
+// node_modules/get-proto/index.js
 var require_get_proto = __commonJS({
-  "../node-dbus-next/node_modules/get-proto/index.js"(exports, module) {
+  "node_modules/get-proto/index.js"(exports, module) {
     "use strict";
     init_globals();
     var reflectGetProto = require_Reflect_getPrototypeOf();
@@ -18018,9 +15504,9 @@ var require_get_proto = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hasown/index.js
+// node_modules/hasown/index.js
 var require_hasown = __commonJS({
-  "../node-dbus-next/node_modules/hasown/index.js"(exports, module) {
+  "node_modules/hasown/index.js"(exports, module) {
     "use strict";
     init_globals();
     var call = Function.prototype.call;
@@ -18030,9 +15516,9 @@ var require_hasown = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/get-intrinsic/index.js
+// node_modules/get-intrinsic/index.js
 var require_get_intrinsic = __commonJS({
-  "../node-dbus-next/node_modules/get-intrinsic/index.js"(exports, module) {
+  "node_modules/get-intrinsic/index.js"(exports, module) {
     "use strict";
     init_globals();
     var undefined2;
@@ -18362,9 +15848,9 @@ var require_get_intrinsic = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/call-bound/index.js
+// node_modules/call-bound/index.js
 var require_call_bound = __commonJS({
-  "../node-dbus-next/node_modules/call-bound/index.js"(exports, module) {
+  "node_modules/call-bound/index.js"(exports, module) {
     "use strict";
     init_globals();
     var GetIntrinsic = require_get_intrinsic();
@@ -18386,9 +15872,9 @@ var require_call_bound = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/object.assign/implementation.js
+// node_modules/object.assign/implementation.js
 var require_implementation3 = __commonJS({
-  "../node-dbus-next/node_modules/object.assign/implementation.js"(exports, module) {
+  "node_modules/object.assign/implementation.js"(exports, module) {
     "use strict";
     init_globals();
     var objectKeys = require_object_keys();
@@ -18432,9 +15918,9 @@ var require_implementation3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/object.assign/polyfill.js
+// node_modules/object.assign/polyfill.js
 var require_polyfill = __commonJS({
-  "../node-dbus-next/node_modules/object.assign/polyfill.js"(exports, module) {
+  "node_modules/object.assign/polyfill.js"(exports, module) {
     "use strict";
     init_globals();
     var implementation = require_implementation3();
@@ -18482,9 +15968,9 @@ var require_polyfill = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/object-is/implementation.js
+// node_modules/object-is/implementation.js
 var require_implementation4 = __commonJS({
-  "../node-dbus-next/node_modules/object-is/implementation.js"(exports, module) {
+  "node_modules/object-is/implementation.js"(exports, module) {
     "use strict";
     init_globals();
     var numberIsNaN = function(value) {
@@ -18505,9 +15991,9 @@ var require_implementation4 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/object-is/polyfill.js
+// node_modules/object-is/polyfill.js
 var require_polyfill2 = __commonJS({
-  "../node-dbus-next/node_modules/object-is/polyfill.js"(exports, module) {
+  "node_modules/object-is/polyfill.js"(exports, module) {
     "use strict";
     init_globals();
     var implementation = require_implementation4();
@@ -18517,9 +16003,9 @@ var require_polyfill2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/define-data-property/index.js
+// node_modules/define-data-property/index.js
 var require_define_data_property = __commonJS({
-  "../node-dbus-next/node_modules/define-data-property/index.js"(exports, module) {
+  "node_modules/define-data-property/index.js"(exports, module) {
     "use strict";
     init_globals();
     var $defineProperty = require_es_define_property();
@@ -18566,9 +16052,9 @@ var require_define_data_property = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/has-property-descriptors/index.js
+// node_modules/has-property-descriptors/index.js
 var require_has_property_descriptors = __commonJS({
-  "../node-dbus-next/node_modules/has-property-descriptors/index.js"(exports, module) {
+  "node_modules/has-property-descriptors/index.js"(exports, module) {
     "use strict";
     init_globals();
     var $defineProperty = require_es_define_property();
@@ -18589,9 +16075,9 @@ var require_has_property_descriptors = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/set-function-length/index.js
+// node_modules/set-function-length/index.js
 var require_set_function_length = __commonJS({
-  "../node-dbus-next/node_modules/set-function-length/index.js"(exports, module) {
+  "node_modules/set-function-length/index.js"(exports, module) {
     "use strict";
     init_globals();
     var GetIntrinsic = require_get_intrinsic();
@@ -18643,9 +16129,9 @@ var require_set_function_length = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/call-bind-apply-helpers/applyBind.js
+// node_modules/call-bind-apply-helpers/applyBind.js
 var require_applyBind = __commonJS({
-  "../node-dbus-next/node_modules/call-bind-apply-helpers/applyBind.js"(exports, module) {
+  "node_modules/call-bind-apply-helpers/applyBind.js"(exports, module) {
     "use strict";
     init_globals();
     var bind = require_function_bind();
@@ -18657,9 +16143,9 @@ var require_applyBind = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/call-bind/index.js
+// node_modules/call-bind/index.js
 var require_call_bind = __commonJS({
-  "../node-dbus-next/node_modules/call-bind/index.js"(exports, module) {
+  "node_modules/call-bind/index.js"(exports, module) {
     "use strict";
     init_globals();
     var setFunctionLength = require_set_function_length();
@@ -18683,9 +16169,9 @@ var require_call_bind = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/call-bind/callBound.js
+// node_modules/call-bind/callBound.js
 var require_callBound = __commonJS({
-  "../node-dbus-next/node_modules/call-bind/callBound.js"(exports, module) {
+  "node_modules/call-bind/callBound.js"(exports, module) {
     "use strict";
     init_globals();
     var GetIntrinsic = require_get_intrinsic();
@@ -18701,9 +16187,9 @@ var require_callBound = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/define-properties/index.js
+// node_modules/define-properties/index.js
 var require_define_properties = __commonJS({
-  "../node-dbus-next/node_modules/define-properties/index.js"(exports, module) {
+  "node_modules/define-properties/index.js"(exports, module) {
     "use strict";
     init_globals();
     var keys = require_object_keys();
@@ -18746,9 +16232,9 @@ var require_define_properties = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/object-is/shim.js
+// node_modules/object-is/shim.js
 var require_shim = __commonJS({
-  "../node-dbus-next/node_modules/object-is/shim.js"(exports, module) {
+  "node_modules/object-is/shim.js"(exports, module) {
     "use strict";
     init_globals();
     var getPolyfill = require_polyfill2();
@@ -18765,9 +16251,9 @@ var require_shim = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/object-is/index.js
+// node_modules/object-is/index.js
 var require_object_is = __commonJS({
-  "../node-dbus-next/node_modules/object-is/index.js"(exports, module) {
+  "node_modules/object-is/index.js"(exports, module) {
     "use strict";
     init_globals();
     var define2 = require_define_properties();
@@ -18785,9 +16271,9 @@ var require_object_is = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/is-nan/implementation.js
+// node_modules/is-nan/implementation.js
 var require_implementation5 = __commonJS({
-  "../node-dbus-next/node_modules/is-nan/implementation.js"(exports, module) {
+  "node_modules/is-nan/implementation.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = function isNaN2(value) {
@@ -18796,9 +16282,9 @@ var require_implementation5 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/is-nan/polyfill.js
+// node_modules/is-nan/polyfill.js
 var require_polyfill3 = __commonJS({
-  "../node-dbus-next/node_modules/is-nan/polyfill.js"(exports, module) {
+  "node_modules/is-nan/polyfill.js"(exports, module) {
     "use strict";
     init_globals();
     var implementation = require_implementation5();
@@ -18811,9 +16297,9 @@ var require_polyfill3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/is-nan/shim.js
+// node_modules/is-nan/shim.js
 var require_shim2 = __commonJS({
-  "../node-dbus-next/node_modules/is-nan/shim.js"(exports, module) {
+  "node_modules/is-nan/shim.js"(exports, module) {
     "use strict";
     init_globals();
     var define2 = require_define_properties();
@@ -18830,9 +16316,9 @@ var require_shim2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/is-nan/index.js
+// node_modules/is-nan/index.js
 var require_is_nan = __commonJS({
-  "../node-dbus-next/node_modules/is-nan/index.js"(exports, module) {
+  "node_modules/is-nan/index.js"(exports, module) {
     "use strict";
     init_globals();
     var callBind = require_call_bind();
@@ -18850,9 +16336,9 @@ var require_is_nan = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/assert/build/internal/util/comparisons.js
+// node_modules/assert/build/internal/util/comparisons.js
 var require_comparisons = __commonJS({
-  "../node-dbus-next/node_modules/assert/build/internal/util/comparisons.js"(exports, module) {
+  "node_modules/assert/build/internal/util/comparisons.js"(exports, module) {
     "use strict";
     init_globals();
     function _slicedToArray(arr, i) {
@@ -19372,9 +16858,9 @@ var require_comparisons = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/assert/build/assert.js
+// node_modules/assert/build/assert.js
 var require_assert = __commonJS({
-  "../node-dbus-next/node_modules/assert/build/assert.js"(exports, module) {
+  "node_modules/assert/build/assert.js"(exports, module) {
     "use strict";
     init_globals();
     function _typeof(o) {
@@ -19905,9 +17391,9 @@ var require_assert = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/shims/put.js
+// node_modules/dbus-next/lib/shims/put.js
 var require_put = __commonJS({
-  "../node-dbus-next/lib/shims/put.js"(exports, module) {
+  "node_modules/dbus-next/lib/shims/put.js"(exports, module) {
     init_globals();
     var Buffer4 = require_buffer().Buffer;
     function PutStream() {
@@ -19957,9 +17443,9 @@ var require_put = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/align.js
+// node_modules/dbus-next/lib/align.js
 var require_align = __commonJS({
-  "../node-dbus-next/lib/align.js"(exports) {
+  "node_modules/dbus-next/lib/align.js"(exports) {
     init_globals();
     var Buffer4 = require_buffer().Buffer;
     function align(ps, n) {
@@ -19973,9 +17459,9 @@ var require_align = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/long/src/long.js
+// node_modules/long/src/long.js
 var require_long = __commonJS({
-  "../node-dbus-next/node_modules/long/src/long.js"(exports, module) {
+  "node_modules/long/src/long.js"(exports, module) {
     init_globals();
     module.exports = Long;
     var wasm = null;
@@ -20837,9 +18323,9 @@ var require_long = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/library-options.js
+// node_modules/dbus-next/lib/library-options.js
 var require_library_options = __commonJS({
-  "../node-dbus-next/lib/library-options.js"(exports, module) {
+  "node_modules/dbus-next/lib/library-options.js"(exports, module) {
     init_globals();
     var libraryOptions = {
       bigIntCompat: false
@@ -20856,9 +18342,9 @@ var require_library_options = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/marshallers.js
+// node_modules/dbus-next/lib/marshallers.js
 var require_marshallers = __commonJS({
-  "../node-dbus-next/lib/marshallers.js"(exports) {
+  "node_modules/dbus-next/lib/marshallers.js"(exports) {
     init_globals();
     var Buffer4 = require_buffer().Buffer;
     var align = require_align().align;
@@ -21125,9 +18611,9 @@ var require_marshallers = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/marshall.js
+// node_modules/dbus-next/lib/marshall.js
 var require_marshall = __commonJS({
-  "../node-dbus-next/lib/marshall.js"(exports, module) {
+  "node_modules/dbus-next/lib/marshall.js"(exports, module) {
     init_globals();
     var assert = require_assert();
     var { parseSignature } = require_signature();
@@ -21232,9 +18718,9 @@ var require_marshall = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/dbus-buffer.js
+// node_modules/dbus-next/lib/dbus-buffer.js
 var require_dbus_buffer = __commonJS({
-  "../node-dbus-next/lib/dbus-buffer.js"(exports, module) {
+  "node_modules/dbus-next/lib/dbus-buffer.js"(exports, module) {
     init_globals();
     var { parseSignature } = require_signature();
     var { getBigIntCompat } = require_library_options();
@@ -21418,9 +18904,9 @@ var require_dbus_buffer = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/header-signature.json
+// node_modules/dbus-next/lib/header-signature.json
 var require_header_signature = __commonJS({
-  "../node-dbus-next/lib/header-signature.json"(exports, module) {
+  "node_modules/dbus-next/lib/header-signature.json"(exports, module) {
     module.exports = [
       {
         type: "a",
@@ -21444,9 +18930,9 @@ var require_header_signature = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/message.js
+// node_modules/dbus-next/lib/message.js
 var require_message = __commonJS({
-  "../node-dbus-next/lib/message.js"(exports, module) {
+  "node_modules/dbus-next/lib/message.js"(exports, module) {
     init_globals();
     var Buffer4 = require_buffer().Buffer;
     var marshall = require_marshall();
@@ -21563,9 +19049,9 @@ var require_message = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/randombytes/browser.js
+// node_modules/randombytes/browser.js
 var require_browser3 = __commonJS({
-  "../node-dbus-next/node_modules/randombytes/browser.js"(exports, module) {
+  "node_modules/randombytes/browser.js"(exports, module) {
     "use strict";
     init_globals();
     var MAX_BYTES = 65536;
@@ -21573,7 +19059,7 @@ var require_browser3 = __commonJS({
     function oldBrowser() {
       throw new Error("Secure random number generation is not supported by this browser.\nUse Chrome, Firefox or Internet Explorer 11");
     }
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var crypto = globalThis.crypto || globalThis.msCrypto;
     if (crypto && crypto.getRandomValues) {
       module.exports = randomBytes;
@@ -21602,47 +19088,14 @@ var require_browser3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/inherits/inherits_browser.js
-var require_inherits_browser2 = __commonJS({
-  "../node-dbus-next/node_modules/inherits/inherits_browser.js"(exports, module) {
-    init_globals();
-    if (typeof Object.create === "function") {
-      module.exports = function inherits2(ctor, superCtor) {
-        if (superCtor) {
-          ctor.super_ = superCtor;
-          ctor.prototype = Object.create(superCtor.prototype, {
-            constructor: {
-              value: ctor,
-              enumerable: false,
-              writable: true,
-              configurable: true
-            }
-          });
-        }
-      };
-    } else {
-      module.exports = function inherits2(ctor, superCtor) {
-        if (superCtor) {
-          ctor.super_ = superCtor;
-          var TempCtor = function() {
-          };
-          TempCtor.prototype = superCtor.prototype;
-          ctor.prototype = new TempCtor();
-          ctor.prototype.constructor = ctor;
-        }
-      };
-    }
-  }
-});
-
-// ../node-dbus-next/node_modules/hash-base/index.js
+// node_modules/hash-base/index.js
 var require_hash_base = __commonJS({
-  "../node-dbus-next/node_modules/hash-base/index.js"(exports, module) {
+  "node_modules/hash-base/index.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var Transform = require_stream_browserify().Transform;
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     function HashBase(blockSize) {
       Transform.call(this);
       this._block = Buffer4.allocUnsafe(blockSize);
@@ -21724,14 +19177,14 @@ var require_hash_base = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/md5.js/index.js
+// node_modules/md5.js/index.js
 var require_md5 = __commonJS({
-  "../node-dbus-next/node_modules/md5.js/index.js"(exports, module) {
+  "node_modules/md5.js/index.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var HashBase = require_hash_base();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var ARRAY16 = new Array(16);
     function MD5() {
       HashBase.call(this, 64);
@@ -21854,9 +19307,9 @@ var require_md5 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/to-buffer/node_modules/isarray/index.js
+// node_modules/isarray/index.js
 var require_isarray = __commonJS({
-  "../node-dbus-next/node_modules/to-buffer/node_modules/isarray/index.js"(exports, module) {
+  "node_modules/isarray/index.js"(exports, module) {
     init_globals();
     var toString = {}.toString;
     module.exports = Array.isArray || function(arr) {
@@ -21865,9 +19318,9 @@ var require_isarray = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/is-callable/index.js
+// node_modules/is-callable/index.js
 var require_is_callable = __commonJS({
-  "../node-dbus-next/node_modules/is-callable/index.js"(exports, module) {
+  "node_modules/is-callable/index.js"(exports, module) {
     "use strict";
     init_globals();
     var fnToStr = Function.prototype.toString;
@@ -21984,9 +19437,9 @@ var require_is_callable = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/for-each/index.js
+// node_modules/for-each/index.js
 var require_for_each = __commonJS({
-  "../node-dbus-next/node_modules/for-each/index.js"(exports, module) {
+  "node_modules/for-each/index.js"(exports, module) {
     "use strict";
     init_globals();
     var isCallable = require_is_callable();
@@ -22045,9 +19498,9 @@ var require_for_each = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/possible-typed-array-names/index.js
+// node_modules/possible-typed-array-names/index.js
 var require_possible_typed_array_names = __commonJS({
-  "../node-dbus-next/node_modules/possible-typed-array-names/index.js"(exports, module) {
+  "node_modules/possible-typed-array-names/index.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = [
@@ -22067,9 +19520,9 @@ var require_possible_typed_array_names = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/available-typed-arrays/index.js
+// node_modules/available-typed-arrays/index.js
 var require_available_typed_arrays = __commonJS({
-  "../node-dbus-next/node_modules/available-typed-arrays/index.js"(exports, module) {
+  "node_modules/available-typed-arrays/index.js"(exports, module) {
     "use strict";
     init_globals();
     var possibleNames = require_possible_typed_array_names();
@@ -22086,9 +19539,9 @@ var require_available_typed_arrays = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/has-tostringtag/shams.js
+// node_modules/has-tostringtag/shams.js
 var require_shams2 = __commonJS({
-  "../node-dbus-next/node_modules/has-tostringtag/shams.js"(exports, module) {
+  "node_modules/has-tostringtag/shams.js"(exports, module) {
     "use strict";
     init_globals();
     var hasSymbols = require_shams();
@@ -22098,9 +19551,9 @@ var require_shams2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/which-typed-array/index.js
+// node_modules/which-typed-array/index.js
 var require_which_typed_array = __commonJS({
-  "../node-dbus-next/node_modules/which-typed-array/index.js"(exports, module) {
+  "node_modules/which-typed-array/index.js"(exports, module) {
     "use strict";
     init_globals();
     var forEach = require_for_each();
@@ -22220,9 +19673,9 @@ var require_which_typed_array = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/is-typed-array/index.js
+// node_modules/is-typed-array/index.js
 var require_is_typed_array = __commonJS({
-  "../node-dbus-next/node_modules/is-typed-array/index.js"(exports, module) {
+  "node_modules/is-typed-array/index.js"(exports, module) {
     "use strict";
     init_globals();
     var whichTypedArray = require_which_typed_array();
@@ -22232,9 +19685,9 @@ var require_is_typed_array = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/typed-array-buffer/index.js
+// node_modules/typed-array-buffer/index.js
 var require_typed_array_buffer = __commonJS({
-  "../node-dbus-next/node_modules/typed-array-buffer/index.js"(exports, module) {
+  "node_modules/typed-array-buffer/index.js"(exports, module) {
     "use strict";
     init_globals();
     var $TypeError = require_type();
@@ -22250,12 +19703,12 @@ var require_typed_array_buffer = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/to-buffer/index.js
+// node_modules/to-buffer/index.js
 var require_to_buffer = __commonJS({
-  "../node-dbus-next/node_modules/to-buffer/index.js"(exports, module) {
+  "node_modules/to-buffer/index.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var isArray = require_isarray();
     var typedArrayBuffer = require_typed_array_buffer();
     var isView = ArrayBuffer.isView || function isView2(obj) {
@@ -22315,12 +19768,12 @@ var require_to_buffer = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/hash-base/to-buffer.js
+// node_modules/ripemd160/node_modules/hash-base/to-buffer.js
 var require_to_buffer2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/hash-base/to-buffer.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/hash-base/to-buffer.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var toBuffer = require_to_buffer();
     var useUint8Array = typeof Uint8Array !== "undefined";
     var useArrayBuffer = useUint8Array && typeof ArrayBuffer !== "undefined";
@@ -22334,9 +19787,9 @@ var require_to_buffer2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/process-nextick-args/index.js
+// node_modules/process-nextick-args/index.js
 var require_process_nextick_args = __commonJS({
-  "../node-dbus-next/node_modules/process-nextick-args/index.js"(exports, module) {
+  "node_modules/process-nextick-args/index.js"(exports, module) {
     "use strict";
     init_globals();
     if (typeof import_process.default === "undefined" || !import_process.default.version || import_process.default.version.indexOf("v0.") === 0 || import_process.default.version.indexOf("v1.") === 0 && import_process.default.version.indexOf("v1.8.") !== 0) {
@@ -22380,9 +19833,9 @@ var require_process_nextick_args = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/isarray/index.js
+// node_modules/ripemd160/node_modules/isarray/index.js
 var require_isarray2 = __commonJS({
-  "../node-dbus-next/node_modules/isarray/index.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/isarray/index.js"(exports, module) {
     init_globals();
     var toString = {}.toString;
     module.exports = Array.isArray || function(arr) {
@@ -22391,17 +19844,17 @@ var require_isarray2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/stream-browser.js
+// node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/stream-browser.js
 var require_stream_browser2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/stream-browser.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/stream-browser.js"(exports, module) {
     init_globals();
     module.exports = require_events().EventEmitter;
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/node_modules/safe-buffer/index.js
+// node_modules/ripemd160/node_modules/readable-stream/node_modules/safe-buffer/index.js
 var require_safe_buffer2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/node_modules/safe-buffer/index.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/node_modules/safe-buffer/index.js"(exports, module) {
     init_globals();
     var buffer = require_buffer();
     var Buffer4 = buffer.Buffer;
@@ -22457,9 +19910,9 @@ var require_safe_buffer2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/core-util-is/lib/util.js
+// node_modules/core-util-is/lib/util.js
 var require_util = __commonJS({
-  "../node-dbus-next/node_modules/core-util-is/lib/util.js"(exports) {
+  "node_modules/core-util-is/lib/util.js"(exports) {
     init_globals();
     function isArray(arg) {
       if (Array.isArray) {
@@ -22528,9 +19981,9 @@ var require_util = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/BufferList.js
+// node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/BufferList.js
 var require_BufferList = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/BufferList.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/BufferList.js"(exports, module) {
     "use strict";
     init_globals();
     function _classCallCheck(instance, Constructor) {
@@ -22607,9 +20060,9 @@ var require_BufferList = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/destroy.js
+// node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/destroy.js
 var require_destroy2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/destroy.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/lib/internal/streams/destroy.js"(exports, module) {
     "use strict";
     init_globals();
     var pna = require_process_nextick_args();
@@ -22677,47 +20130,9 @@ var require_destroy2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/util-deprecate/browser.js
-var require_browser4 = __commonJS({
-  "../node-dbus-next/node_modules/util-deprecate/browser.js"(exports, module) {
-    init_globals();
-    module.exports = deprecate2;
-    function deprecate2(fn, msg) {
-      if (config("noDeprecation")) {
-        return fn;
-      }
-      var warned = false;
-      function deprecated() {
-        if (!warned) {
-          if (config("throwDeprecation")) {
-            throw new Error(msg);
-          } else if (config("traceDeprecation")) {
-            console.trace(msg);
-          } else {
-            console.warn(msg);
-          }
-          warned = true;
-        }
-        return fn.apply(this, arguments);
-      }
-      return deprecated;
-    }
-    function config(name) {
-      try {
-        if (!globalThis.localStorage) return false;
-      } catch (_) {
-        return false;
-      }
-      var val = globalThis.localStorage[name];
-      if (null == val) return false;
-      return String(val).toLowerCase() === "true";
-    }
-  }
-});
-
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_writable.js
+// node_modules/ripemd160/node_modules/readable-stream/lib/_stream_writable.js
 var require_stream_writable2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_writable.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/lib/_stream_writable.js"(exports, module) {
     "use strict";
     init_globals();
     var pna = require_process_nextick_args();
@@ -22734,9 +20149,9 @@ var require_stream_writable2 = __commonJS({
     var Duplex2;
     Writable.WritableState = WritableState;
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     var internalUtil = {
-      deprecate: require_browser4()
+      deprecate: require_browser2()
     };
     var Stream = require_stream_browser2();
     var Buffer4 = require_safe_buffer2().Buffer;
@@ -23156,9 +20571,9 @@ var require_stream_writable2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_duplex.js
+// node_modules/ripemd160/node_modules/readable-stream/lib/_stream_duplex.js
 var require_stream_duplex2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_duplex.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/lib/_stream_duplex.js"(exports, module) {
     "use strict";
     init_globals();
     var pna = require_process_nextick_args();
@@ -23171,7 +20586,7 @@ var require_stream_duplex2 = __commonJS({
     };
     module.exports = Duplex2;
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     var Readable = require_stream_readable2();
     var Writable = require_stream_writable2();
     util.inherits(Duplex2, Readable);
@@ -23234,12 +20649,70 @@ var require_stream_duplex2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/string_decoder/lib/string_decoder.js
-var require_string_decoder3 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/string_decoder/lib/string_decoder.js"(exports) {
+// node_modules/ripemd160/node_modules/string_decoder/node_modules/safe-buffer/index.js
+var require_safe_buffer3 = __commonJS({
+  "node_modules/ripemd160/node_modules/string_decoder/node_modules/safe-buffer/index.js"(exports, module) {
+    init_globals();
+    var buffer = require_buffer();
+    var Buffer4 = buffer.Buffer;
+    function copyProps(src, dst) {
+      for (var key in src) {
+        dst[key] = src[key];
+      }
+    }
+    if (Buffer4.from && Buffer4.alloc && Buffer4.allocUnsafe && Buffer4.allocUnsafeSlow) {
+      module.exports = buffer;
+    } else {
+      copyProps(buffer, exports);
+      exports.Buffer = SafeBuffer;
+    }
+    function SafeBuffer(arg, encodingOrOffset, length) {
+      return Buffer4(arg, encodingOrOffset, length);
+    }
+    copyProps(Buffer4, SafeBuffer);
+    SafeBuffer.from = function(arg, encodingOrOffset, length) {
+      if (typeof arg === "number") {
+        throw new TypeError("Argument must not be a number");
+      }
+      return Buffer4(arg, encodingOrOffset, length);
+    };
+    SafeBuffer.alloc = function(size, fill, encoding) {
+      if (typeof size !== "number") {
+        throw new TypeError("Argument must be a number");
+      }
+      var buf = Buffer4(size);
+      if (fill !== void 0) {
+        if (typeof encoding === "string") {
+          buf.fill(fill, encoding);
+        } else {
+          buf.fill(fill);
+        }
+      } else {
+        buf.fill(0);
+      }
+      return buf;
+    };
+    SafeBuffer.allocUnsafe = function(size) {
+      if (typeof size !== "number") {
+        throw new TypeError("Argument must be a number");
+      }
+      return Buffer4(size);
+    };
+    SafeBuffer.allocUnsafeSlow = function(size) {
+      if (typeof size !== "number") {
+        throw new TypeError("Argument must be a number");
+      }
+      return buffer.SlowBuffer(size);
+    };
+  }
+});
+
+// node_modules/ripemd160/node_modules/string_decoder/lib/string_decoder.js
+var require_string_decoder2 = __commonJS({
+  "node_modules/ripemd160/node_modules/string_decoder/lib/string_decoder.js"(exports) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer3().Buffer;
     var isEncoding = Buffer4.isEncoding || function(encoding) {
       encoding = "" + encoding;
       switch (encoding && encoding.toLowerCase()) {
@@ -23473,9 +20946,9 @@ var require_string_decoder3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_readable.js
+// node_modules/ripemd160/node_modules/readable-stream/lib/_stream_readable.js
 var require_stream_readable2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_readable.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/lib/_stream_readable.js"(exports, module) {
     "use strict";
     init_globals();
     var pna = require_process_nextick_args();
@@ -23498,7 +20971,7 @@ var require_stream_readable2 = __commonJS({
       return Buffer4.isBuffer(obj) || obj instanceof OurUint8Array;
     }
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     var debugUtil = (init_util_shim(), __toCommonJS(util_shim_exports));
     var debug = void 0;
     if (debugUtil && debugUtil.debuglog) {
@@ -23551,7 +21024,7 @@ var require_stream_readable2 = __commonJS({
       this.decoder = null;
       this.encoding = null;
       if (options.encoding) {
-        if (!StringDecoder) StringDecoder = require_string_decoder3().StringDecoder;
+        if (!StringDecoder) StringDecoder = require_string_decoder2().StringDecoder;
         this.decoder = new StringDecoder(options.encoding);
         this.encoding = options.encoding;
       }
@@ -23668,7 +21141,7 @@ var require_stream_readable2 = __commonJS({
       return this._readableState.flowing === false;
     };
     Readable.prototype.setEncoding = function(enc) {
-      if (!StringDecoder) StringDecoder = require_string_decoder3().StringDecoder;
+      if (!StringDecoder) StringDecoder = require_string_decoder2().StringDecoder;
       this._readableState.decoder = new StringDecoder(enc);
       this._readableState.encoding = enc;
       return this;
@@ -24160,15 +21633,15 @@ var require_stream_readable2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_transform.js
+// node_modules/ripemd160/node_modules/readable-stream/lib/_stream_transform.js
 var require_stream_transform2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_transform.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/lib/_stream_transform.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Transform;
     var Duplex2 = require_stream_duplex2();
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     util.inherits(Transform, Duplex2);
     function afterTransform(er, data) {
       var ts = this._transformState;
@@ -24261,15 +21734,15 @@ var require_stream_transform2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_passthrough.js
+// node_modules/ripemd160/node_modules/readable-stream/lib/_stream_passthrough.js
 var require_stream_passthrough2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/lib/_stream_passthrough.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/lib/_stream_passthrough.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = PassThrough;
     var Transform = require_stream_transform2();
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     util.inherits(PassThrough, Transform);
     function PassThrough(options) {
       if (!(this instanceof PassThrough)) return new PassThrough(options);
@@ -24281,9 +21754,9 @@ var require_stream_passthrough2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/readable-browser.js
+// node_modules/ripemd160/node_modules/readable-stream/readable-browser.js
 var require_readable_browser = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/readable-stream/readable-browser.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/readable-stream/readable-browser.js"(exports, module) {
     init_globals();
     exports = module.exports = require_stream_readable2();
     exports.Stream = exports;
@@ -24295,15 +21768,15 @@ var require_readable_browser = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/node_modules/hash-base/index.js
+// node_modules/ripemd160/node_modules/hash-base/index.js
 var require_hash_base2 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/node_modules/hash-base/index.js"(exports, module) {
+  "node_modules/ripemd160/node_modules/hash-base/index.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var toBuffer = require_to_buffer2();
     var Transform = require_readable_browser().Transform;
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     function HashBase(blockSize) {
       Transform.call(this);
       this._block = Buffer4.allocUnsafe(blockSize);
@@ -24387,13 +21860,13 @@ var require_hash_base2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/ripemd160/index.js
+// node_modules/ripemd160/index.js
 var require_ripemd160 = __commonJS({
-  "../node-dbus-next/node_modules/ripemd160/index.js"(exports, module) {
+  "node_modules/ripemd160/index.js"(exports, module) {
     "use strict";
     init_globals();
     var Buffer4 = require_buffer().Buffer;
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var HashBase = require_hash_base2();
     var ARRAY16 = new Array(16);
     var zl = [
@@ -24829,12 +22302,12 @@ var require_ripemd160 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/sha.js/hash.js
+// node_modules/sha.js/hash.js
 var require_hash = __commonJS({
-  "../node-dbus-next/node_modules/sha.js/hash.js"(exports, module) {
+  "node_modules/sha.js/hash.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var toBuffer = require_to_buffer();
     function Hash(blockSize, finalSize) {
       this._block = Buffer4.alloc(blockSize);
@@ -24891,14 +22364,14 @@ var require_hash = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/sha.js/sha.js
+// node_modules/sha.js/sha.js
 var require_sha = __commonJS({
-  "../node-dbus-next/node_modules/sha.js/sha.js"(exports, module) {
+  "node_modules/sha.js/sha.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Hash = require_hash();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var K = [
       1518500249,
       1859775393,
@@ -24976,14 +22449,14 @@ var require_sha = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/sha.js/sha1.js
+// node_modules/sha.js/sha1.js
 var require_sha1 = __commonJS({
-  "../node-dbus-next/node_modules/sha.js/sha1.js"(exports, module) {
+  "node_modules/sha.js/sha1.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Hash = require_hash();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var K = [
       1518500249,
       1859775393,
@@ -25064,14 +22537,14 @@ var require_sha1 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/sha.js/sha256.js
+// node_modules/sha.js/sha256.js
 var require_sha256 = __commonJS({
-  "../node-dbus-next/node_modules/sha.js/sha256.js"(exports, module) {
+  "node_modules/sha.js/sha256.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Hash = require_hash();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var K = [
       1116352408,
       1899447441,
@@ -25227,15 +22700,15 @@ var require_sha256 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/sha.js/sha224.js
+// node_modules/sha.js/sha224.js
 var require_sha224 = __commonJS({
-  "../node-dbus-next/node_modules/sha.js/sha224.js"(exports, module) {
+  "node_modules/sha.js/sha224.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Sha256 = require_sha256();
     var Hash = require_hash();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var W = new Array(64);
     function Sha224() {
       this.init();
@@ -25269,14 +22742,14 @@ var require_sha224 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/sha.js/sha512.js
+// node_modules/sha.js/sha512.js
 var require_sha512 = __commonJS({
-  "../node-dbus-next/node_modules/sha.js/sha512.js"(exports, module) {
+  "node_modules/sha.js/sha512.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Hash = require_hash();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var K = [
       1116352408,
       3609767458,
@@ -25613,15 +23086,15 @@ var require_sha512 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/sha.js/sha384.js
+// node_modules/sha.js/sha384.js
 var require_sha384 = __commonJS({
-  "../node-dbus-next/node_modules/sha.js/sha384.js"(exports, module) {
+  "node_modules/sha.js/sha384.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var SHA512 = require_sha512();
     var Hash = require_hash();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var W = new Array(160);
     function Sha384() {
       this.init();
@@ -25666,9 +23139,9 @@ var require_sha384 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/sha.js/index.js
+// node_modules/sha.js/index.js
 var require_sha2 = __commonJS({
-  "../node-dbus-next/node_modules/sha.js/index.js"(exports, module) {
+  "node_modules/sha.js/index.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = function SHA(algorithm) {
@@ -25688,15 +23161,15 @@ var require_sha2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/cipher-base/index.js
+// node_modules/cipher-base/index.js
 var require_cipher_base = __commonJS({
-  "../node-dbus-next/node_modules/cipher-base/index.js"(exports, module) {
+  "node_modules/cipher-base/index.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var Transform = require_stream_browserify().Transform;
-    var StringDecoder = require_string_decoder2().StringDecoder;
-    var inherits2 = require_inherits_browser2();
+    var StringDecoder = require_string_decoder().StringDecoder;
+    var inherits2 = require_inherits_browser();
     var toBuffer = require_to_buffer();
     function CipherBase(hashMode) {
       Transform.call(this);
@@ -25784,12 +23257,12 @@ var require_cipher_base = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/create-hash/browser.js
-var require_browser5 = __commonJS({
-  "../node-dbus-next/node_modules/create-hash/browser.js"(exports, module) {
+// node_modules/create-hash/browser.js
+var require_browser4 = __commonJS({
+  "node_modules/create-hash/browser.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var MD5 = require_md5();
     var RIPEMD160 = require_ripemd160();
     var sha = require_sha2();
@@ -25814,13 +23287,13 @@ var require_browser5 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/create-hmac/legacy.js
+// node_modules/create-hmac/legacy.js
 var require_legacy = __commonJS({
-  "../node-dbus-next/node_modules/create-hmac/legacy.js"(exports, module) {
+  "node_modules/create-hmac/legacy.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
-    var Buffer4 = require_buffer().Buffer;
+    var inherits2 = require_inherits_browser();
+    var Buffer4 = require_safe_buffer().Buffer;
     var Base = require_cipher_base();
     var ZEROS = Buffer4.alloc(128);
     var blocksize = 64;
@@ -25856,9 +23329,9 @@ var require_legacy = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/create-hash/md5.js
+// node_modules/create-hash/md5.js
 var require_md52 = __commonJS({
-  "../node-dbus-next/node_modules/create-hash/md5.js"(exports, module) {
+  "node_modules/create-hash/md5.js"(exports, module) {
     init_globals();
     var MD5 = require_md5();
     module.exports = function(buffer) {
@@ -25867,15 +23340,15 @@ var require_md52 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/create-hmac/browser.js
-var require_browser6 = __commonJS({
-  "../node-dbus-next/node_modules/create-hmac/browser.js"(exports, module) {
+// node_modules/create-hmac/browser.js
+var require_browser5 = __commonJS({
+  "node_modules/create-hmac/browser.js"(exports, module) {
     "use strict";
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Legacy = require_legacy();
     var Base = require_cipher_base();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var md5 = require_md52();
     var RIPEMD160 = require_ripemd160();
     var sha = require_sha2();
@@ -25925,9 +23398,9 @@ var require_browser6 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/browser/algorithms.json
+// node_modules/browserify-sign/browser/algorithms.json
 var require_algorithms = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/browser/algorithms.json"(exports, module) {
+  "node_modules/browserify-sign/browser/algorithms.json"(exports, module) {
     module.exports = {
       sha224WithRSAEncryption: {
         sign: "rsa",
@@ -26083,77 +23556,18 @@ var require_algorithms = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/algos.js
+// node_modules/browserify-sign/algos.js
 var require_algos = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/algos.js"(exports, module) {
+  "node_modules/browserify-sign/algos.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = require_algorithms();
   }
 });
 
-// ../node-dbus-next/node_modules/safe-buffer/index.js
-var require_safe_buffer3 = __commonJS({
-  "../node-dbus-next/node_modules/safe-buffer/index.js"(exports, module) {
-    init_globals();
-    var buffer = require_buffer();
-    var Buffer4 = buffer.Buffer;
-    function copyProps(src, dst) {
-      for (var key in src) {
-        dst[key] = src[key];
-      }
-    }
-    if (Buffer4.from && Buffer4.alloc && Buffer4.allocUnsafe && Buffer4.allocUnsafeSlow) {
-      module.exports = buffer;
-    } else {
-      copyProps(buffer, exports);
-      exports.Buffer = SafeBuffer;
-    }
-    function SafeBuffer(arg, encodingOrOffset, length) {
-      return Buffer4(arg, encodingOrOffset, length);
-    }
-    SafeBuffer.prototype = Object.create(Buffer4.prototype);
-    copyProps(Buffer4, SafeBuffer);
-    SafeBuffer.from = function(arg, encodingOrOffset, length) {
-      if (typeof arg === "number") {
-        throw new TypeError("Argument must not be a number");
-      }
-      return Buffer4(arg, encodingOrOffset, length);
-    };
-    SafeBuffer.alloc = function(size, fill, encoding) {
-      if (typeof size !== "number") {
-        throw new TypeError("Argument must be a number");
-      }
-      var buf = Buffer4(size);
-      if (fill !== void 0) {
-        if (typeof encoding === "string") {
-          buf.fill(fill, encoding);
-        } else {
-          buf.fill(fill);
-        }
-      } else {
-        buf.fill(0);
-      }
-      return buf;
-    };
-    SafeBuffer.allocUnsafe = function(size) {
-      if (typeof size !== "number") {
-        throw new TypeError("Argument must be a number");
-      }
-      return Buffer4(size);
-    };
-    SafeBuffer.allocUnsafeSlow = function(size) {
-      if (typeof size !== "number") {
-        throw new TypeError("Argument must be a number");
-      }
-      return buffer.SlowBuffer(size);
-    };
-  }
-});
-
-// ../node-dbus-next/node_modules/pbkdf2/lib/precondition.js
+// node_modules/pbkdf2/lib/precondition.js
 var require_precondition = __commonJS({
-  "../node-dbus-next/node_modules/pbkdf2/lib/precondition.js"(exports, module) {
+  "node_modules/pbkdf2/lib/precondition.js"(exports, module) {
     "use strict";
     init_globals();
     var $isFinite = isFinite;
@@ -26175,9 +23589,9 @@ var require_precondition = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/pbkdf2/lib/default-encoding.js
+// node_modules/pbkdf2/lib/default-encoding.js
 var require_default_encoding = __commonJS({
-  "../node-dbus-next/node_modules/pbkdf2/lib/default-encoding.js"(exports, module) {
+  "node_modules/pbkdf2/lib/default-encoding.js"(exports, module) {
     "use strict";
     init_globals();
     var defaultEncoding;
@@ -26194,12 +23608,12 @@ var require_default_encoding = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/pbkdf2/lib/to-buffer.js
+// node_modules/pbkdf2/lib/to-buffer.js
 var require_to_buffer3 = __commonJS({
-  "../node-dbus-next/node_modules/pbkdf2/lib/to-buffer.js"(exports, module) {
+  "node_modules/pbkdf2/lib/to-buffer.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_safe_buffer3().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var toBuffer = require_to_buffer();
     var useUint8Array = typeof Uint8Array !== "undefined";
     var useArrayBuffer = useUint8Array && typeof ArrayBuffer !== "undefined";
@@ -26213,15 +23627,15 @@ var require_to_buffer3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/pbkdf2/lib/sync-browser.js
+// node_modules/pbkdf2/lib/sync-browser.js
 var require_sync_browser = __commonJS({
-  "../node-dbus-next/node_modules/pbkdf2/lib/sync-browser.js"(exports, module) {
+  "node_modules/pbkdf2/lib/sync-browser.js"(exports, module) {
     "use strict";
     init_globals();
     var md5 = require_md52();
     var RIPEMD160 = require_ripemd160();
     var sha = require_sha2();
-    var Buffer4 = require_safe_buffer3().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var checkParameters = require_precondition();
     var defaultEncoding = require_default_encoding();
     var toBuffer = require_to_buffer3();
@@ -26328,12 +23742,12 @@ var require_sync_browser = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/pbkdf2/lib/async.js
+// node_modules/pbkdf2/lib/async.js
 var require_async = __commonJS({
-  "../node-dbus-next/node_modules/pbkdf2/lib/async.js"(exports, module) {
+  "node_modules/pbkdf2/lib/async.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_safe_buffer3().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var checkParameters = require_precondition();
     var defaultEncoding = require_default_encoding();
     var sync = require_sync_browser();
@@ -26451,9 +23865,9 @@ var require_async = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/pbkdf2/browser.js
-var require_browser7 = __commonJS({
-  "../node-dbus-next/node_modules/pbkdf2/browser.js"(exports) {
+// node_modules/pbkdf2/browser.js
+var require_browser6 = __commonJS({
+  "node_modules/pbkdf2/browser.js"(exports) {
     "use strict";
     init_globals();
     exports.pbkdf2 = require_async();
@@ -26461,9 +23875,9 @@ var require_browser7 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/des.js/lib/des/utils.js
+// node_modules/des.js/lib/des/utils.js
 var require_utils = __commonJS({
-  "../node-dbus-next/node_modules/des.js/lib/des/utils.js"(exports) {
+  "node_modules/des.js/lib/des/utils.js"(exports) {
     "use strict";
     init_globals();
     exports.readUInt32BE = function readUInt32BE(bytes, off) {
@@ -27228,9 +24642,9 @@ var require_utils = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/minimalistic-assert/index.js
+// node_modules/minimalistic-assert/index.js
 var require_minimalistic_assert = __commonJS({
-  "../node-dbus-next/node_modules/minimalistic-assert/index.js"(exports, module) {
+  "node_modules/minimalistic-assert/index.js"(exports, module) {
     init_globals();
     module.exports = assert;
     function assert(val, msg) {
@@ -27244,9 +24658,9 @@ var require_minimalistic_assert = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/des.js/lib/des/cipher.js
+// node_modules/des.js/lib/des/cipher.js
 var require_cipher = __commonJS({
-  "../node-dbus-next/node_modules/des.js/lib/des/cipher.js"(exports, module) {
+  "node_modules/des.js/lib/des/cipher.js"(exports, module) {
     "use strict";
     init_globals();
     var assert = require_minimalistic_assert();
@@ -27353,13 +24767,13 @@ var require_cipher = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/des.js/lib/des/des.js
+// node_modules/des.js/lib/des/des.js
 var require_des = __commonJS({
-  "../node-dbus-next/node_modules/des.js/lib/des/des.js"(exports, module) {
+  "node_modules/des.js/lib/des/des.js"(exports, module) {
     "use strict";
     init_globals();
     var assert = require_minimalistic_assert();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var utils = require_utils();
     var Cipher = require_cipher();
     function DESState() {
@@ -27481,13 +24895,13 @@ var require_des = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/des.js/lib/des/cbc.js
+// node_modules/des.js/lib/des/cbc.js
 var require_cbc = __commonJS({
-  "../node-dbus-next/node_modules/des.js/lib/des/cbc.js"(exports) {
+  "node_modules/des.js/lib/des/cbc.js"(exports) {
     "use strict";
     init_globals();
     var assert = require_minimalistic_assert();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var proto = {};
     function CBCState(iv) {
       assert.equal(iv.length, 8, "Invalid IV length");
@@ -27537,13 +24951,13 @@ var require_cbc = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/des.js/lib/des/ede.js
+// node_modules/des.js/lib/des/ede.js
 var require_ede = __commonJS({
-  "../node-dbus-next/node_modules/des.js/lib/des/ede.js"(exports, module) {
+  "node_modules/des.js/lib/des/ede.js"(exports, module) {
     "use strict";
     init_globals();
     var assert = require_minimalistic_assert();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Cipher = require_cipher();
     var DES = require_des();
     function EDEState(type, key) {
@@ -27586,9 +25000,9 @@ var require_ede = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/des.js/lib/des.js
+// node_modules/des.js/lib/des.js
 var require_des2 = __commonJS({
-  "../node-dbus-next/node_modules/des.js/lib/des.js"(exports) {
+  "node_modules/des.js/lib/des.js"(exports) {
     "use strict";
     init_globals();
     exports.utils = require_utils();
@@ -27599,14 +25013,14 @@ var require_des2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-des/index.js
+// node_modules/browserify-des/index.js
 var require_browserify_des = __commonJS({
-  "../node-dbus-next/node_modules/browserify-des/index.js"(exports, module) {
+  "node_modules/browserify-des/index.js"(exports, module) {
     init_globals();
     var CipherBase = require_cipher_base();
     var des = require_des2();
-    var inherits2 = require_inherits_browser2();
-    var Buffer4 = require_buffer().Buffer;
+    var inherits2 = require_inherits_browser();
+    var Buffer4 = require_safe_buffer().Buffer;
     var modes = {
       "des-ede3-cbc": des.CBC.instantiate(des.EDE),
       "des-ede3": des.EDE,
@@ -27655,9 +25069,9 @@ var require_browserify_des = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/modes/ecb.js
+// node_modules/browserify-aes/modes/ecb.js
 var require_ecb = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/modes/ecb.js"(exports) {
+  "node_modules/browserify-aes/modes/ecb.js"(exports) {
     init_globals();
     exports.encrypt = function(self2, block) {
       return self2._cipher.encryptBlock(block);
@@ -27668,9 +25082,9 @@ var require_ecb = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/buffer-xor/index.js
+// node_modules/buffer-xor/index.js
 var require_buffer_xor = __commonJS({
-  "../node-dbus-next/node_modules/buffer-xor/index.js"(exports, module) {
+  "node_modules/buffer-xor/index.js"(exports, module) {
     init_globals();
     module.exports = function xor(a, b) {
       var length = Math.min(a.length, b.length);
@@ -27683,9 +25097,9 @@ var require_buffer_xor = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/modes/cbc.js
+// node_modules/browserify-aes/modes/cbc.js
 var require_cbc2 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/modes/cbc.js"(exports) {
+  "node_modules/browserify-aes/modes/cbc.js"(exports) {
     init_globals();
     var xor = require_buffer_xor();
     exports.encrypt = function(self2, block) {
@@ -27702,11 +25116,11 @@ var require_cbc2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/modes/cfb.js
+// node_modules/browserify-aes/modes/cfb.js
 var require_cfb = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/modes/cfb.js"(exports) {
+  "node_modules/browserify-aes/modes/cfb.js"(exports) {
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var xor = require_buffer_xor();
     function encryptStart(self2, data, decrypt) {
       var len = data.length;
@@ -27737,11 +25151,11 @@ var require_cfb = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/modes/cfb8.js
+// node_modules/browserify-aes/modes/cfb8.js
 var require_cfb8 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/modes/cfb8.js"(exports) {
+  "node_modules/browserify-aes/modes/cfb8.js"(exports) {
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     function encryptByte(self2, byteParam, decrypt) {
       var pad = self2._cipher.encryptBlock(self2._prev);
       var out = pad[0] ^ byteParam;
@@ -27763,11 +25177,11 @@ var require_cfb8 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/modes/cfb1.js
+// node_modules/browserify-aes/modes/cfb1.js
 var require_cfb1 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/modes/cfb1.js"(exports) {
+  "node_modules/browserify-aes/modes/cfb1.js"(exports) {
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     function encryptByte(self2, byteParam, decrypt) {
       var pad;
       var i = -1;
@@ -27805,9 +25219,9 @@ var require_cfb1 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/modes/ofb.js
+// node_modules/browserify-aes/modes/ofb.js
 var require_ofb = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/modes/ofb.js"(exports) {
+  "node_modules/browserify-aes/modes/ofb.js"(exports) {
     init_globals();
     var xor = require_buffer_xor();
     function getBlock(self2) {
@@ -27825,9 +25239,9 @@ var require_ofb = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/incr32.js
+// node_modules/browserify-aes/incr32.js
 var require_incr32 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/incr32.js"(exports, module) {
+  "node_modules/browserify-aes/incr32.js"(exports, module) {
     init_globals();
     function incr32(iv) {
       var len = iv.length;
@@ -27847,12 +25261,12 @@ var require_incr32 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/modes/ctr.js
+// node_modules/browserify-aes/modes/ctr.js
 var require_ctr = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/modes/ctr.js"(exports) {
+  "node_modules/browserify-aes/modes/ctr.js"(exports) {
     init_globals();
     var xor = require_buffer_xor();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var incr32 = require_incr32();
     function getBlock(self2) {
       var out = self2._cipher.encryptBlockRaw(self2._prev);
@@ -27882,9 +25296,9 @@ var require_ctr = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/modes/list.json
+// node_modules/browserify-aes/modes/list.json
 var require_list = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/modes/list.json"(exports, module) {
+  "node_modules/browserify-aes/modes/list.json"(exports, module) {
     module.exports = {
       "aes-128-ecb": {
         cipher: "AES",
@@ -28079,9 +25493,9 @@ var require_list = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/modes/index.js
+// node_modules/browserify-aes/modes/index.js
 var require_modes = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/modes/index.js"(exports, module) {
+  "node_modules/browserify-aes/modes/index.js"(exports, module) {
     init_globals();
     var modeModules = {
       ECB: require_ecb(),
@@ -28102,11 +25516,11 @@ var require_modes = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/aes.js
+// node_modules/browserify-aes/aes.js
 var require_aes = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/aes.js"(exports, module) {
+  "node_modules/browserify-aes/aes.js"(exports, module) {
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     function asUInt32Array(buf) {
       if (!Buffer4.isBuffer(buf)) buf = Buffer4.from(buf);
       var len = buf.length / 4 | 0;
@@ -28277,11 +25691,11 @@ var require_aes = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/ghash.js
+// node_modules/browserify-aes/ghash.js
 var require_ghash = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/ghash.js"(exports, module) {
+  "node_modules/browserify-aes/ghash.js"(exports, module) {
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var ZEROES = Buffer4.alloc(16, 0);
     function toArray(buf) {
       return [
@@ -28355,14 +25769,14 @@ var require_ghash = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/authCipher.js
+// node_modules/browserify-aes/authCipher.js
 var require_authCipher = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/authCipher.js"(exports, module) {
+  "node_modules/browserify-aes/authCipher.js"(exports, module) {
     init_globals();
     var aes = require_aes();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var Transform = require_cipher_base();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var GHASH = require_ghash();
     var xor = require_buffer_xor();
     var incr32 = require_incr32();
@@ -28458,14 +25872,14 @@ var require_authCipher = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/streamCipher.js
+// node_modules/browserify-aes/streamCipher.js
 var require_streamCipher = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/streamCipher.js"(exports, module) {
+  "node_modules/browserify-aes/streamCipher.js"(exports, module) {
     init_globals();
     var aes = require_aes();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var Transform = require_cipher_base();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     function StreamCipher(mode, key, iv, decrypt) {
       Transform.call(this);
       this._cipher = new aes.AES(key);
@@ -28486,11 +25900,11 @@ var require_streamCipher = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/evp_bytestokey/index.js
+// node_modules/evp_bytestokey/index.js
 var require_evp_bytestokey = __commonJS({
-  "../node-dbus-next/node_modules/evp_bytestokey/index.js"(exports, module) {
+  "node_modules/evp_bytestokey/index.js"(exports, module) {
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var MD5 = require_md5();
     function EVP_BytesToKey(password, salt, keyBits, ivLen) {
       if (!Buffer4.isBuffer(password)) password = Buffer4.from(password, "binary");
@@ -28529,18 +25943,18 @@ var require_evp_bytestokey = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/encrypter.js
+// node_modules/browserify-aes/encrypter.js
 var require_encrypter = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/encrypter.js"(exports) {
+  "node_modules/browserify-aes/encrypter.js"(exports) {
     init_globals();
     var MODES = require_modes();
     var AuthCipher = require_authCipher();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var StreamCipher = require_streamCipher();
     var Transform = require_cipher_base();
     var aes = require_aes();
     var ebtk = require_evp_bytestokey();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     function Cipher(mode, key, iv) {
       Transform.call(this);
       this._cache = new Splitter();
@@ -28626,18 +26040,18 @@ var require_encrypter = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/decrypter.js
+// node_modules/browserify-aes/decrypter.js
 var require_decrypter = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/decrypter.js"(exports) {
+  "node_modules/browserify-aes/decrypter.js"(exports) {
     init_globals();
     var AuthCipher = require_authCipher();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var MODES = require_modes();
     var StreamCipher = require_streamCipher();
     var Transform = require_cipher_base();
     var aes = require_aes();
     var ebtk = require_evp_bytestokey();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     function Decipher(mode, key, iv) {
       Transform.call(this);
       this._cache = new Splitter();
@@ -28736,9 +26150,9 @@ var require_decrypter = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-aes/browser.js
-var require_browser8 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-aes/browser.js"(exports) {
+// node_modules/browserify-aes/browser.js
+var require_browser7 = __commonJS({
+  "node_modules/browserify-aes/browser.js"(exports) {
     init_globals();
     var ciphers = require_encrypter();
     var deciphers = require_decrypter();
@@ -28754,9 +26168,9 @@ var require_browser8 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-des/modes.js
+// node_modules/browserify-des/modes.js
 var require_modes2 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-des/modes.js"(exports) {
+  "node_modules/browserify-des/modes.js"(exports) {
     init_globals();
     exports["des-ecb"] = {
       key: 8,
@@ -28785,12 +26199,12 @@ var require_modes2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-cipher/browser.js
-var require_browser9 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-cipher/browser.js"(exports) {
+// node_modules/browserify-cipher/browser.js
+var require_browser8 = __commonJS({
+  "node_modules/browserify-cipher/browser.js"(exports) {
     init_globals();
     var DES = require_browserify_des();
-    var aes = require_browser8();
+    var aes = require_browser7();
     var aesModes = require_modes();
     var desModes = require_modes2();
     var ebtk = require_evp_bytestokey();
@@ -28847,16 +26261,16 @@ var require_browser9 = __commonJS({
   }
 });
 
-// (disabled):../node-dbus-next/node_modules/buffer/index.js
-var require_buffer3 = __commonJS({
-  "(disabled):../node-dbus-next/node_modules/buffer/index.js"() {
+// (disabled):node_modules/buffer/index.js
+var require_buffer2 = __commonJS({
+  "(disabled):node_modules/buffer/index.js"() {
     init_globals();
   }
 });
 
-// ../node-dbus-next/node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js
+// node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js
 var require_bn = __commonJS({
-  "../node-dbus-next/node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js"(exports, module) {
+  "node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js"(exports, module) {
     init_globals();
     (function(module2, exports2) {
       "use strict";
@@ -28899,7 +26313,7 @@ var require_bn = __commonJS({
         if (typeof window !== "undefined" && typeof window.Buffer !== "undefined") {
           Buffer4 = window.Buffer;
         } else {
-          Buffer4 = require_buffer3().Buffer;
+          Buffer4 = require_buffer2().Buffer;
         }
       } catch (e) {
       }
@@ -31662,9 +29076,9 @@ var require_bn = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/miller-rabin/node_modules/bn.js/lib/bn.js
+// node_modules/miller-rabin/node_modules/bn.js/lib/bn.js
 var require_bn2 = __commonJS({
-  "../node-dbus-next/node_modules/miller-rabin/node_modules/bn.js/lib/bn.js"(exports, module) {
+  "node_modules/miller-rabin/node_modules/bn.js/lib/bn.js"(exports, module) {
     init_globals();
     (function(module2, exports2) {
       "use strict";
@@ -31707,7 +29121,7 @@ var require_bn2 = __commonJS({
         if (typeof window !== "undefined" && typeof window.Buffer !== "undefined") {
           Buffer4 = window.Buffer;
         } else {
-          Buffer4 = require_buffer3().Buffer;
+          Buffer4 = require_buffer2().Buffer;
         }
       } catch (e) {
       }
@@ -34477,9 +31891,9 @@ var require_crypto = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/brorand/index.js
+// node_modules/brorand/index.js
 var require_brorand = __commonJS({
-  "../node-dbus-next/node_modules/brorand/index.js"(exports, module) {
+  "node_modules/brorand/index.js"(exports, module) {
     init_globals();
     var r;
     module.exports = function rand(len) {
@@ -34535,9 +31949,9 @@ var require_brorand = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/miller-rabin/lib/mr.js
+// node_modules/miller-rabin/lib/mr.js
 var require_mr = __commonJS({
-  "../node-dbus-next/node_modules/miller-rabin/lib/mr.js"(exports, module) {
+  "node_modules/miller-rabin/lib/mr.js"(exports, module) {
     init_globals();
     var bn = require_bn2();
     var brorand = require_brorand();
@@ -34627,9 +32041,9 @@ var require_mr = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/diffie-hellman/lib/generatePrime.js
+// node_modules/diffie-hellman/lib/generatePrime.js
 var require_generatePrime = __commonJS({
-  "../node-dbus-next/node_modules/diffie-hellman/lib/generatePrime.js"(exports, module) {
+  "node_modules/diffie-hellman/lib/generatePrime.js"(exports, module) {
     init_globals();
     var randomBytes = require_browser3();
     module.exports = findPrime;
@@ -34724,9 +32138,9 @@ var require_generatePrime = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/diffie-hellman/lib/primes.json
+// node_modules/diffie-hellman/lib/primes.json
 var require_primes = __commonJS({
-  "../node-dbus-next/node_modules/diffie-hellman/lib/primes.json"(exports, module) {
+  "node_modules/diffie-hellman/lib/primes.json"(exports, module) {
     module.exports = {
       modp1: {
         gen: "02",
@@ -34764,9 +32178,9 @@ var require_primes = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/diffie-hellman/lib/dh.js
+// node_modules/diffie-hellman/lib/dh.js
 var require_dh = __commonJS({
-  "../node-dbus-next/node_modules/diffie-hellman/lib/dh.js"(exports, module) {
+  "node_modules/diffie-hellman/lib/dh.js"(exports, module) {
     init_globals();
     var BN = require_bn();
     var MillerRabin = require_mr();
@@ -34911,9 +32325,9 @@ var require_dh = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/diffie-hellman/browser.js
-var require_browser10 = __commonJS({
-  "../node-dbus-next/node_modules/diffie-hellman/browser.js"(exports) {
+// node_modules/diffie-hellman/browser.js
+var require_browser9 = __commonJS({
+  "node_modules/diffie-hellman/browser.js"(exports) {
     init_globals();
     var generatePrime = require_generatePrime();
     var primes = require_primes();
@@ -34951,17 +32365,28 @@ var require_browser10 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/stream-browser.js
+// node_modules/browserify-sign/node_modules/isarray/index.js
+var require_isarray3 = __commonJS({
+  "node_modules/browserify-sign/node_modules/isarray/index.js"(exports, module) {
+    init_globals();
+    var toString = {}.toString;
+    module.exports = Array.isArray || function(arr) {
+      return toString.call(arr) == "[object Array]";
+    };
+  }
+});
+
+// node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/stream-browser.js
 var require_stream_browser3 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/stream-browser.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/stream-browser.js"(exports, module) {
     init_globals();
     module.exports = require_events().EventEmitter;
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/node_modules/safe-buffer/index.js
+// node_modules/browserify-sign/node_modules/readable-stream/node_modules/safe-buffer/index.js
 var require_safe_buffer4 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/node_modules/safe-buffer/index.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/node_modules/safe-buffer/index.js"(exports, module) {
     init_globals();
     var buffer = require_buffer();
     var Buffer4 = buffer.Buffer;
@@ -35017,9 +32442,9 @@ var require_safe_buffer4 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/BufferList.js
+// node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/BufferList.js
 var require_BufferList2 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/BufferList.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/BufferList.js"(exports, module) {
     "use strict";
     init_globals();
     function _classCallCheck(instance, Constructor) {
@@ -35096,9 +32521,9 @@ var require_BufferList2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/destroy.js
+// node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/destroy.js
 var require_destroy3 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/destroy.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/lib/internal/streams/destroy.js"(exports, module) {
     "use strict";
     init_globals();
     var pna = require_process_nextick_args();
@@ -35166,9 +32591,9 @@ var require_destroy3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_writable.js
+// node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_writable.js
 var require_stream_writable3 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_writable.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_writable.js"(exports, module) {
     "use strict";
     init_globals();
     var pna = require_process_nextick_args();
@@ -35185,9 +32610,9 @@ var require_stream_writable3 = __commonJS({
     var Duplex2;
     Writable.WritableState = WritableState;
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     var internalUtil = {
-      deprecate: require_browser4()
+      deprecate: require_browser2()
     };
     var Stream = require_stream_browser3();
     var Buffer4 = require_safe_buffer4().Buffer;
@@ -35607,9 +33032,9 @@ var require_stream_writable3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_duplex.js
+// node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_duplex.js
 var require_stream_duplex3 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_duplex.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_duplex.js"(exports, module) {
     "use strict";
     init_globals();
     var pna = require_process_nextick_args();
@@ -35622,7 +33047,7 @@ var require_stream_duplex3 = __commonJS({
     };
     module.exports = Duplex2;
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     var Readable = require_stream_readable3();
     var Writable = require_stream_writable3();
     util.inherits(Duplex2, Readable);
@@ -35685,12 +33110,70 @@ var require_stream_duplex3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/string_decoder/lib/string_decoder.js
-var require_string_decoder4 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/string_decoder/lib/string_decoder.js"(exports) {
+// node_modules/browserify-sign/node_modules/string_decoder/node_modules/safe-buffer/index.js
+var require_safe_buffer5 = __commonJS({
+  "node_modules/browserify-sign/node_modules/string_decoder/node_modules/safe-buffer/index.js"(exports, module) {
+    init_globals();
+    var buffer = require_buffer();
+    var Buffer4 = buffer.Buffer;
+    function copyProps(src, dst) {
+      for (var key in src) {
+        dst[key] = src[key];
+      }
+    }
+    if (Buffer4.from && Buffer4.alloc && Buffer4.allocUnsafe && Buffer4.allocUnsafeSlow) {
+      module.exports = buffer;
+    } else {
+      copyProps(buffer, exports);
+      exports.Buffer = SafeBuffer;
+    }
+    function SafeBuffer(arg, encodingOrOffset, length) {
+      return Buffer4(arg, encodingOrOffset, length);
+    }
+    copyProps(Buffer4, SafeBuffer);
+    SafeBuffer.from = function(arg, encodingOrOffset, length) {
+      if (typeof arg === "number") {
+        throw new TypeError("Argument must not be a number");
+      }
+      return Buffer4(arg, encodingOrOffset, length);
+    };
+    SafeBuffer.alloc = function(size, fill, encoding) {
+      if (typeof size !== "number") {
+        throw new TypeError("Argument must be a number");
+      }
+      var buf = Buffer4(size);
+      if (fill !== void 0) {
+        if (typeof encoding === "string") {
+          buf.fill(fill, encoding);
+        } else {
+          buf.fill(fill);
+        }
+      } else {
+        buf.fill(0);
+      }
+      return buf;
+    };
+    SafeBuffer.allocUnsafe = function(size) {
+      if (typeof size !== "number") {
+        throw new TypeError("Argument must be a number");
+      }
+      return Buffer4(size);
+    };
+    SafeBuffer.allocUnsafeSlow = function(size) {
+      if (typeof size !== "number") {
+        throw new TypeError("Argument must be a number");
+      }
+      return buffer.SlowBuffer(size);
+    };
+  }
+});
+
+// node_modules/browserify-sign/node_modules/string_decoder/lib/string_decoder.js
+var require_string_decoder3 = __commonJS({
+  "node_modules/browserify-sign/node_modules/string_decoder/lib/string_decoder.js"(exports) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer5().Buffer;
     var isEncoding = Buffer4.isEncoding || function(encoding) {
       encoding = "" + encoding;
       switch (encoding && encoding.toLowerCase()) {
@@ -35924,14 +33407,14 @@ var require_string_decoder4 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_readable.js
+// node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_readable.js
 var require_stream_readable3 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_readable.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_readable.js"(exports, module) {
     "use strict";
     init_globals();
     var pna = require_process_nextick_args();
     module.exports = Readable;
-    var isArray = require_isarray2();
+    var isArray = require_isarray3();
     var Duplex2;
     Readable.ReadableState = ReadableState;
     var EE = require_events().EventEmitter;
@@ -35949,7 +33432,7 @@ var require_stream_readable3 = __commonJS({
       return Buffer4.isBuffer(obj) || obj instanceof OurUint8Array;
     }
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     var debugUtil = (init_util_shim(), __toCommonJS(util_shim_exports));
     var debug = void 0;
     if (debugUtil && debugUtil.debuglog) {
@@ -36002,7 +33485,7 @@ var require_stream_readable3 = __commonJS({
       this.decoder = null;
       this.encoding = null;
       if (options.encoding) {
-        if (!StringDecoder) StringDecoder = require_string_decoder4().StringDecoder;
+        if (!StringDecoder) StringDecoder = require_string_decoder3().StringDecoder;
         this.decoder = new StringDecoder(options.encoding);
         this.encoding = options.encoding;
       }
@@ -36119,7 +33602,7 @@ var require_stream_readable3 = __commonJS({
       return this._readableState.flowing === false;
     };
     Readable.prototype.setEncoding = function(enc) {
-      if (!StringDecoder) StringDecoder = require_string_decoder4().StringDecoder;
+      if (!StringDecoder) StringDecoder = require_string_decoder3().StringDecoder;
       this._readableState.decoder = new StringDecoder(enc);
       this._readableState.encoding = enc;
       return this;
@@ -36611,15 +34094,15 @@ var require_stream_readable3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_transform.js
+// node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_transform.js
 var require_stream_transform3 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_transform.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_transform.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = Transform;
     var Duplex2 = require_stream_duplex3();
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     util.inherits(Transform, Duplex2);
     function afterTransform(er, data) {
       var ts = this._transformState;
@@ -36712,15 +34195,15 @@ var require_stream_transform3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_passthrough.js
+// node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_passthrough.js
 var require_stream_passthrough3 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_passthrough.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/lib/_stream_passthrough.js"(exports, module) {
     "use strict";
     init_globals();
     module.exports = PassThrough;
     var Transform = require_stream_transform3();
     var util = Object.create(require_util());
-    util.inherits = require_inherits_browser2();
+    util.inherits = require_inherits_browser();
     util.inherits(PassThrough, Transform);
     function PassThrough(options) {
       if (!(this instanceof PassThrough)) return new PassThrough(options);
@@ -36732,9 +34215,9 @@ var require_stream_passthrough3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/readable-browser.js
+// node_modules/browserify-sign/node_modules/readable-stream/readable-browser.js
 var require_readable_browser2 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/node_modules/readable-stream/readable-browser.js"(exports, module) {
+  "node_modules/browserify-sign/node_modules/readable-stream/readable-browser.js"(exports, module) {
     init_globals();
     exports = module.exports = require_stream_readable3();
     exports.Stream = exports;
@@ -36746,9 +34229,9 @@ var require_readable_browser2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/bn.js/lib/bn.js
+// node_modules/bn.js/lib/bn.js
 var require_bn3 = __commonJS({
-  "../node-dbus-next/node_modules/bn.js/lib/bn.js"(exports, module) {
+  "node_modules/bn.js/lib/bn.js"(exports, module) {
     init_globals();
     (function(module2, exports2) {
       "use strict";
@@ -36791,7 +34274,7 @@ var require_bn3 = __commonJS({
         if (typeof window !== "undefined" && typeof window.Buffer !== "undefined") {
           Buffer4 = window.Buffer;
         } else {
-          Buffer4 = require_buffer3().Buffer;
+          Buffer4 = require_buffer2().Buffer;
         }
       } catch (e) {
       }
@@ -39634,14 +37117,14 @@ var require_bn3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-rsa/index.js
+// node_modules/browserify-rsa/index.js
 var require_browserify_rsa = __commonJS({
-  "../node-dbus-next/node_modules/browserify-rsa/index.js"(exports, module) {
+  "node_modules/browserify-rsa/index.js"(exports, module) {
     "use strict";
     init_globals();
     var BN = require_bn3();
     var randomBytes = require_browser3();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     function getr(priv) {
       var len = priv.modulus.byteLength();
       var r;
@@ -39674,9 +37157,9 @@ var require_browserify_rsa = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/package.json
+// node_modules/elliptic/package.json
 var require_package = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/package.json"(exports, module) {
+  "node_modules/elliptic/package.json"(exports, module) {
     module.exports = {
       name: "elliptic",
       version: "6.6.1",
@@ -39736,9 +37219,9 @@ var require_package = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/node_modules/bn.js/lib/bn.js
+// node_modules/elliptic/node_modules/bn.js/lib/bn.js
 var require_bn4 = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/node_modules/bn.js/lib/bn.js"(exports, module) {
+  "node_modules/elliptic/node_modules/bn.js/lib/bn.js"(exports, module) {
     init_globals();
     (function(module2, exports2) {
       "use strict";
@@ -39781,7 +37264,7 @@ var require_bn4 = __commonJS({
         if (typeof window !== "undefined" && typeof window.Buffer !== "undefined") {
           Buffer4 = window.Buffer;
         } else {
-          Buffer4 = require_buffer3().Buffer;
+          Buffer4 = require_buffer2().Buffer;
         }
       } catch (e) {
       }
@@ -42544,9 +40027,9 @@ var require_bn4 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/minimalistic-crypto-utils/lib/utils.js
+// node_modules/minimalistic-crypto-utils/lib/utils.js
 var require_utils2 = __commonJS({
-  "../node-dbus-next/node_modules/minimalistic-crypto-utils/lib/utils.js"(exports) {
+  "node_modules/minimalistic-crypto-utils/lib/utils.js"(exports) {
     "use strict";
     init_globals();
     var utils = exports;
@@ -42604,9 +40087,9 @@ var require_utils2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/utils.js
+// node_modules/elliptic/lib/elliptic/utils.js
 var require_utils3 = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/utils.js"(exports) {
+  "node_modules/elliptic/lib/elliptic/utils.js"(exports) {
     "use strict";
     init_globals();
     var utils = exports;
@@ -42711,9 +40194,9 @@ var require_utils3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/base.js
+// node_modules/elliptic/lib/elliptic/curve/base.js
 var require_base = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/base.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/curve/base.js"(exports, module) {
     "use strict";
     init_globals();
     var BN = require_bn4();
@@ -43034,14 +40517,14 @@ var require_base = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/short.js
+// node_modules/elliptic/lib/elliptic/curve/short.js
 var require_short = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/short.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/curve/short.js"(exports, module) {
     "use strict";
     init_globals();
     var utils = require_utils3();
     var BN = require_bn4();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Base = require_base();
     var assert = utils.assert;
     function ShortCurve(conf) {
@@ -43733,13 +41216,13 @@ var require_short = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/mont.js
+// node_modules/elliptic/lib/elliptic/curve/mont.js
 var require_mont = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/mont.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/curve/mont.js"(exports, module) {
     "use strict";
     init_globals();
     var BN = require_bn4();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Base = require_base();
     var utils = require_utils3();
     function MontCurve(conf) {
@@ -43862,14 +41345,14 @@ var require_mont = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/edwards.js
+// node_modules/elliptic/lib/elliptic/curve/edwards.js
 var require_edwards = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/edwards.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/curve/edwards.js"(exports, module) {
     "use strict";
     init_globals();
     var utils = require_utils3();
     var BN = require_bn4();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Base = require_base();
     var assert = utils.assert;
     function EdwardsCurve(conf) {
@@ -44164,9 +41647,9 @@ var require_edwards = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/index.js
+// node_modules/elliptic/lib/elliptic/curve/index.js
 var require_curve = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/curve/index.js"(exports) {
+  "node_modules/elliptic/lib/elliptic/curve/index.js"(exports) {
     "use strict";
     init_globals();
     var curve = exports;
@@ -44177,13 +41660,13 @@ var require_curve = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/utils.js
+// node_modules/hash.js/lib/hash/utils.js
 var require_utils4 = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/utils.js"(exports) {
+  "node_modules/hash.js/lib/hash/utils.js"(exports) {
     "use strict";
     init_globals();
     var assert = require_minimalistic_assert();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     exports.inherits = inherits2;
     function isSurrogatePair(msg, i) {
       if ((msg.charCodeAt(i) & 64512) !== 55296) {
@@ -44423,9 +41906,9 @@ var require_utils4 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/common.js
+// node_modules/hash.js/lib/hash/common.js
 var require_common = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/common.js"(exports) {
+  "node_modules/hash.js/lib/hash/common.js"(exports) {
     "use strict";
     init_globals();
     var utils = require_utils4();
@@ -44503,9 +41986,9 @@ var require_common = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/sha/common.js
+// node_modules/hash.js/lib/hash/sha/common.js
 var require_common2 = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/sha/common.js"(exports) {
+  "node_modules/hash.js/lib/hash/sha/common.js"(exports) {
     "use strict";
     init_globals();
     var utils = require_utils4();
@@ -44550,9 +42033,9 @@ var require_common2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/sha/1.js
+// node_modules/hash.js/lib/hash/sha/1.js
 var require__ = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/sha/1.js"(exports, module) {
+  "node_modules/hash.js/lib/hash/sha/1.js"(exports, module) {
     "use strict";
     init_globals();
     var utils = require_utils4();
@@ -44623,9 +42106,9 @@ var require__ = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/sha/256.js
+// node_modules/hash.js/lib/hash/sha/256.js
 var require__2 = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/sha/256.js"(exports, module) {
+  "node_modules/hash.js/lib/hash/sha/256.js"(exports, module) {
     "use strict";
     init_globals();
     var utils = require_utils4();
@@ -44776,9 +42259,9 @@ var require__2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/sha/224.js
+// node_modules/hash.js/lib/hash/sha/224.js
 var require__3 = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/sha/224.js"(exports, module) {
+  "node_modules/hash.js/lib/hash/sha/224.js"(exports, module) {
     "use strict";
     init_globals();
     var utils = require_utils4();
@@ -44813,9 +42296,9 @@ var require__3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/sha/512.js
+// node_modules/hash.js/lib/hash/sha/512.js
 var require__4 = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/sha/512.js"(exports, module) {
+  "node_modules/hash.js/lib/hash/sha/512.js"(exports, module) {
     "use strict";
     init_globals();
     var utils = require_utils4();
@@ -45253,9 +42736,9 @@ var require__4 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/sha/384.js
+// node_modules/hash.js/lib/hash/sha/384.js
 var require__5 = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/sha/384.js"(exports, module) {
+  "node_modules/hash.js/lib/hash/sha/384.js"(exports, module) {
     "use strict";
     init_globals();
     var utils = require_utils4();
@@ -45298,9 +42781,9 @@ var require__5 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/sha.js
+// node_modules/hash.js/lib/hash/sha.js
 var require_sha3 = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/sha.js"(exports) {
+  "node_modules/hash.js/lib/hash/sha.js"(exports) {
     "use strict";
     init_globals();
     exports.sha1 = require__();
@@ -45311,9 +42794,9 @@ var require_sha3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/ripemd.js
+// node_modules/hash.js/lib/hash/ripemd.js
 var require_ripemd = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/ripemd.js"(exports) {
+  "node_modules/hash.js/lib/hash/ripemd.js"(exports) {
     "use strict";
     init_globals();
     var utils = require_utils4();
@@ -45753,9 +43236,9 @@ var require_ripemd = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash/hmac.js
+// node_modules/hash.js/lib/hash/hmac.js
 var require_hmac = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash/hmac.js"(exports, module) {
+  "node_modules/hash.js/lib/hash/hmac.js"(exports, module) {
     "use strict";
     init_globals();
     var utils = require_utils4();
@@ -45795,9 +43278,9 @@ var require_hmac = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hash.js/lib/hash.js
+// node_modules/hash.js/lib/hash.js
 var require_hash2 = __commonJS({
-  "../node-dbus-next/node_modules/hash.js/lib/hash.js"(exports) {
+  "node_modules/hash.js/lib/hash.js"(exports) {
     init_globals();
     var hash = exports;
     hash.utils = require_utils4();
@@ -45814,9 +43297,9 @@ var require_hash2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js
+// node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js
 var require_secp256k1 = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js"(exports, module) {
     init_globals();
     module.exports = {
       doubles: {
@@ -46601,9 +44084,9 @@ var require_secp256k1 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/curves.js
+// node_modules/elliptic/lib/elliptic/curves.js
 var require_curves = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/curves.js"(exports) {
+  "node_modules/elliptic/lib/elliptic/curves.js"(exports) {
     "use strict";
     init_globals();
     var curves = exports;
@@ -46778,9 +44261,9 @@ var require_curves = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/hmac-drbg/lib/hmac-drbg.js
+// node_modules/hmac-drbg/lib/hmac-drbg.js
 var require_hmac_drbg = __commonJS({
-  "../node-dbus-next/node_modules/hmac-drbg/lib/hmac-drbg.js"(exports, module) {
+  "node_modules/hmac-drbg/lib/hmac-drbg.js"(exports, module) {
     "use strict";
     init_globals();
     var hash = require_hash2();
@@ -46873,9 +44356,9 @@ var require_hmac_drbg = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/ec/key.js
+// node_modules/elliptic/lib/elliptic/ec/key.js
 var require_key = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/ec/key.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/ec/key.js"(exports, module) {
     "use strict";
     init_globals();
     var BN = require_bn4();
@@ -46968,9 +44451,9 @@ var require_key = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/ec/signature.js
+// node_modules/elliptic/lib/elliptic/ec/signature.js
 var require_signature2 = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/ec/signature.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/ec/signature.js"(exports, module) {
     "use strict";
     init_globals();
     var BN = require_bn4();
@@ -47124,9 +44607,9 @@ var require_signature2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/ec/index.js
+// node_modules/elliptic/lib/elliptic/ec/index.js
 var require_ec = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/ec/index.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/ec/index.js"(exports, module) {
     "use strict";
     init_globals();
     var BN = require_bn4();
@@ -47332,9 +44815,9 @@ var require_ec = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/eddsa/key.js
+// node_modules/elliptic/lib/elliptic/eddsa/key.js
 var require_key2 = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/eddsa/key.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/eddsa/key.js"(exports, module) {
     "use strict";
     init_globals();
     var utils = require_utils3();
@@ -47407,9 +44890,9 @@ var require_key2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/eddsa/signature.js
+// node_modules/elliptic/lib/elliptic/eddsa/signature.js
 var require_signature3 = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/eddsa/signature.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/eddsa/signature.js"(exports, module) {
     "use strict";
     init_globals();
     var BN = require_bn4();
@@ -47458,9 +44941,9 @@ var require_signature3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic/eddsa/index.js
+// node_modules/elliptic/lib/elliptic/eddsa/index.js
 var require_eddsa = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic/eddsa/index.js"(exports, module) {
+  "node_modules/elliptic/lib/elliptic/eddsa/index.js"(exports, module) {
     "use strict";
     init_globals();
     var hash = require_hash2();
@@ -47547,9 +45030,9 @@ var require_eddsa = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/elliptic/lib/elliptic.js
+// node_modules/elliptic/lib/elliptic.js
 var require_elliptic = __commonJS({
-  "../node-dbus-next/node_modules/elliptic/lib/elliptic.js"(exports) {
+  "node_modules/elliptic/lib/elliptic.js"(exports) {
     "use strict";
     init_globals();
     var elliptic = exports;
@@ -47563,9 +45046,9 @@ var require_elliptic = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/node_modules/bn.js/lib/bn.js
+// node_modules/asn1.js/node_modules/bn.js/lib/bn.js
 var require_bn5 = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/node_modules/bn.js/lib/bn.js"(exports, module) {
+  "node_modules/asn1.js/node_modules/bn.js/lib/bn.js"(exports, module) {
     init_globals();
     (function(module2, exports2) {
       "use strict";
@@ -47608,7 +45091,7 @@ var require_bn5 = __commonJS({
         if (typeof window !== "undefined" && typeof window.Buffer !== "undefined") {
           Buffer4 = window.Buffer;
         } else {
-          Buffer4 = require_buffer3().Buffer;
+          Buffer4 = require_buffer2().Buffer;
         }
       } catch (e) {
       }
@@ -50371,12 +47854,12 @@ var require_bn5 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/api.js
+// node_modules/asn1.js/lib/asn1/api.js
 var require_api = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/api.js"(exports) {
+  "node_modules/asn1.js/lib/asn1/api.js"(exports) {
     init_globals();
     var asn1 = require_asn1();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var api = exports;
     api.define = function define2(name, body) {
       return new Entity(name, body);
@@ -50425,11 +47908,11 @@ var require_api = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/base/reporter.js
+// node_modules/asn1.js/lib/asn1/base/reporter.js
 var require_reporter = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/base/reporter.js"(exports) {
+  "node_modules/asn1.js/lib/asn1/base/reporter.js"(exports) {
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     function Reporter(options) {
       this._reporterState = {
         obj: null,
@@ -50526,11 +48009,11 @@ var require_reporter = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/base/buffer.js
-var require_buffer4 = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/base/buffer.js"(exports) {
+// node_modules/asn1.js/lib/asn1/base/buffer.js
+var require_buffer3 = __commonJS({
+  "node_modules/asn1.js/lib/asn1/base/buffer.js"(exports) {
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Reporter = require_base2().Reporter;
     var Buffer4 = require_buffer().Buffer;
     function DecoderBuffer(base, options) {
@@ -50629,9 +48112,9 @@ var require_buffer4 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/base/node.js
+// node_modules/asn1.js/lib/asn1/base/node.js
 var require_node = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/base/node.js"(exports, module) {
+  "node_modules/asn1.js/lib/asn1/base/node.js"(exports, module) {
     init_globals();
     var Reporter = require_base2().Reporter;
     var EncoderBuffer = require_base2().EncoderBuffer;
@@ -51163,21 +48646,21 @@ var require_node = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/base/index.js
+// node_modules/asn1.js/lib/asn1/base/index.js
 var require_base2 = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/base/index.js"(exports) {
+  "node_modules/asn1.js/lib/asn1/base/index.js"(exports) {
     init_globals();
     var base = exports;
     base.Reporter = require_reporter().Reporter;
-    base.DecoderBuffer = require_buffer4().DecoderBuffer;
-    base.EncoderBuffer = require_buffer4().EncoderBuffer;
+    base.DecoderBuffer = require_buffer3().DecoderBuffer;
+    base.EncoderBuffer = require_buffer3().EncoderBuffer;
     base.Node = require_node();
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/constants/der.js
+// node_modules/asn1.js/lib/asn1/constants/der.js
 var require_der = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/constants/der.js"(exports) {
+  "node_modules/asn1.js/lib/asn1/constants/der.js"(exports) {
     init_globals();
     var constants = require_constants2();
     exports.tagClass = {
@@ -51222,9 +48705,9 @@ var require_der = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/constants/index.js
+// node_modules/asn1.js/lib/asn1/constants/index.js
 var require_constants2 = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/constants/index.js"(exports) {
+  "node_modules/asn1.js/lib/asn1/constants/index.js"(exports) {
     init_globals();
     var constants = exports;
     constants._reverse = function reverse(map) {
@@ -51241,11 +48724,11 @@ var require_constants2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/decoders/der.js
+// node_modules/asn1.js/lib/asn1/decoders/der.js
 var require_der2 = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/decoders/der.js"(exports, module) {
+  "node_modules/asn1.js/lib/asn1/decoders/der.js"(exports, module) {
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var asn1 = require_asn1();
     var base = asn1.base;
     var bignum = asn1.bignum;
@@ -51505,11 +48988,11 @@ var require_der2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/decoders/pem.js
+// node_modules/asn1.js/lib/asn1/decoders/pem.js
 var require_pem = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/decoders/pem.js"(exports, module) {
+  "node_modules/asn1.js/lib/asn1/decoders/pem.js"(exports, module) {
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Buffer4 = require_buffer().Buffer;
     var DERDecoder = require_der2();
     function PEMDecoder(entity) {
@@ -51551,9 +49034,9 @@ var require_pem = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/decoders/index.js
+// node_modules/asn1.js/lib/asn1/decoders/index.js
 var require_decoders = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/decoders/index.js"(exports) {
+  "node_modules/asn1.js/lib/asn1/decoders/index.js"(exports) {
     init_globals();
     var decoders = exports;
     decoders.der = require_der2();
@@ -51561,11 +49044,11 @@ var require_decoders = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/encoders/der.js
+// node_modules/asn1.js/lib/asn1/encoders/der.js
 var require_der3 = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/encoders/der.js"(exports, module) {
+  "node_modules/asn1.js/lib/asn1/encoders/der.js"(exports, module) {
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var Buffer4 = require_buffer().Buffer;
     var asn1 = require_asn1();
     var base = asn1.base;
@@ -51793,11 +49276,11 @@ var require_der3 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/encoders/pem.js
+// node_modules/asn1.js/lib/asn1/encoders/pem.js
 var require_pem2 = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/encoders/pem.js"(exports, module) {
+  "node_modules/asn1.js/lib/asn1/encoders/pem.js"(exports, module) {
     init_globals();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var DEREncoder = require_der3();
     function PEMEncoder(entity) {
       DEREncoder.call(this, entity);
@@ -51817,9 +49300,9 @@ var require_pem2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1/encoders/index.js
+// node_modules/asn1.js/lib/asn1/encoders/index.js
 var require_encoders = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1/encoders/index.js"(exports) {
+  "node_modules/asn1.js/lib/asn1/encoders/index.js"(exports) {
     init_globals();
     var encoders = exports;
     encoders.der = require_der3();
@@ -51827,9 +49310,9 @@ var require_encoders = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/asn1.js/lib/asn1.js
+// node_modules/asn1.js/lib/asn1.js
 var require_asn1 = __commonJS({
-  "../node-dbus-next/node_modules/asn1.js/lib/asn1.js"(exports) {
+  "node_modules/asn1.js/lib/asn1.js"(exports) {
     init_globals();
     var asn1 = exports;
     asn1.bignum = require_bn5();
@@ -51841,9 +49324,9 @@ var require_asn1 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/parse-asn1/certificate.js
+// node_modules/parse-asn1/certificate.js
 var require_certificate = __commonJS({
-  "../node-dbus-next/node_modules/parse-asn1/certificate.js"(exports, module) {
+  "node_modules/parse-asn1/certificate.js"(exports, module) {
     "use strict";
     init_globals();
     var asn = require_asn1();
@@ -51921,9 +49404,9 @@ var require_certificate = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/parse-asn1/asn1.js
+// node_modules/parse-asn1/asn1.js
 var require_asn12 = __commonJS({
-  "../node-dbus-next/node_modules/parse-asn1/asn1.js"(exports) {
+  "node_modules/parse-asn1/asn1.js"(exports) {
     "use strict";
     init_globals();
     var asn1 = require_asn1();
@@ -52035,9 +49518,9 @@ var require_asn12 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/parse-asn1/aesid.json
+// node_modules/parse-asn1/aesid.json
 var require_aesid = __commonJS({
-  "../node-dbus-next/node_modules/parse-asn1/aesid.json"(exports, module) {
+  "node_modules/parse-asn1/aesid.json"(exports, module) {
     module.exports = {
       "2.16.840.1.101.3.4.1.1": "aes-128-ecb",
       "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
@@ -52055,17 +49538,17 @@ var require_aesid = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/parse-asn1/fixProc.js
+// node_modules/parse-asn1/fixProc.js
 var require_fixProc = __commonJS({
-  "../node-dbus-next/node_modules/parse-asn1/fixProc.js"(exports, module) {
+  "node_modules/parse-asn1/fixProc.js"(exports, module) {
     "use strict";
     init_globals();
     var findProc = /Proc-Type: 4,ENCRYPTED[\n\r]+DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)[\n\r]+([0-9A-z\n\r+/=]+)[\n\r]+/m;
     var startRegex = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----/m;
     var fullRegex = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----([0-9A-z\n\r+/=]+)-----END \1-----$/m;
     var evp = require_evp_bytestokey();
-    var ciphers = require_browser8();
-    var Buffer4 = require_buffer().Buffer;
+    var ciphers = require_browser7();
+    var Buffer4 = require_safe_buffer().Buffer;
     module.exports = function(okey, password) {
       var key = okey.toString();
       var match = key.match(findProc);
@@ -52093,17 +49576,17 @@ var require_fixProc = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/parse-asn1/index.js
+// node_modules/parse-asn1/index.js
 var require_parse_asn1 = __commonJS({
-  "../node-dbus-next/node_modules/parse-asn1/index.js"(exports, module) {
+  "node_modules/parse-asn1/index.js"(exports, module) {
     "use strict";
     init_globals();
     var asn1 = require_asn12();
     var aesid = require_aesid();
     var fixProc = require_fixProc();
-    var ciphers = require_browser8();
-    var pbkdf2Sync = require_browser7().pbkdf2Sync;
-    var Buffer4 = require_buffer().Buffer;
+    var ciphers = require_browser7();
+    var pbkdf2Sync = require_browser6().pbkdf2Sync;
+    var Buffer4 = require_safe_buffer().Buffer;
     function decrypt(data, password) {
       var salt = data.algorithm.decrypt.kde.kdeparams.salt;
       var iters = parseInt(data.algorithm.decrypt.kde.kdeparams.iters.toString(), 10);
@@ -52208,9 +49691,9 @@ var require_parse_asn1 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/browser/curves.json
+// node_modules/browserify-sign/browser/curves.json
 var require_curves2 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/browser/curves.json"(exports, module) {
+  "node_modules/browserify-sign/browser/curves.json"(exports, module) {
     module.exports = {
       "1.3.132.0.10": "secp256k1",
       "1.3.132.0.33": "p224",
@@ -52222,13 +49705,13 @@ var require_curves2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/browser/sign.js
+// node_modules/browserify-sign/browser/sign.js
 var require_sign2 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/browser/sign.js"(exports, module) {
+  "node_modules/browserify-sign/browser/sign.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
-    var createHmac = require_browser6();
+    var Buffer4 = require_safe_buffer().Buffer;
+    var createHmac = require_browser5();
     var crt = require_browserify_rsa();
     var EC = require_elliptic().ec;
     var BN = require_bn3();
@@ -52377,12 +49860,12 @@ var require_sign2 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/browser/verify.js
+// node_modules/browserify-sign/browser/verify.js
 var require_verify = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/browser/verify.js"(exports, module) {
+  "node_modules/browserify-sign/browser/verify.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     var BN = require_bn3();
     var EC = require_elliptic().ec;
     var parseKeys = require_parse_asn1();
@@ -52468,15 +49951,15 @@ var require_verify = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/browserify-sign/browser/index.js
-var require_browser11 = __commonJS({
-  "../node-dbus-next/node_modules/browserify-sign/browser/index.js"(exports, module) {
+// node_modules/browserify-sign/browser/index.js
+var require_browser10 = __commonJS({
+  "node_modules/browserify-sign/browser/index.js"(exports, module) {
     "use strict";
     init_globals();
-    var Buffer4 = require_buffer().Buffer;
-    var createHash = require_browser5();
+    var Buffer4 = require_safe_buffer().Buffer;
+    var createHash = require_browser4();
     var stream = require_readable_browser2();
-    var inherits2 = require_inherits_browser2();
+    var inherits2 = require_inherits_browser();
     var sign = require_sign2();
     var verify = require_verify();
     var algorithms = require_algorithms();
@@ -52550,9 +50033,9 @@ var require_browser11 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/create-ecdh/node_modules/bn.js/lib/bn.js
+// node_modules/create-ecdh/node_modules/bn.js/lib/bn.js
 var require_bn6 = __commonJS({
-  "../node-dbus-next/node_modules/create-ecdh/node_modules/bn.js/lib/bn.js"(exports, module) {
+  "node_modules/create-ecdh/node_modules/bn.js/lib/bn.js"(exports, module) {
     init_globals();
     (function(module2, exports2) {
       "use strict";
@@ -52595,7 +50078,7 @@ var require_bn6 = __commonJS({
         if (typeof window !== "undefined" && typeof window.Buffer !== "undefined") {
           Buffer4 = window.Buffer;
         } else {
-          Buffer4 = require_buffer3().Buffer;
+          Buffer4 = require_buffer2().Buffer;
         }
       } catch (e) {
       }
@@ -55358,9 +52841,9 @@ var require_bn6 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/create-ecdh/browser.js
-var require_browser12 = __commonJS({
-  "../node-dbus-next/node_modules/create-ecdh/browser.js"(exports, module) {
+// node_modules/create-ecdh/browser.js
+var require_browser11 = __commonJS({
+  "node_modules/create-ecdh/browser.js"(exports, module) {
     init_globals();
     var elliptic = require_elliptic();
     var BN = require_bn6();
@@ -55477,12 +52960,12 @@ var require_browser12 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/public-encrypt/mgf.js
+// node_modules/public-encrypt/mgf.js
 var require_mgf = __commonJS({
-  "../node-dbus-next/node_modules/public-encrypt/mgf.js"(exports, module) {
+  "node_modules/public-encrypt/mgf.js"(exports, module) {
     init_globals();
-    var createHash = require_browser5();
-    var Buffer4 = require_buffer().Buffer;
+    var createHash = require_browser4();
+    var Buffer4 = require_safe_buffer().Buffer;
     module.exports = function(seed, len) {
       var t = Buffer4.alloc(0);
       var i = 0;
@@ -55501,9 +52984,9 @@ var require_mgf = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/public-encrypt/xor.js
+// node_modules/public-encrypt/xor.js
 var require_xor = __commonJS({
-  "../node-dbus-next/node_modules/public-encrypt/xor.js"(exports, module) {
+  "node_modules/public-encrypt/xor.js"(exports, module) {
     init_globals();
     module.exports = function xor(a, b) {
       var len = a.length;
@@ -55516,9 +52999,9 @@ var require_xor = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/public-encrypt/node_modules/bn.js/lib/bn.js
+// node_modules/public-encrypt/node_modules/bn.js/lib/bn.js
 var require_bn7 = __commonJS({
-  "../node-dbus-next/node_modules/public-encrypt/node_modules/bn.js/lib/bn.js"(exports, module) {
+  "node_modules/public-encrypt/node_modules/bn.js/lib/bn.js"(exports, module) {
     init_globals();
     (function(module2, exports2) {
       "use strict";
@@ -55561,7 +53044,7 @@ var require_bn7 = __commonJS({
         if (typeof window !== "undefined" && typeof window.Buffer !== "undefined") {
           Buffer4 = window.Buffer;
         } else {
-          Buffer4 = require_buffer3().Buffer;
+          Buffer4 = require_buffer2().Buffer;
         }
       } catch (e) {
       }
@@ -58324,12 +55807,12 @@ var require_bn7 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/public-encrypt/withPublic.js
+// node_modules/public-encrypt/withPublic.js
 var require_withPublic = __commonJS({
-  "../node-dbus-next/node_modules/public-encrypt/withPublic.js"(exports, module) {
+  "node_modules/public-encrypt/withPublic.js"(exports, module) {
     init_globals();
     var BN = require_bn7();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     function withPublic(paddedMsg, key) {
       return Buffer4.from(paddedMsg.toRed(BN.mont(key.modulus)).redPow(new BN(key.publicExponent)).fromRed().toArray());
     }
@@ -58337,19 +55820,19 @@ var require_withPublic = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/public-encrypt/publicEncrypt.js
+// node_modules/public-encrypt/publicEncrypt.js
 var require_publicEncrypt = __commonJS({
-  "../node-dbus-next/node_modules/public-encrypt/publicEncrypt.js"(exports, module) {
+  "node_modules/public-encrypt/publicEncrypt.js"(exports, module) {
     init_globals();
     var parseKeys = require_parse_asn1();
     var randomBytes = require_browser3();
-    var createHash = require_browser5();
+    var createHash = require_browser4();
     var mgf = require_mgf();
     var xor = require_xor();
     var BN = require_bn7();
     var withPublic = require_withPublic();
     var crt = require_browserify_rsa();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     module.exports = function publicEncrypt(publicKey, msg, reverse) {
       var padding;
       if (publicKey.padding) {
@@ -58430,18 +55913,18 @@ var require_publicEncrypt = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/public-encrypt/privateDecrypt.js
+// node_modules/public-encrypt/privateDecrypt.js
 var require_privateDecrypt = __commonJS({
-  "../node-dbus-next/node_modules/public-encrypt/privateDecrypt.js"(exports, module) {
+  "node_modules/public-encrypt/privateDecrypt.js"(exports, module) {
     init_globals();
     var parseKeys = require_parse_asn1();
     var mgf = require_mgf();
     var xor = require_xor();
     var BN = require_bn7();
     var crt = require_browserify_rsa();
-    var createHash = require_browser5();
+    var createHash = require_browser4();
     var withPublic = require_withPublic();
-    var Buffer4 = require_buffer().Buffer;
+    var Buffer4 = require_safe_buffer().Buffer;
     module.exports = function privateDecrypt(privateKey, enc, reverse) {
       var padding;
       if (privateKey.padding) {
@@ -58537,9 +56020,9 @@ var require_privateDecrypt = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/public-encrypt/browser.js
-var require_browser13 = __commonJS({
-  "../node-dbus-next/node_modules/public-encrypt/browser.js"(exports) {
+// node_modules/public-encrypt/browser.js
+var require_browser12 = __commonJS({
+  "node_modules/public-encrypt/browser.js"(exports) {
     init_globals();
     exports.publicEncrypt = require_publicEncrypt();
     exports.privateDecrypt = require_privateDecrypt();
@@ -58552,15 +56035,15 @@ var require_browser13 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/randomfill/browser.js
-var require_browser14 = __commonJS({
-  "../node-dbus-next/node_modules/randomfill/browser.js"(exports) {
+// node_modules/randomfill/browser.js
+var require_browser13 = __commonJS({
+  "node_modules/randomfill/browser.js"(exports) {
     "use strict";
     init_globals();
     function oldBrowser() {
       throw new Error("secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11");
     }
-    var safeBuffer = require_buffer();
+    var safeBuffer = require_safe_buffer();
     var randombytes = require_browser3();
     var Buffer4 = safeBuffer.Buffer;
     var kBufferMaxLength = safeBuffer.kMaxLength;
@@ -58655,14 +56138,14 @@ var require_browser14 = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/crypto-browserify/index.js
+// node_modules/crypto-browserify/index.js
 var require_crypto_browserify = __commonJS({
-  "../node-dbus-next/node_modules/crypto-browserify/index.js"(exports) {
+  "node_modules/crypto-browserify/index.js"(exports) {
     "use strict";
     init_globals();
     exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require_browser3();
-    exports.createHash = exports.Hash = require_browser5();
-    exports.createHmac = exports.Hmac = require_browser6();
+    exports.createHash = exports.Hash = require_browser4();
+    exports.createHmac = exports.Hmac = require_browser5();
     var algos = require_algos();
     var algoKeys = Object.keys(algos);
     var hashes = [
@@ -58677,10 +56160,10 @@ var require_crypto_browserify = __commonJS({
     exports.getHashes = function() {
       return hashes;
     };
-    var p = require_browser7();
+    var p = require_browser6();
     exports.pbkdf2 = p.pbkdf2;
     exports.pbkdf2Sync = p.pbkdf2Sync;
-    var aes = require_browser9();
+    var aes = require_browser8();
     exports.Cipher = aes.Cipher;
     exports.createCipher = aes.createCipher;
     exports.Cipheriv = aes.Cipheriv;
@@ -58691,24 +56174,24 @@ var require_crypto_browserify = __commonJS({
     exports.createDecipheriv = aes.createDecipheriv;
     exports.getCiphers = aes.getCiphers;
     exports.listCiphers = aes.listCiphers;
-    var dh = require_browser10();
+    var dh = require_browser9();
     exports.DiffieHellmanGroup = dh.DiffieHellmanGroup;
     exports.createDiffieHellmanGroup = dh.createDiffieHellmanGroup;
     exports.getDiffieHellman = dh.getDiffieHellman;
     exports.createDiffieHellman = dh.createDiffieHellman;
     exports.DiffieHellman = dh.DiffieHellman;
-    var sign = require_browser11();
+    var sign = require_browser10();
     exports.createSign = sign.createSign;
     exports.Sign = sign.Sign;
     exports.createVerify = sign.createVerify;
     exports.Verify = sign.Verify;
-    exports.createECDH = require_browser12();
-    var publicEncrypt = require_browser13();
+    exports.createECDH = require_browser11();
+    var publicEncrypt = require_browser12();
     exports.publicEncrypt = publicEncrypt.publicEncrypt;
     exports.privateEncrypt = publicEncrypt.privateEncrypt;
     exports.publicDecrypt = publicEncrypt.publicDecrypt;
     exports.privateDecrypt = publicEncrypt.privateDecrypt;
-    var rf = require_browser14();
+    var rf = require_browser13();
     exports.randomFill = rf.randomFill;
     exports.randomFillSync = rf.randomFillSync;
     exports.createCredentials = function() {
@@ -58734,9 +56217,9 @@ var require_crypto_browserify = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/path-browserify/index.js
+// node_modules/path-browserify/index.js
 var require_path_browserify = __commonJS({
-  "../node-dbus-next/node_modules/path-browserify/index.js"(exports, module) {
+  "node_modules/path-browserify/index.js"(exports, module) {
     "use strict";
     init_globals();
     function assertPath(path) {
@@ -59142,9 +56625,9 @@ var require_path_browserify = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/readline.js
+// node_modules/dbus-next/lib/readline.js
 var require_readline = __commonJS({
-  "../node-dbus-next/lib/readline.js"(exports, module) {
+  "node_modules/dbus-next/lib/readline.js"(exports, module) {
     init_globals();
     var Buffer4 = require_buffer().Buffer;
     module.exports = function readOneLine(stream, cb) {
@@ -59171,9 +56654,9 @@ var require_readline = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/handshake.js
+// node_modules/dbus-next/lib/handshake.js
 var require_handshake = __commonJS({
-  "../node-dbus-next/lib/handshake.js"(exports, module) {
+  "node_modules/dbus-next/lib/handshake.js"(exports, module) {
     init_globals();
     var Buffer4 = require_buffer().Buffer;
     var crypto = require_crypto_browserify();
@@ -59318,9 +56801,9 @@ var require_handshake = __commonJS({
   }
 });
 
-// ../node-dbus-next/node_modules/os-browserify/browser.js
-var require_browser15 = __commonJS({
-  "../node-dbus-next/node_modules/os-browserify/browser.js"(exports) {
+// node_modules/os-browserify/browser.js
+var require_browser14 = __commonJS({
+  "node_modules/os-browserify/browser.js"(exports) {
     init_globals();
     exports.endianness = function() {
       return "LE";
@@ -59373,20 +56856,20 @@ var require_browser15 = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/shims/noop.js
+// node_modules/dbus-next/lib/shims/noop.js
 var require_noop = __commonJS({
-  "../node-dbus-next/lib/shims/noop.js"(exports, module) {
+  "node_modules/dbus-next/lib/shims/noop.js"(exports, module) {
     init_globals();
     module.exports = {};
   }
 });
 
-// ../node-dbus-next/lib/address-x11.js
+// node_modules/dbus-next/lib/address-x11.js
 var require_address_x11 = __commonJS({
-  "../node-dbus-next/lib/address-x11.js"(exports, module) {
+  "node_modules/dbus-next/lib/address-x11.js"(exports, module) {
     init_globals();
     var fs = require_fs();
-    var os = require_browser15();
+    var os = require_browser14();
     function getDbusAddressFromWindowSelection(callback) {
       const x11 = require_noop();
       if (x11 === null) {
@@ -59451,9 +56934,9 @@ var require_address_x11 = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/marshall-compat.js
+// node_modules/dbus-next/lib/marshall-compat.js
 var require_marshall_compat = __commonJS({
-  "../node-dbus-next/lib/marshall-compat.js"(exports, module) {
+  "node_modules/dbus-next/lib/marshall-compat.js"(exports, module) {
     init_globals();
     var { parseSignature, collapseSignature } = require_signature();
     var { Variant: Variant3 } = require_variant();
@@ -59614,9 +57097,9 @@ var require_marshall_compat = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/websocket-stream.js
+// node_modules/dbus-next/lib/websocket-stream.js
 var require_websocket_stream = __commonJS({
-  "../node-dbus-next/lib/websocket-stream.js"(exports, module) {
+  "node_modules/dbus-next/lib/websocket-stream.js"(exports, module) {
     init_globals();
     var EventEmitter3 = require_events().EventEmitter;
     var Buffer4 = require_buffer().Buffer;
@@ -59686,9 +57169,9 @@ var require_websocket_stream = __commonJS({
   }
 });
 
-// ../node-dbus-next/lib/connection.js
+// node_modules/dbus-next/lib/connection.js
 var require_connection = __commonJS({
-  "../node-dbus-next/lib/connection.js"(exports, module) {
+  "node_modules/dbus-next/lib/connection.js"(exports, module) {
     init_globals();
     var EventEmitter3 = require_events().EventEmitter;
     var net = require_net();
@@ -59862,9 +57345,9 @@ var require_connection = __commonJS({
   }
 });
 
-// ../node-dbus-next/index.js
-var require_node_dbus_next = __commonJS({
-  "../node-dbus-next/index.js"(exports, module) {
+// node_modules/dbus-next/index.js
+var require_dbus_next = __commonJS({
+  "node_modules/dbus-next/index.js"(exports, module) {
     init_globals();
     var constants = require_constants();
     var MessageBus = require_bus();
@@ -59922,169 +57405,6 @@ var require_node_dbus_next = __commonJS({
   }
 });
 
-// node_modules/process/browser.js
-var require_browser16 = __commonJS({
-  "node_modules/process/browser.js"(exports, module) {
-    init_globals();
-    var process = module.exports = {};
-    var cachedSetTimeout;
-    var cachedClearTimeout;
-    function defaultSetTimout() {
-      throw new Error("setTimeout has not been defined");
-    }
-    function defaultClearTimeout() {
-      throw new Error("clearTimeout has not been defined");
-    }
-    (function() {
-      try {
-        if (typeof setTimeout === "function") {
-          cachedSetTimeout = setTimeout;
-        } else {
-          cachedSetTimeout = defaultSetTimout;
-        }
-      } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-      }
-      try {
-        if (typeof clearTimeout === "function") {
-          cachedClearTimeout = clearTimeout;
-        } else {
-          cachedClearTimeout = defaultClearTimeout;
-        }
-      } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-      }
-    })();
-    function runTimeout(fun) {
-      if (cachedSetTimeout === setTimeout) {
-        return setTimeout(fun, 0);
-      }
-      if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-      }
-      try {
-        return cachedSetTimeout(fun, 0);
-      } catch (e) {
-        try {
-          return cachedSetTimeout.call(null, fun, 0);
-        } catch (e2) {
-          return cachedSetTimeout.call(this, fun, 0);
-        }
-      }
-    }
-    function runClearTimeout(marker) {
-      if (cachedClearTimeout === clearTimeout) {
-        return clearTimeout(marker);
-      }
-      if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-      }
-      try {
-        return cachedClearTimeout(marker);
-      } catch (e) {
-        try {
-          return cachedClearTimeout.call(null, marker);
-        } catch (e2) {
-          return cachedClearTimeout.call(this, marker);
-        }
-      }
-    }
-    var queue = [];
-    var draining = false;
-    var currentQueue;
-    var queueIndex = -1;
-    function cleanUpNextTick() {
-      if (!draining || !currentQueue) {
-        return;
-      }
-      draining = false;
-      if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-      } else {
-        queueIndex = -1;
-      }
-      if (queue.length) {
-        drainQueue();
-      }
-    }
-    function drainQueue() {
-      if (draining) {
-        return;
-      }
-      var timeout = runTimeout(cleanUpNextTick);
-      draining = true;
-      var len = queue.length;
-      while (len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-          if (currentQueue) {
-            currentQueue[queueIndex].run();
-          }
-        }
-        queueIndex = -1;
-        len = queue.length;
-      }
-      currentQueue = null;
-      draining = false;
-      runClearTimeout(timeout);
-    }
-    process.nextTick = function(fun) {
-      var args = new Array(arguments.length - 1);
-      if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-          args[i - 1] = arguments[i];
-        }
-      }
-      queue.push(new Item(fun, args));
-      if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-      }
-    };
-    function Item(fun, array) {
-      this.fun = fun;
-      this.array = array;
-    }
-    Item.prototype.run = function() {
-      this.fun.apply(null, this.array);
-    };
-    process.title = "browser";
-    process.browser = true;
-    process.env = {};
-    process.argv = [];
-    process.version = "";
-    process.versions = {};
-    function noop() {
-    }
-    process.on = noop;
-    process.addListener = noop;
-    process.once = noop;
-    process.off = noop;
-    process.removeListener = noop;
-    process.removeAllListeners = noop;
-    process.emit = noop;
-    process.prependListener = noop;
-    process.prependOnceListener = noop;
-    process.listeners = function(name) {
-      return [];
-    };
-    process.binding = function(name) {
-      throw new Error("process.binding is not supported");
-    };
-    process.cwd = function() {
-      return "/";
-    };
-    process.chdir = function(dir) {
-      throw new Error("process.chdir is not supported");
-    };
-    process.umask = function() {
-      return 0;
-    };
-  }
-});
-
 // dist/index.js
 init_globals();
 
@@ -60096,7 +57416,7 @@ init_globals();
 
 // dist/lib/protocol.js
 init_globals();
-var dbus = __toESM(require_node_dbus_next(), 1);
+var dbus = __toESM(require_dbus_next(), 1);
 var __decorate = function(decorators, target, key, desc) {
   var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
   if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60168,7 +57488,7 @@ var SignalAdapter = class {
 };
 
 // dist/lib/script.js
-var import_events = __toESM(require_events2(), 1);
+var import_events = __toESM(require_events(), 1);
 init_util_shim();
 var Script = class {
   constructor(_controller, id) {
@@ -60421,14 +57741,14 @@ function isReservedMethodName(name) {
 }
 
 // dist/lib/session.js
-var import_events2 = __toESM(require_events2(), 1);
-var dbus2 = __toESM(require_node_dbus_next(), 1);
+var import_events2 = __toESM(require_events(), 1);
+var dbus2 = __toESM(require_dbus_next(), 1);
 
 // node_modules/@frida/rtc-stream/dist/index.js
 init_globals();
-var import_buffer2 = __toESM(require_buffer2(), 1);
+var import_buffer2 = __toESM(require_buffer(), 1);
 var import_stream = __toESM(require_stream_browserify(), 1);
-var import_process2 = __toESM(require_browser16(), 1);
+var import_process2 = __toESM(require_browser(), 1);
 var _handle, _bufferSize, _bufferTimeout, _openStateValue, _closedStateValue, _pendingWriteBuffer, _pendingWriteCallback;
 var RTCStream = class extends import_stream.Duplex {
   constructor(handle, options) {
@@ -60971,7 +58291,7 @@ var IceCandidateQueue = class extends import_events2.EventEmitter {
 };
 
 // dist/lib/client.js
-var dbus3 = __toESM(require_node_dbus_next(), 1);
+var dbus3 = __toESM(require_dbus_next(), 1);
 var Client = class {
   constructor(host, options = {}) {
     __publicField(this, "_serverUrl");
@@ -61130,17 +58450,6 @@ buffer/index.js:
    * @license  MIT
    *)
 
-ieee754/index.js:
-  (*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> *)
-
-buffer/index.js:
-  (*!
-   * The buffer module from node.js, for the browser.
-   *
-   * @author   Feross Aboukhadijeh <https://feross.org>
-   * @license  MIT
-   *)
-
 safe-buffer/index.js:
   (*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> *)
 
@@ -61154,7 +58463,4 @@ assert/build/internal/util/comparisons.js:
    * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
    * @license  MIT
    *)
-
-safe-buffer/index.js:
-  (*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> *)
 */

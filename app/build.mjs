@@ -2,9 +2,12 @@ import * as esbuild from "esbuild";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import { createRequire } from "module";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
-const dbusNextRoot = path.resolve(projectRoot, "../node-dbus-next");
+const require = createRequire(import.meta.url);
+const dbusNextRoot = path.dirname(require.resolve("dbus-next/package.json"));
 
 const sharedOptions = {
     bundle: true,
@@ -15,10 +18,17 @@ const sharedOptions = {
         "util": path.resolve(__dirname, "util-shim.js"),
     },
     plugins: [{
-        name: "util-slash",
+        name: "node-shims",
         setup(build) {
             build.onResolve({ filter: /^util\/$/ }, () => ({
                 path: path.resolve(__dirname, "util-shim.js"),
+            }));
+            build.onResolve({ filter: /^timers$/ }, () => ({
+                path: "timers",
+                namespace: "shim",
+            }));
+            build.onLoad({ filter: /^timers$/, namespace: "shim" }, () => ({
+                contents: "export var setImmediate = globalThis.setTimeout; export var clearImmediate = globalThis.clearTimeout;",
             }));
         },
     }],
